@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails cyber_hrm_rorv4: development" uuid="ea30f895-2d17-4f15-b1f4-f59f486eaf0a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails cyber_hrm_rorv4: test" uuid="bf45a277-0ed9-4eef-ae07-1967c8faf11b">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails cyber_hrm_rorv4: production" uuid="51880284-69cc-494f-b75c-06f2165c9324">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
