@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :tinhthanhphos
+
   resources :vungdialies
 
   resources :quoctiches

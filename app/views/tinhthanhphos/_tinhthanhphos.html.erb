@@ -1,0 +1,26 @@
+<table class="table table-hover">
+  <thead style="color: blue">
+  <th>Mã tỉnh/thành phố</th>
+  <th>Tên tỉnh/thành phố</th>
+  <th>Vùng địa lý</th>
+  <th></th>
+  </thead>
+
+  <% @tinhthanhphos.each do |tinhthanhpho| %>
+      <tbody>
+      <td style="width: 150px;"><%= tinhthanhpho.ma %></td>
+      <td><%= tinhthanhpho.ten %></td>
+      <td><%= tinhthanhpho.vungdialy.ten %></td>
+      <td style="text-align: center; width: 60px;"><%= link_to edit_quoctich_path(tinhthanhpho), :title => 'Cập nhật' do %>
+            <i class="glyphicon glyphicon-pencil"></i>
+        <% end %>
+        <%= link_to tinhthanhpho, method: :delete, :title => 'Xóa',data: {confirm: 'Are you sure?'} do %>
+            <i class="glyphicon glyphicon-trash"></i>
+        <% end %>
+      </td>
+      </tbody>
+  <% end %>
+</table>
+<div class="text-center">
+  <%= will_paginate @tinhthanhphos, :renderer => BootstrapPagination::Rails %>
+</div>

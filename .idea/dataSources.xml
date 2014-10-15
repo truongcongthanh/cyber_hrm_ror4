@@ -12,7 +12,9 @@
     <data-source source="LOCAL" name="Rails cyber_hrm_rorv4: test" uuid="bf45a277-0ed9-4eef-ae07-1967c8faf11b">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:cyber_hrm_rorv4_test</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5435/cyber_hrm_rorv4</jdbc-url>
+      <user-name>medisoft</user-name>
+      <user-password>dfc6dfc3dfc4dfc1dfd9df9bdf93df98df9a</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails cyber_hrm_rorv4: production" uuid="51880284-69cc-494f-b75c-06f2165c9324">
