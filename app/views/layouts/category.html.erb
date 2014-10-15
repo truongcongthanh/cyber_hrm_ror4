@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Cyberhrm" %></title>
+  <link href="/assets/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/glyphicons-halflings-regular.eot" rel="stylesheet">
+  <link href="/assets/glyphicons-halflings-regular.svg" rel="stylesheet">
+  <link href="/assets/glyphicons-halflings-regular.ttf" rel="stylesheet">
+  <link href="/assets/glyphicons-halflings-regular.woff" rel="stylesheet">
+  <link href="/assets/bootstrap.min.js" type="text/javascript">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default " role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/assets/medisoft-vn.png" style="height: 30px; width: 250px;">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Quản lý nhân viên</a></li>
+        <li><a href="#">Quản lý danh mục</a></li>
+        <li><a href="#">Quản lý người dùng</a></li>
+        <li><a href="#">Thông số bệnh viện</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-user"></span>
+            <strong>thanhtruong</strong>
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="navbar-login">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <p class="text-center">
+                      <img src="/assets/male.jpg" class="img-circle" style="height: 90px;">
+
+                    <p class="text-center small">
+                      <a href="#">
+                        <i class="glyphicon glyphicon-edit"></i> Thay đổi
+                      </a></p>
+                    </p>
+                  </div>
+                  <div class="col-lg-8">
+                    <p class="text-left"><strong>Truong Cong Thanh</strong></p>
+
+                    <p class="text-left small">Khoa/phòng: Lập trình</p>
+
+                    <p class="text-left small">Chức vụ: Nhân viên</p>
+
+                    <p class="text-left">
+                      <a href="#" class="btn btn-primary btn-block btn-sm">
+                        <i class="glyphicon glyphicon-pencil"></i> Cập nhật thông tin</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <div class="navbar-login navbar-login-session">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <p>
+                      <a href="#" class="btn btn-danger btn-block">
+                        <i class="glyphicon glyphicon-log-out"></i> Đăng xuất</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-lg-3">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                Cơ quan - Tổ chức
+              </a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapsing">
+            <div class="panel-body">
+              <ul class="nav nav-list">
+                <li><%= link_to "Nhóm khoa phòng", "#" %></li>
+                <li><%= link_to "Khoa/Phòng/Ban", "#" %></li>
+                <li><%= link_to "Khu vực làm việc", "#" %></li>
+                <li><%= link_to "Nhóm chức danh", "#" %></li>
+                <li><%= link_to "Chức danh", "#" %></li>
+                <li><%= link_to "Nhóm chức vụ", "#" %></li>
+                <li><%= link_to "Chức vụ", "#" %></li>
+                <li><%= link_to "Nhiệm vụ tại cơ quan", "#" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                Hành chánh
+              </a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapsing">
+            <div class="panel-body">
+              <ul class="nav nav-list">
+                <li><%= link_to "Quốc gia", quoctiches_path %></li>
+                <li><%= link_to "Vùng địa lý", vungdialies_path  %></li>
+                <li><%= link_to "Tỉnh/Thành phố", "#" %></li>
+                <li><%= link_to "Quận/Huyện", "#" %></li>
+                <li><%= link_to "Phường/Xã", "#" %></li>
+                <li><%= link_to "Dân tộc", "#" %></li>
+                <li><%= link_to "Tôn giáo", "#" %></li>
+                <li><%= link_to "Bệnh viện", "#" %></li>
+                <li><%= link_to "Ngân hàng", "#" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                Trình độ - Học vấn
+              </a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapsing">
+            <div class="panel-body">
+              <ul class="nav nav-list">
+                <li><%= link_to "Nhóm bằng cấp", "#" %></li>
+                <li><%= link_to "Bằng cấp", "#" %></li>
+                <li><%= link_to "Học hàm", "#" %></li>
+                <li><%= link_to "Hệ đào tạo", "#" %></li>
+                <li><%= link_to "Trình độ giáo dục phổ thông", "#" %></li>
+                <li><%= link_to "Nhóm ngành đào tạo", "#" %></li>
+                <li><%= link_to "Chuyên ngành đào tạo", "#" %></li>
+                <li><%= link_to "Lý luận chính trị", "#" %></li>
+                <li><%= link_to "Quản lý nhà nước", "#" %></li>
+                <li><%= link_to "Nơi đào tạo", "#" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                Hợp đồng
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFour" class="panel-collapse collapsing">
+            <div class="panel-body">
+              <ul class="nav nav-list">
+                <li><%= link_to "Loại ngạch", "#" %></li>
+                <li><%= link_to "Nhóm ngạch", "#" %></li>
+                <li><%= link_to "Mã ngạch", "#" %></li>
+                <li><%= link_to "Nhóm hợp đồng", "#" %></li>
+                <li><%= link_to "Hợp đồng", "#" %></li>
+                <li><%= link_to "Nhóm lý do nghỉ", "#" %></li>
+                <li><%= link_to "Lý do nghỉ", "#" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                Thi đua - Khen thưởng
+              </a>
+            </h4>
+          </div>
+          <div id="collapseFive" class="panel-collapse collapsing">
+            <div class="panel-body">
+              <ul class="nav nav-list">
+                <li><%= link_to "Cấp khen thưởng", "#" %></li>
+                <li><%= link_to "Loại khen thưởng", "#" %></li>
+                <li><%= link_to "Nhóm khen thưởng", "#" %></li>
+                <li><%= link_to "Thi đua - khen thưởng", "#" %></li>
+                <li><%= link_to "Kỷ luật", "#" %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-9">
+    <%= yield %>
+  </div>
+</div>
+</div>
+</body>
+</html>
