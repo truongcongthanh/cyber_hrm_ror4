@@ -1,0 +1,28 @@
+vn:
+  # control
+  new: "Thêm mới"
+  back: "Trở về"
+  edit: "Cập nhật"
+  # end control
+  # navbar
+  employees: "Quản lý nhân sự"
+  categories: "Quản lý danh mục"
+  manage_users: "Quản lý người dùng"
+  setting: "Cấu hình hệ thống"
+  languages: "Ngôn ngữ"
+  # end navbar
+
+  # left menu categories
+  agency: "Cơ quan - Tổ chức"
+  admitrative: "Thông tin hành chánh"
+  education_level: "Trình độ - Học vấn"
+  contract: "Hợp đồng"
+  emulation: "Thi đua - Khen thưởng"
+  # end left menu categories
+
+  tinhthanhphos:
+    code: "Mã tỉnh/thành phố"
+    name: "Tên tỉnh/thành phố"
+    region: "Vùng địa lý"
+    index:
+      title: "Danh sách Tỉnh/Thành phố"

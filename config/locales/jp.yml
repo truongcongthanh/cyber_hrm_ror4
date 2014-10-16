@@ -1,0 +1,28 @@
+jp:
+  # control
+  new: "新しい"
+  back: "バック"
+  edit: "編集"
+  # end control
+  # navbar
+  employees: "人的資源"
+  categories: "カテゴリー"
+  manage_users: "ユーザー管理"
+  setting: "設定"
+  languages: "言語"
+  # end navbar
+
+  # left menu categories
+  agency: "庁 - 組織"
+  admitrative: "管理情報"
+  education_level: "教育レベル"
+  contract: "契約"
+  emulation: "エミュレーション - 表彰"
+  # end left menu categories
+
+  tinhthanhphos:
+    code: "コード"
+    name: "名前"
+    region: "地域"
+    index:
+      title: "都市の一覧"
