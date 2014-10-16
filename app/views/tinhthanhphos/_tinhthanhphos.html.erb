@@ -1,8 +1,8 @@
 <table class="table table-hover">
   <thead style="color: blue">
-  <th><%= t "tinhthanhphos.code" %></th>
-  <th><%= t "tinhthanhphos.name" %></th>
-  <th><%= t "tinhthanhphos.region" %></th>
+  <th><%= t "tinhthanhphos.ma" %></th>
+  <th><%= t "tinhthanhphos.ten" %></th>
+  <th><%= t "tinhthanhphos.vungdialy_id" %></th>
   <th></th>
   </thead>
 
@@ -11,12 +11,14 @@
       <td style="width: 150px;"><%= tinhthanhpho.ma %></td>
       <td><%= tinhthanhpho.ten %></td>
       <td><%= tinhthanhpho.vungdialy.ten %></td>
-      <td style="text-align: center; width: 60px;"><%= link_to edit_quoctich_path(tinhthanhpho), :title => 'Cập nhật' do %>
-            <i class="glyphicon glyphicon-pencil"></i>
-        <% end %>
-        <%= link_to tinhthanhpho, method: :delete, :title => 'Xóa',data: {confirm: 'Are you sure?'} do %>
-            <i class="glyphicon glyphicon-trash"></i>
-        <% end %>
+      <td style="text-align: center; width: 60px;">
+        <a href="<%= edit_tinhthanhpho_path(tinhthanhpho) %>" title="<%= t "edit" %>">
+          <i class="glyphicon glyphicon-pencil"></i>
+        </a>
+        <a title="Delete" data-backdrop="static" data-keyboard="true" href="javascript:;"
+           onclick="show_confirm_modal('<%= tinhthanhpho_path(tinhthanhpho) %>','<%= t "tinhthanhphos.question" %>');">
+          <i class="glyphicon glyphicon-trash"></i>
+        </a>
       </td>
       </tbody>
   <% end %>

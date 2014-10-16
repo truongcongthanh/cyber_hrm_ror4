@@ -1,9 +1,15 @@
 
 en:
   # control
+  save: "Save"
   new: "Add new"
   back: "Return"
   edit: "Edit"
+  delete: "Delete"
+  will_paginate:
+    page_gap: "&hellip;"
+    previous_label: "Prev"
+    next_label: "Next"
   # end control
   # navbar
   employees: "Human resources"
@@ -22,8 +28,12 @@ en:
   # end left menu categories
 
   tinhthanhphos:
-    code: "Code"
-    name: "Name"
-    region: "Region"
+    ma: "Code"
+    ten: "Name of city"
+    vungdialy_id: "Region"
+    keysearch: "Ex: Hà Nội, Hồ Chí Minh..."
+    question: "Are you want to delete this city?"
     index:
       title: "List of Cities"
+    new:
+      header: "Add new City"

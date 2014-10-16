@@ -3,6 +3,11 @@ jp:
   new: "新しい"
   back: "バック"
   edit: "編集"
+  delete: "削除"
+  will_paginate:
+    page_gap: "&hellip;"
+    previous_label: "前の"
+    next_label: "次の"
   # end control
   # navbar
   employees: "人的資源"
@@ -20,9 +25,14 @@ jp:
   emulation: "エミュレーション - 表彰"
   # end left menu categories
 
+
   tinhthanhphos:
-    code: "コード"
-    name: "名前"
-    region: "地域"
+    ma: "コード"
+    ten: "名前"
+    vungdialy_id: "地域"
+    keysearch: "例えば: Hà Nội, Hồ Chí Minh..."
+    question: "あなたはこの街を削除していますか？"
     index:
-      title: "都市の一覧"
+      header: "都市の一覧"
+    new:
+      header: "新しい都市を追加"

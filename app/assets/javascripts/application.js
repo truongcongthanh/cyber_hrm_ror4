@@ -2,7 +2,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap.min
-//= require_tree .
+//= require_tree
+
+function show_confirm_modal(path, question) {
+    $('#confirm-modal #question').text(question);
+    $('#confirm-modal #delete').on("click", function () {
+        $.ajax({
+            async: false,
+            type: "DELETE",
+            url: path,
+            success: function () {
+                $('#confirm-modal').modal('hide');
+            },
+            dataType: 'script'
+        });
+        $('#confirm-modal').modal('hide');
+    });
+    $('#confirm-modal').show();
+}
 
 $(function () {
     $("#tinhthanhphos").on("click", ".pagination a", function () {
@@ -14,3 +31,4 @@ $(function () {
         return false;
     });
 });
+
