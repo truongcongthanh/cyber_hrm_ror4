@@ -1,0 +1,41 @@
+<%= render 'layouts/confirm_modal' %>
+
+<table class="table table-hover">
+  <thead style="color: blue;">
+  <tr>
+    <th style="width: 200px;"><%= t "nhomkhoaphongs.ma" %></th>
+    <th><%= t "nhomkhoaphongs.ten" %></th>
+    <th style="width: 60px;"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @nhomkhoaphongs.each do |nhomkhoaphong| %>
+      <tr>
+        <td>
+          <%= nhomkhoaphong.ma %>
+        </td>
+        <td>
+          <%= nhomkhoaphong.ten %>
+        </td>
+        <td>
+          <%= link_to edit_nhomkhoaphong_path(nhomkhoaphong), :remote => true, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+
+          <a style="height: 14px; padding-left: 5px;" title="<%= t "delete" %>"
+             data-backdrop="static" data-keyboard="true"
+             href="javascript:;"
+             onclick="show_confirm_modal('<%= nhomkhoaphong_path(nhomkhoaphong) %>',
+                     'Are you sure you want to delete the nhomkhoaphong : <%= nhomkhoaphong.ten%>');">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr>
+    <td colspan="5"> <%= will_paginate @nhomkhoaphongs %> </td>
+  </tr>
+  </tfoot>
+</table>

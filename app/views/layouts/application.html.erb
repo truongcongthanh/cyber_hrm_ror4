@@ -1,116 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= content_for?(:title) ? yield(:title) : "Cyberhrm" %></title>
-  <link href="/assets/bootstrap.min.css" rel="stylesheet">
-  <link href="/assets/glyphicons-halflings-regular.eot" rel="stylesheet">
-  <link href="/assets/glyphicons-halflings-regular.svg" rel="stylesheet">
-  <link href="/assets/glyphicons-halflings-regular.ttf" rel="stylesheet">
-  <link href="/assets/glyphicons-halflings-regular.woff" rel="stylesheet">
-  <link href="/assets/bootstrap.min.js" type="text/javascript">
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <title><%= content_for?(:title) ? yield(:title) : "Cyber Hrm Rorv4" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cyber Hrm Rorv4" %>">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav class="navbar navbar-default " role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="<%= home_path %>">
-        <img src="/assets/medisoft-vn.png" style="height: 30px; width: 250px;">
-      </a>
+<header>
+  <%= render 'layouts/navigation' %>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <aside>
+        <%= render 'layouts/sidebar_categories' %>
+      </aside>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#"><%= t "employees" %></a></li>
-        <li><a href="<%= danhmuc_path %>"><%= t "categories" %></a></li>
-        <li><a href="#"><%= t "manage_users" %></a></li>
-        <li><a href="#"><%= t "setting" %></a></li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-globe"></span>
-            <strong><%= t "languages" %></strong>
-            <span class="glyphicon glyphicon-chevron-down"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><%= link_to_unless_current "English", locale: "en"%></li>
-            <li><%= link_to_unless_current "Việt Nam", locale: "vn"%></li>
-            <li><%= link_to_unless_current "日本の", locale: "jp" %></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <span class="glyphicon glyphicon-user"></span>
-            <strong>thanhtruong</strong>
-            <span class="glyphicon glyphicon-chevron-down"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <div class="navbar-login">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <p class="text-center">
-                      <img src="/assets/male.jpg" class="img-circle" style="height: 90px;">
-
-                    <p class="text-center small">
-                      <a href="#">
-                        <i class="glyphicon glyphicon-edit"></i> Thay đổi
-                      </a></p>
-                    </p>
-                  </div>
-                  <div class="col-lg-8">
-                    <p class="text-left"><strong>Truong Cong Thanh</strong></p>
-
-                    <p class="text-left small">Khoa/phòng: Lập trình</p>
-
-                    <p class="text-left small">Chức vụ: Nhân viên</p>
-
-                    <p class="text-left">
-                      <a href="#" class="btn btn-primary btn-block btn-sm">
-                        <i class="glyphicon glyphicon-pencil"></i> Cập nhật thông tin</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="divider"></li>
-            <li>
-              <div class="navbar-login navbar-login-session">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <p>
-                      <a href="#" class="btn btn-danger btn-block">
-                        <i class="glyphicon glyphicon-log-out"></i> Đăng xuất</a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
+    <div class="col-lg-9">
+      <main role="main">
+        <div id="message">
+          <%= render 'layouts/messages' %>
+        </div>
+        <div id="body-content">
+          <%= yield %>
+        </div>
+      </main>
     </div>
-    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.container-fluid -->
-</nav>
-<div class="container-fluid">
-  <%= yield %>
 </div>
 </body>
 </html>

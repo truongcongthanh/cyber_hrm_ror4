@@ -14,7 +14,7 @@ vn:
   employees: "Quản lý nhân sự"
   categories: "Quản lý danh mục"
   manage_users: "Quản lý người dùng"
-  setting: "Cấu hình hệ thống"
+  settings: "Cấu hình hệ thống"
   languages: "Ngôn ngữ"
   # end navbar
 
