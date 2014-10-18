@@ -17,18 +17,19 @@
 //= require_tree .
 
 function show_confirm_modal(path, question){
-    $('#question').text(question);
-    $('#delete').on("click", function(){
+    $('#confirm-modal #question').text(question);
+    $('#confirm-modal #delete').on("click", function(){
         $.ajax({
             async: false,
             type: "DELETE",
             url: path,
             success: function() {$('#confirm-modal').modal('hide');},
-            dataType: 'script'
+            dataType: 'script',
         });
         $('#confirm-modal').modal('hide');
     });
     $('#confirm-modal').modal('show');
+
 }
 
 $(function(){

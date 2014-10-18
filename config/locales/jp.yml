@@ -1,5 +1,7 @@
 jp:
   # control
+  yes: "はい"
+  no: "いいえ"
   new: "新しい"
   back: "バック"
   edit: "編集"
@@ -36,3 +38,17 @@ jp:
       header: "都市の一覧"
     new:
       header: "新しい都市を追加"
+
+  nhombangcaps:
+    ma: "コード"
+    ten: "名前"
+    diengiai: "説明"
+    question: "あなたがこのグループの認証を削除してもされていますか？"
+    index:
+      header: "グループ認証のリスト"
+    new:
+      header: "新しいグループ認証を追加します。"
+    edit:
+      header: "編集グループ認証："
+    delete:
+      header: "削除の確認"

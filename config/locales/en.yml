@@ -1,6 +1,8 @@
 
 en:
   # control
+  yes: "Yes"
+  no: "No"
   save: "Save"
   new: "Add new"
   back: "Return"
@@ -37,3 +39,17 @@ en:
       title: "List of Cities"
     new:
       header: "Add new City"
+
+  nhombangcaps:
+      ma: "Code"
+      ten: "Name"
+      diengiai: "Description"
+      question: "Are you want to delete this group certification?"
+      index:
+        header: "List of group certification"
+      new:
+        header: "Add new group certification"
+      edit:
+        header: "Edit group certification: "
+      delete:
+        header: "Confirm delete"

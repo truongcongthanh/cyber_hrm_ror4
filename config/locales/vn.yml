@@ -1,5 +1,7 @@
 vn:
   # control
+  yes: "Đồng ý"
+  no: "Không"
   new: "Thêm mới"
   back: "Trở về"
   edit: "Cập nhật"
@@ -36,3 +38,16 @@ vn:
       header: "Danh sách Tỉnh/Thành phố"
     new:
       header: "Thêm mới Tỉnh/Thành phố"
+  nhombangcaps:
+      ma: "Mã nhóm"
+      ten: "Tên nhóm"
+      diengiai: "Mô tả"
+      question: "Bạn có muốn xóa nhóm bằng cấp này hay không?"
+      index:
+        header: "Danh sách nhóm bằng cấp"
+      new:
+        header: "Thêm mới nhóm bầng cấp"
+      edit:
+        header: "Cập nhật nhóm bằng cấp: "
+      delete:
+        header: "Xác nhận xóa"

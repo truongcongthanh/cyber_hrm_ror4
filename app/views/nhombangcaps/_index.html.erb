@@ -1,0 +1,14 @@
+<% @nhombangcaps.each do |nhombangcap| %>
+    <tr>
+      <td><%= nhombangcap.ma %></td>
+      <td><%= nhombangcap.ten %></td>
+      <td><%= nhombangcap.diengiai %></td>
+      <td><%= link_to edit_nhombangcap_path(nhombangcap), data: {remote: true}, :title => t('edit') do %>
+            <i class="glyphicon glyphicon-edit"></i>
+        <% end %>
+        <%= link_to nhombangcap_delete_path(nhombangcap), data: {remote: true}, :title => t('delete') do %>
+            <i class="glyphicon glyphicon-trash"></i>
+        <% end %>
+      </td>
+    </tr>
+<% end %>
