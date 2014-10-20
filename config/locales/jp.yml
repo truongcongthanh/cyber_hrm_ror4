@@ -24,9 +24,50 @@ jp:
   admitrative: "管理情報"
   education_level: "教育レベル"
   contract: "契約"
-  emulation: "エミュレーション - 表彰"
+  emulation: "報酬 - 規律"
   # end left menu categories
 
+  category:
+    slidebar:
+      nhomkhoaphong: "部門·グループ"
+      khoaphong: "部門"
+      khuvuclamviec: "作業領域"
+      nhomchucdanh: "タイトルグループ"
+      chucdanh: "タイトル"
+      nhomchucvu: "ポジショングループ"
+      chucvu: "ポジション"
+      nhiemvu: "説明責任"
+      quoctich: "ナショナルズ"
+      vungdialy: "地域"
+      tinhthanhpho: "都市"
+      quanhuyen: "地区"
+      phuongxa: "ウォード"
+      dantoc: "エスニック"
+      tongiao: "宗教"
+      benhvien: "病院"
+      nganhang: "銀行"
+      nhombangcap: "証明書グループ"
+      bangcap: "証明書"
+      hocham: "アカデミックタイトル"
+      hedaotao: "教育の種類"
+      trinhdophothong: "教育レベル"
+      nhomnganhdaotao: "セクター"
+      chuyennganhdaotao: "メジャー"
+      lyluanchinhtri: "政治理論"
+      quanlynhanuoc: "状態管理のレベル"
+      noidaotao: "学校/アカデミー"
+      loaingach: "公式のタイプ"
+      nhomngach: "公式グループ"
+      mangach: "公式のコード"
+      nhomhopdong: "契約のグループt"
+      hopdong: "契約"
+      nhomlydo: "不在の理由のグループ"
+      lydovangmat: "不在の理由"
+      capkhenthuong: "報酬のレベル"
+      loaikhenthuong: "報酬の種類"
+      nhomkhenthuong: "報酬のグループ"
+      thiduakhenthuong: "リワード"
+      kyluat: "規律"
 
   tinhthanhphos:
     ma: "コード"
@@ -68,6 +109,7 @@ jp:
     delete:
       header: "削除の確認"
 
+
   quoctiches:
     ma: "コード"
     ten: "名前"
@@ -78,5 +120,18 @@ jp:
       header: "新しい国家を追加"
     edit:
       header: "全国に編集します。"
+    delete:
+      header: "削除の確認"
+
+  vungdialies:
+    ma: "コード"
+    ten: "名前"
+    question: "リージョンを削除しますか："
+    index:
+      header: "地域一覧"
+    new:
+      header: "新しい領域を追加します。"
+    edit:
+      header: "編集領域："
     delete:
       header: "削除の確認"

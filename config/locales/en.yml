@@ -26,8 +26,50 @@ en:
   admitrative: "Administrative Infomation"
   education_level: "Education Level"
   contract: "Contract"
-  emulation: "Emulation - Commendation"
+  emulation: "Reward - Discipline"
   # end left menu categories
+
+  category:
+    slidebar:
+      nhomkhoaphong: "Department group"
+      khoaphong: "Departments"
+      khuvuclamviec: "Work areas"
+      nhomchucdanh: "Title group"
+      chucdanh: "Titles"
+      nhomchucvu: "Position group"
+      chucvu: "Positions"
+      nhiemvu: "Accountability"
+      quoctich: "Nationals"
+      vungdialy: "Regions"
+      tinhthanhpho: "Cities"
+      quanhuyen: "Districts"
+      phuongxa: "Ward"
+      dantoc: "Ethnic"
+      tongiao: "Religion"
+      benhvien: "Hospital"
+      nganhang: "Bank"
+      nhombangcap: "Certificate group"
+      bangcap: "Certificate"
+      hocham: "Academic Titles"
+      hedaotao: "Kind of education"
+      trinhdophothong: "Education level"
+      nhomnganhdaotao: "Sector"
+      chuyennganhdaotao: "Majors"
+      lyluanchinhtri: "Political theories"
+      quanlynhanuoc: "Level of state management"
+      noidaotao: "Schools/Academies"
+      loaingach: "Type of official"
+      nhomngach: "Group of official"
+      mangach: "Code of official"
+      nhomhopdong: "Group of contract"
+      hopdong: "Contract"
+      nhomlydo: "Group of reason for the absence"
+      lydovangmat: "Reason for the absence"
+      capkhenthuong: "Levels of reward"
+      loaikhenthuong: "Types of reward"
+      nhomkhenthuong: "Groups of reward"
+      thiduakhenthuong: "Rewards"
+      kyluat: "Discipline"
 
   tinhthanhphos:
     ma: "Code"
@@ -69,6 +111,7 @@ en:
     delete:
       header: "Confirm delete"
 
+
   quoctiches:
     ma: "Code"
     ten: "Name"
@@ -79,5 +122,18 @@ en:
       header: "Add new national"
     edit:
       header: "Edit national: "
+    delete:
+      header: "Confirm delete"
+
+  vungdialies:
+    ma: "Code"
+    ten: "Name"
+    question: "Do you want to delete region: "
+    index:
+      header: "List of region"
+    new:
+      header: "Add new region"
+    edit:
+      header: "Edit region: "
     delete:
       header: "Confirm delete"

@@ -10,14 +10,31 @@
     <div id="collapseOne" class="panel-collapse collapsing">
       <div class="panel-body">
         <ul class="nav nav-list">
-          <li><%= link_to "Nhóm khoa phòng", nhomkhoaphongs_path %></li>
-          <li><%= link_to "Khoa/Phòng/Ban", "#" %></li>
-          <li><%= link_to "Khu vực làm việc", "#" %></li>
-          <li><%= link_to "Nhóm chức danh", "#" %></li>
-          <li><%= link_to "Chức danh", "#" %></li>
-          <li><%= link_to "Nhóm chức vụ", "#" %></li>
-          <li><%= link_to "Chức vụ", "#" %></li>
-          <li><%= link_to "Nhiệm vụ tại cơ quan", "#" %></li>
+          <li><%= link_to nhomkhoaphongs_path do %>
+                <%= t "category.slidebar.nhomkhoaphong" %>
+            <% end %>
+          </li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.khoaphong" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.khuvuclamviec" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomchucdanh" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.chucdanh" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomchucvu" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.chucvu" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhiemvu" %>
+            <% end %></li>
         </ul>
       </div>
     </div>
@@ -33,15 +50,34 @@
     <div id="collapseTwo" class="panel-collapse collapsing">
       <div class="panel-body">
         <ul class="nav nav-list">
-          <li><%= link_to "Quốc gia", quoctiches_path %></li>
-          <li><%= link_to "Vùng địa lý", "#" %></li>
-          <li><%= link_to "Tỉnh/Thành phố", "#" %></li>
-          <li><%= link_to "Quận/Huyện", "#" %></li>
-          <li><%= link_to "Phường/Xã", "#" %></li>
-          <li><%= link_to "Dân tộc", "#" %></li>
-          <li><%= link_to "Tôn giáo", "#" %></li>
-          <li><%= link_to "Bệnh viện", "#" %></li>
-          <li><%= link_to "Ngân hàng", "#" %></li>
+          <li><%= link_to quoctiches_path do %>
+                <%= t "category.slidebar.quoctich" %>
+            <% end %>
+          </li>
+          <li><%= link_to vungdialies_path do %>
+                <%= t "category.slidebar.vungdialy" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.tinhthanhpho" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.quanhuyen" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.phuongxa" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.dantoc" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.tongiao" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.benhvien" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nganhang" %>
+            <% end %></li>
         </ul>
       </div>
     </div>
@@ -57,16 +93,36 @@
     <div id="collapseThree" class="panel-collapse collapsing">
       <div class="panel-body">
         <ul class="nav nav-list">
-          <li><%= link_to "Nhóm bằng cấp", nhombangcaps_path %></li>
-          <li><%= link_to "Bằng cấp", "#" %></li>
-          <li><%= link_to "Học hàm", "#" %></li>
-          <li><%= link_to "Hệ đào tạo", "#" %></li>
-          <li><%= link_to "Trình độ giáo dục phổ thông", "#" %></li>
-          <li><%= link_to "Nhóm ngành đào tạo", "#" %></li>
-          <li><%= link_to "Chuyên ngành đào tạo", "#" %></li>
-          <li><%= link_to "Lý luận chính trị", "#" %></li>
-          <li><%= link_to "Quản lý nhà nước", "#" %></li>
-          <li><%= link_to "Nơi đào tạo", "#" %></li>
+          <li><%= link_to nhombangcaps_path do %>
+                <%= t "category.slidebar.nhombangcap" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.bangcap" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.hocham" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.hedaotao" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.trinhdophothong" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomnganhdaotao" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.chuyennganhdaotao" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.lyluanchinhtri" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.quanlynhanuoc" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.noidaotao" %>
+            <% end %></li>
         </ul>
       </div>
     </div>
@@ -82,13 +138,27 @@
     <div id="collapseFour" class="panel-collapse collapsing">
       <div class="panel-body">
         <ul class="nav nav-list">
-          <li><%= link_to "Loại ngạch", "#" %></li>
-          <li><%= link_to "Nhóm ngạch", "#" %></li>
-          <li><%= link_to "Mã ngạch", "#" %></li>
-          <li><%= link_to "Nhóm hợp đồng", "#" %></li>
-          <li><%= link_to "Hợp đồng", "#" %></li>
-          <li><%= link_to "Nhóm lý do nghỉ", "#" %></li>
-          <li><%= link_to "Lý do nghỉ", "#" %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.loaingach" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomngach" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.mangach" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomhopdong" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.hopdong" %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomlydo"  %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.lydovangmat"  %>
+            <% end %></li>
         </ul>
       </div>
     </div>
@@ -104,11 +174,21 @@
     <div id="collapseFive" class="panel-collapse collapsing">
       <div class="panel-body">
         <ul class="nav nav-list">
-          <li><%= link_to "Cấp khen thưởng", "#" %></li>
-          <li><%= link_to "Loại khen thưởng", "#" %></li>
-          <li><%= link_to "Nhóm khen thưởng", "#" %></li>
-          <li><%= link_to "Thi đua - khen thưởng", "#" %></li>
-          <li><%= link_to "Kỷ luật", "#" %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.capkhenthuong"  %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.loaikhenthuong"  %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.nhomkhenthuong"  %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.thiduakhenthuong"  %>
+            <% end %></li>
+          <li><%= link_to "#" do %>
+                <%= t "category.slidebar.kyluat"  %>
+            <% end %></li>
         </ul>
       </div>
     </div>

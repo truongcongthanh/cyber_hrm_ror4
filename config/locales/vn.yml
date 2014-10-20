@@ -28,6 +28,48 @@ vn:
   emulation: "Thi đua - Khen thưởng"
   # end left menu categories
 
+  category:
+    slidebar:
+      nhomkhoaphong: "Nhóm khoa/phòng"
+      khoaphong: "Khoa/phòng/ban"
+      khuvuclamviec: "Khu vực làm việc"
+      nhomchucdanh: "Nhóm chức danh"
+      chucdanh: "Chức danh"
+      nhomchucvu: "Nhóm chức vụ"
+      chucvu: "Chức vụ"
+      nhiemvu: "Nhiệm vụ"
+      quoctich: "Quốc gia"
+      vungdialy: "Vùng địa lý"
+      tinhthanhpho: "Tỉnh/thành phố"
+      quanhuyen: "Quận/Huyện"
+      phuongxa: "Phường/Xã"
+      dantoc: "Dân tộc"
+      tongiao: "Tôn"
+      benhvien: "Bệnh viện"
+      nganhang: "Ngân Hàng"
+      nhombangcap: "Nhóm bằng cấp"
+      bangcap: "Bằng cấp"
+      hocham: "Học hàm"
+      hedaotao: "Hệ đào tạo"
+      trinhdophothong: "Trình độ phổ thông"
+      nhomnganhdaotao: "Nhóm ngành đào tạo"
+      chuyennganhdaotao: "Chuyên ngành đào tạo"
+      lyluanchinhtri: "Lý luận chính trị"
+      quanlynhanuoc: "Quản lý nhà nước"
+      noidaotao: "Nơi đào tạo"
+      loaingach: "Loại ngạch"
+      nhomngach: "Nhóm ngạch"
+      mangach: "Mã ngạch"
+      nhomhopdong: "Nhóm hợp đồng"
+      hopdong: "Hợp đồng"
+      nhomlydo: "Nhóm lý do nghỉ"
+      lydovangmat: "Lý do nghỉ"
+      capkhenthuong: "Cấp khen thưởng"
+      loaikhenthuong: "Loại khen thưởng"
+      nhomkhenthuong: "Nhóm khen thưởng"
+      thiduakhenthuong: "Thi đua - Khen thưởng"
+      kyluat: "Kỷ luật"
+
   tinhthanhphos:
     ma: "Mã tỉnh/thành phố"
     ten: "Tên tỉnh/thành phố"
@@ -78,5 +120,18 @@ vn:
       header: "Thêm mới quốc gia"
     edit:
       header: "Cập nhật quốc gia: "
+    delete:
+      header: "Xác nhận xóa"
+
+  vungdialies:
+    ma: "Mã vùng"
+    ten: "Tên vùng đia lý"
+    question: "Bạn có muốn xóa vùng địa lý: "
+    index:
+      header: "Danh sách vùng địa lý"
+    new:
+      header: "Thêm mới vùng địa lý"
+    edit:
+      header: "Cập nhật vùng địa lý "
     delete:
       header: "Xác nhận xóa"
