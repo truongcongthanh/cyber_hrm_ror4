@@ -1,0 +1,36 @@
+<%= hidden_field_tag :direction, params[:direction] %>
+<%= hidden_field_tag :sort, params[:sort] %>
+
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "tinhthanhphos.ma" %></th>
+    <th><%= sortable "ten", t('tinhthanhphos.ten') %></th>
+    <th><%= sortable "vungdialy_id", t('tinhthanhphos.vungdialy_id') %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @tinhthanhphos.each do |tinhthanhpho| %>
+      <tr>
+        <td><%= tinhthanhpho.ma %></td>
+        <td><%= tinhthanhpho.ten %></td>
+        <td><%= tinhthanhpho.vungdialy.ten %></td>
+        <td><%= link_to edit_tinhthanhpho_path(tinhthanhpho), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to tinhthanhpho_delete_path(tinhthanhpho), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot id="table_paginate">
+  <tr class="text-center">
+    <td colspan="4">
+      <%= will_paginate @tinhthanhphos, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

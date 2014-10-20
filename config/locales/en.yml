@@ -76,6 +76,7 @@ en:
     ten: "Name of city"
     vungdialy_id: "Region"
     keysearch: "Ex: Hà Nội, Hồ Chí Minh..."
+    promt: "Choose region..."
     question: "Are you want to delete city: "
     index:
       title: "List of Cities"

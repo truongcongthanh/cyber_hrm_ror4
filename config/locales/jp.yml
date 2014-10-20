@@ -6,6 +6,7 @@ jp:
   back: "バック"
   edit: "編集"
   delete: "削除"
+  save: "保存"
   will_paginate:
     page_gap: "&hellip;"
     previous_label: "前の"
@@ -74,6 +75,7 @@ jp:
     ten: "名前"
     vungdialy_id: "地域"
     keysearch: "例えば: Hà Nội, Hồ Chí Minh..."
+    promt: "地域を選択..."
     question: "あなたはこの街を削除していますか: "
     index:
       header: "都市の一覧"

@@ -75,6 +75,7 @@ vn:
     ten: "Tên tỉnh/thành phố"
     vungdialy_id: "Vùng địa lý"
     keysearch: "Ví dụ: Hà Nội, Hồ Chí Minh..."
+    promt: "Chọn vùng địa lý..."
     question: "Bạn có muốn xóa thông tin tỉnh/thành phố: "
     index:
       header: "Danh sách Tỉnh/Thành phố"
