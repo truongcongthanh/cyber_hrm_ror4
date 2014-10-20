@@ -1,0 +1,2 @@
+module VungdialiesHelper
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ma: MyString
+  ten: MyString
+  vungdialy_id: 
+
+two:
+  ma: MyString
+  ten: MyString
+  vungdialy_id: 
