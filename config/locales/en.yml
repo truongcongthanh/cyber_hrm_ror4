@@ -59,7 +59,6 @@ en:
   nhomkhoaphongs:
     ma: "Code"
     ten: "Name"
-    diengiai: "Description"
     question: "Do you want to delete groups of department: "
     index:
       header: "List department group"
@@ -67,5 +66,18 @@ en:
       header: "Add new department group"
     edit:
       header: "Edit department group: "
+    delete:
+      header: "Confirm delete"
+
+  quoctiches:
+    ma: "Code"
+    ten: "Name"
+    question: "Do you want to delete national: "
+    index:
+      header: "List of national"
+    new:
+      header: "Add new national"
+    edit:
+      header: "Edit national: "
     delete:
       header: "Confirm delete"

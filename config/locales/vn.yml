@@ -58,7 +58,6 @@ vn:
   nhomkhoaphongs:
     ma: "Mã nhóm"
     ten: "Tên nhóm"
-    diengiai: "Mô tả"
     question: "Bạn có muốn xóa nhóm khoa/phòng: "
     index:
       header: "Danh sách nhóm khoa/phòng"
@@ -66,5 +65,18 @@ vn:
       header: "Thêm mới nhóm khoa/phòng"
     edit:
       header: "Cập nhật nhóm khoa/phòng: "
+    delete:
+      header: "Xác nhận xóa"
+
+  quoctiches:
+    ma: "Mã quốc gia"
+    ten: "Tên quốc gia"
+    question: "Bạn có muốn xóa quốc gia: "
+    index:
+      header: "Danh sách quốc gia"
+    new:
+      header: "Thêm mới quốc gia"
+    edit:
+      header: "Cập nhật quốc gia: "
     delete:
       header: "Xác nhận xóa"

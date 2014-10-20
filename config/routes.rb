@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :nhomkhoaphongs do
       get "delete"
     end
+    resources :quoctiches do
+      get "delete"
+    end
     root to: 'pages#home', :as => 'home'
     match '/about' => 'pages#about', :via => :get
     match '/signin' => 'pages#signin', :via => [:get, :post]

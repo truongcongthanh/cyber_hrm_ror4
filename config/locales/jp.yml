@@ -67,3 +67,16 @@ jp:
       header: "編集部門グループ： "
     delete:
       header: "削除の確認"
+
+  quoctiches:
+    ma: "コード"
+    ten: "名前"
+    question: "あなたが国家削除しますか："
+    index:
+      header: "国家のリスト"
+    new:
+      header: "新しい国家を追加"
+    edit:
+      header: "全国に編集します。"
+    delete:
+      header: "削除の確認"
