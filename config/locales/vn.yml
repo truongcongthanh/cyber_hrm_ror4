@@ -38,6 +38,7 @@ vn:
       header: "Danh sách Tỉnh/Thành phố"
     new:
       header: "Thêm mới Tỉnh/Thành phố"
+
   nhombangcaps:
       ma: "Mã nhóm"
       ten: "Tên nhóm"

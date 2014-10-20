@@ -24,12 +24,11 @@ function show_confirm_modal(path, question){
             type: "DELETE",
             url: path,
             success: function() {$('#confirm-modal').modal('hide');},
-            dataType: 'script',
+            dataType: 'script'
         });
         $('#confirm-modal').modal('hide');
     });
     $('#confirm-modal').modal('show');
-
 }
 
 $(function(){
