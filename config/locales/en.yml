@@ -34,22 +34,38 @@ en:
     ten: "Name of city"
     vungdialy_id: "Region"
     keysearch: "Ex: Hà Nội, Hồ Chí Minh..."
-    question: "Are you want to delete this city?"
+    question: "Are you want to delete city: "
     index:
       title: "List of Cities"
     new:
       header: "Add new City"
+    delete:
+      header: "Confirm delete"
 
   nhombangcaps:
-      ma: "Code"
-      ten: "Name"
-      diengiai: "Description"
-      question: "Are you want to delete this group certification?"
-      index:
-        header: "List of group certification"
-      new:
-        header: "Add new group certification"
-      edit:
-        header: "Edit group certification: "
-      delete:
-        header: "Confirm delete"
+    ma: "Code"
+    ten: "Name"
+    diengiai: "Description"
+    question: "Are you want to delete group certification: "
+    index:
+      header: "List of group certification"
+    new:
+      header: "Add new group certification"
+    edit:
+      header: "Edit group certification: "
+    delete:
+      header: "Confirm delete"
+
+  nhomkhoaphongs:
+    ma: "Code"
+    ten: "Name"
+    diengiai: "Description"
+    question: "Do you want to delete groups of department: "
+    index:
+      header: "List department group"
+    new:
+      header: "Add new department group"
+    edit:
+      header: "Edit department group: "
+    delete:
+      header: "Confirm delete"

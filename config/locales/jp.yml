@@ -33,22 +33,37 @@ jp:
     ten: "名前"
     vungdialy_id: "地域"
     keysearch: "例えば: Hà Nội, Hồ Chí Minh..."
-    question: "あなたはこの街を削除していますか？"
+    question: "あなたはこの街を削除していますか: "
     index:
       header: "都市の一覧"
     new:
       header: "新しい都市を追加"
+    delete:
+      header: "削除の確認"
 
   nhombangcaps:
     ma: "コード"
     ten: "名前"
     diengiai: "説明"
-    question: "あなたがこのグループの認証を削除してもされていますか？"
+    question: "あなたがこのグループの認証を削除してもされていますか: "
     index:
       header: "グループ認証のリスト"
     new:
       header: "新しいグループ認証を追加します。"
     edit:
       header: "編集グループ認証："
+    delete:
+      header: "削除の確認"
+
+  nhomkhoaphongs:
+    ma: "コード"
+    ten: "名前"
+    question: "あなたは、部門のグループを削除しますか："
+    index:
+      header: "リスト部門グループ"
+    new:
+      header: "新しい部門グループを追加"
+    edit:
+      header: "編集部門グループ： "
     delete:
       header: "削除の確認"

@@ -33,22 +33,38 @@ vn:
     ten: "Tên tỉnh/thành phố"
     vungdialy_id: "Vùng địa lý"
     keysearch: "Ví dụ: Hà Nội, Hồ Chí Minh..."
-    question: "Bạn có muốn xóa thông tin tỉnh/thành phố này không?"
+    question: "Bạn có muốn xóa thông tin tỉnh/thành phố: "
     index:
       header: "Danh sách Tỉnh/Thành phố"
     new:
       header: "Thêm mới Tỉnh/Thành phố"
+    delete:
+      header: "Xác nhận xóa"
 
   nhombangcaps:
-      ma: "Mã nhóm"
-      ten: "Tên nhóm"
-      diengiai: "Mô tả"
-      question: "Bạn có muốn xóa nhóm bằng cấp này hay không?"
-      index:
-        header: "Danh sách nhóm bằng cấp"
-      new:
-        header: "Thêm mới nhóm bầng cấp"
-      edit:
-        header: "Cập nhật nhóm bằng cấp: "
-      delete:
-        header: "Xác nhận xóa"
+    ma: "Mã nhóm"
+    ten: "Tên nhóm"
+    diengiai: "Mô tả"
+    question: "Bạn có muốn xóa nhóm bằng cấp: "
+    index:
+      header: "Danh sách nhóm bằng cấp"
+    new:
+      header: "Thêm mới nhóm bằng cấp"
+    edit:
+      header: "Cập nhật nhóm bằng cấp: "
+    delete:
+      header: "Xác nhận xóa"
+
+  nhomkhoaphongs:
+    ma: "Mã nhóm"
+    ten: "Tên nhóm"
+    diengiai: "Mô tả"
+    question: "Bạn có muốn xóa nhóm khoa/phòng: "
+    index:
+      header: "Danh sách nhóm khoa/phòng"
+    new:
+      header: "Thêm mới nhóm khoa/phòng"
+    edit:
+      header: "Cập nhật nhóm khoa/phòng: "
+    delete:
+      header: "Xác nhận xóa"
