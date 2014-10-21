@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad0d45aa-a019-43e1-bed3-67f9ab88b638" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/phuongxas/_delete.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/phuongxas/_edit.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/phuongxas/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/phuongxas/_index.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/phuongxas/_new.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/phuongxas/_save.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/quanhuyen.rb" afterPath="$PROJECT_DIR$/app/models/quanhuyen.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/quanhuyens_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/quanhuyens_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/tinhthanhpho.rb" afterPath="$PROJECT_DIR$/app/models/tinhthanhpho.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ad0d45aa-a019-43e1-bed3-67f9ab88b638" name="Default" comment="" />
     <ignored path="cyber_hrm_rorv4.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
