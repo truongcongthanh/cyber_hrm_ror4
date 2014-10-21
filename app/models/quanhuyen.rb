@@ -1,6 +1,6 @@
 class Quanhuyen < ActiveRecord::Base
   belongs_to :tinhthanhpho
-
+  has_many :phuongxas
   validates :ma, :presence => true,:length => {:minimum => 2}
   validates :ten, :presence => true, :length => {:minimum => 3}
   validates :tinhthanhpho_id, :presence => true

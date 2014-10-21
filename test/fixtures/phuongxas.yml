@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ma: MyString
+  ten: MyString
+  quanhuyen_id_id: 
+  viettat: MyString
+
+two:
+  ma: MyString
+  ten: MyString
+  quanhuyen_id_id: 
+  viettat: MyString

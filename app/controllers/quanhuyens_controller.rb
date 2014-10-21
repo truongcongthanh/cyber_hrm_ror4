@@ -42,7 +42,7 @@ class QuanhuyensController < ApplicationController
 
   private
   def quanhuyen_params
-    params.require(:tinhthanhpho).permit(:ma,:ten,:tinhthanhpho_id)
+    params.require(:phuongxa).permit(:ma,:ten,:tinhthanhpho_id)
   end
 
   def sort_column
