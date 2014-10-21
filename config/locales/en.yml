@@ -85,6 +85,20 @@ en:
     delete:
       header: "Confirm delete"
 
+  quanhuyens:
+    ma: "Code"
+    ten: "Name of district"
+    tinhthanhpho_id: "Cities"
+    keysearch: "Ex: Q.1, Q.3..."
+    promt: "Choose city..."
+    question: "Are you want to delete district: "
+    index:
+      header: "List of Districts"
+    new:
+      header: "Add new District"
+    delete:
+      header: "Confirm delete"
+
   nhombangcaps:
     ma: "Code"
     ten: "Name"

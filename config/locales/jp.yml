@@ -84,6 +84,20 @@ jp:
     delete:
       header: "削除の確認"
 
+  quanhuyens:
+    ma: "コード"
+    ten: "名前"
+    tinhthanhpho_id: "シティ"
+    keysearch: "例えば: Q.1, Q.3..."
+    promt: "都市を選択してください..."
+    question: "あなたは、地区を削除しますか: "
+    index:
+      header: "地区一覧"
+    new:
+      header: "新しい地区を追加"
+    delete:
+      header: "削除の確認"
+
   nhombangcaps:
     ma: "コード"
     ten: "名前"

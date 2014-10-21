@@ -4,6 +4,6 @@ $("ul.errors").html("")
 $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
 <% end %>
 <% else %>
-$(".tinhthanhpho-index").html("<%= escape_javascript(render 'index') %>")
-$("#tinhthanhpho-modal").modal("hide")
+$(".form-index").html("<%= escape_javascript(render 'index') %>")
+$("#form-modal").modal("hide")
 <% end %>

@@ -1,6 +1,6 @@
 $("ul.errors").html("")
-<% if @quoctich.errors.any? %>
-<% @quoctich.errors.full_messages.each do |message| %>
+<% if @quanhuyen.errors.any? %>
+<% @quanhuyen.errors.full_messages.each do |message| %>
 $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
 <% end %>
 <% else %>

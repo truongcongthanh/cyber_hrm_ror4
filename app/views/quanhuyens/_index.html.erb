@@ -6,7 +6,7 @@
   <tr>
     <th style="width: 150px;"><%= t "quanhuyens.ma" %></th>
     <th><%= sortable "ten", t('quanhuyens.ten') %></th>
-    <th><%= sortable "vungdialy_id", t('quanhuyens.tinhthanhpho_id') %></th>
+    <th><%= sortable "tinhthanhpho_id", t('quanhuyens.tinhthanhpho_id') %></th>
     <td style="width: 60px;">&nbsp;</td>
   </tr>
   </thead>
@@ -26,7 +26,7 @@
       </tr>
   <% end %>
   </tbody>
-  <tfoot id="table_paginate">
+  <tfoot>
   <tr class="text-center">
     <td colspan="4">
       <%= will_paginate @quanhuyens, renderer: BootstrapPagination::Rails %>

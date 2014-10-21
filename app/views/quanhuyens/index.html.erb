@@ -5,7 +5,8 @@
   <% end %>
   <div class="clearfix"></div>
 </div>
-<div class="new-quanhuyen"></div>
+<div class="new-form"></div>
+
 <%= form_tag quanhuyens_path, :method => 'get', :id => "ajax_search" do %>
     <div class="row">
       <div class="col-lg-6">
@@ -15,14 +16,14 @@
         </div>
       </div>
     </div>
-    <div class="row" id="search">
-      <div class="quanhuyen-index">
+    <div class="row">
+      <div class="form-index">
         <%= render "index" %>
       </div>
     </div>
 <% end %>
-<div id="quanhuyen-modal" class="modal fade">
+<div id="form-modal" class="modal fade">
   <div class="modal-dialog">
-    <div id="inner-quanhuyen-modal" class="modal-content"></div>
+    <div id="inner-form-modal" class="modal-content"></div>
   </div>
 </div>

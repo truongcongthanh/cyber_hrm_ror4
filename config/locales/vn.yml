@@ -84,6 +84,20 @@ vn:
     delete:
       header: "Xác nhận xóa"
 
+  quanhuyens:
+    ma: "Mã quận/huyện"
+    ten: "Tên quận/huyện"
+    tinhthanhpho_id: "Tỉnh/Thành phố"
+    keysearch: "Ví dụ: Q.1, Q.3..."
+    promt: "Chọn vùng địa lý..."
+    question: "Bạn có muốn xóa thông tin quận/huyện: "
+    index:
+      header: "Danh sách quận/huyện"
+    new:
+      header: "Thêm mới quận/huyện"
+    delete:
+      header: "Xác nhận xóa"
+
   nhombangcaps:
     ma: "Mã nhóm"
     ten: "Tên nhóm"

@@ -15,7 +15,7 @@
             <%= f.text_field :ten, class: "form-control" %>
           </div>
           <div class="form-group">
-            <label for="tinhthanhpho_id"><%= t "quanhuyens.tinhthanhpho_id" %></label>
+            <label for="tinhthanhpho_id"><%= t "quanhuyens.vungdialy_id" %></label>
             <%= f.select(:tinhthanhpho_id, Tinhthanhpho.all.collect { |c| [c.ten, c.id] }, {:prompt => t('quanhuyens.promt')}, {:class => "form-control"}) %>
           </div>
         </div>
