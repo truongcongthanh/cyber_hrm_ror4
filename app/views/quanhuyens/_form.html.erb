@@ -1,4 +1,4 @@
-<%= form_for @tinhthanhpho, :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
+<%= form_for @quanhuyen, :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
     <div class="modal-body">
       <div class="row">
         <ul class="errors"></ul>
@@ -7,16 +7,16 @@
         <div class="col-lg-3"></div>
         <div class="col-lg-6">
           <div class="form-group">
-            <label for="ma"><%= t "tinhthanhphos.ma" %></label>
+            <label for="ma"><%= t "quanhuyens.ma" %></label>
             <%= f.text_field :ma, class: "form-control" %>
           </div>
           <div class="form-group">
-            <label for="ten"><%= t "tinhthanhphos.ten" %></label>
+            <label for="ten"><%= t "quanhuyens.ten" %></label>
             <%= f.text_field :ten, class: "form-control" %>
           </div>
           <div class="form-group">
-            <label for="vungdialy_id"><%= t "tinhthanhphos.vungdialy_id" %></label>
-            <%= f.select(:vungdialy_id, Vungdialy.all.collect { |c| [c.ten, c.id] }, {:prompt => t('tinhthanhphos.promt')}, {:class => "form-control"}) %>
+            <label for="tinhthanhpho_id"><%= t "quanhuyens.tinhthanhpho_id" %></label>
+            <%= f.select(:tinhthanhpho_id, Tinhthanhpho.all.collect { |c| [c.ten, c.id] }, {:prompt => t('quanhuyens.promt')}, {:class => "form-control"}) %>
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
         <button type="submit" class="btn btn-primary">
           <i class="glyphicon glyphicon-floppy-save"></i> <%= t "save" %>
         </button>
-        <%= link_to tinhthanhphos_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+        <%= link_to quanhuyens_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
             <i class="glyphicon glyphicon-chevron-left"></i> <%= t "back" %>
         <% end %>
       </div>

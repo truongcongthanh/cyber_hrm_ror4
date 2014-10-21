@@ -32,7 +32,7 @@ class TinhthanhphosController < ApplicationController
   end
 
   def delete
-    @tinhthanhphos = Tinhthanhpho.find(params[:tinhthanhpho_id])
+    @tinhthanhpho = Tinhthanhpho.find(params[:tinhthanhpho_id])
   end
 
   def destroy

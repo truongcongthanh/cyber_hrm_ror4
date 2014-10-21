@@ -26,4 +26,8 @@ $(function () {
         $.get($("#ajax_search").attr("action"), $("#ajax_search").serialize(), null, "script");
         return false;
     });
+    $('#search').on("click", "th a" ,function () {
+        $.getScript(this.href);
+        return false;
+    });
 });

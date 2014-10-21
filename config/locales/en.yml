@@ -79,7 +79,7 @@ en:
     promt: "Choose region..."
     question: "Are you want to delete city: "
     index:
-      title: "List of Cities"
+      header: "List of Cities"
     new:
       header: "Add new City"
     delete:
