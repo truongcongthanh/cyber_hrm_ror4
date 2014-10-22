@@ -1,0 +1,33 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "chucvus.ma" %></th>
+    <th><%= t "chucvus.ten" %></th>
+    <th><%= t "chucvus.nhomchucvu_id" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @chucvus.each do |chucvu| %>
+      <tr>
+        <td><%= chucvu.ma %></td>
+        <td><%= chucvu.ten %></td>
+        <td><%= chucvu.nhomchucvu.ten %></td>
+        <td><%= link_to edit_chucvu_path(chucvu), remote: true, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to chucvu_delete_path(chucvu), remote: true, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="3">
+      <%= will_paginate @chucvus, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

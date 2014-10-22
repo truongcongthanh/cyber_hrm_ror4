@@ -246,6 +246,37 @@ en:
     delete:
       header: "Confirm delete"
 
+  nhomchucvus:
+    ma: "Code"
+    ten: "Group position"
+    diengiai: "Description"
+    question: "Are you want to delete group position: "
+    keysearch: "Enter group position..."
+    index:
+      header: "List group positions"
+    new:
+      header: "Add new group position"
+    edit:
+      header: "Edit group position: "
+    delete:
+      header: "Confirm delete"
+
+  chucvus:
+    ma: "Code"
+    ten: "Position"
+    nhomchucvu_id: "Group"
+    promt: "Choose group position..."
+    question: "Are you want to delete position: "
+    keysearch: "Enter position..."
+    index:
+      header: "List Positions"
+    new:
+      header: "Add new position"
+    edit:
+      header: "Edit position: "
+    delete:
+      header: "Confirm delete"
+
   bangcaps:
     ma: "Code"
     ten: "Certificate"
@@ -287,3 +318,4 @@ en:
       header: "Edit region: "
     delete:
       header: "Confirm delete"
+

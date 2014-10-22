@@ -1,0 +1,17 @@
+<div class="page-header">
+  <h1 class="pull-left"><%= t "nhomchucvus.index.header" %></h1>
+  <%= link_to new_nhomchucvu_path, remote: true, class: "btn btn-primary pull-right" do %>
+      <i class="glyphicon glyphicon-plus-sign"></i> <%= t('new') %>
+  <% end %>
+  <div class="clearfix"></div>
+</div>
+</div>
+<div class="new-form"></div>
+<div class="nhomchucvu-index">
+  <%= render "index" %>
+</div>
+<div id="form-modal" class="modal fade">
+  <div class="modal-dialog">
+    <div id="inner-form-modal" class="modal-content"></div>
+  </div>
+</div>

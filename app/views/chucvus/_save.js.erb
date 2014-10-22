@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @chucvu.errors.any? %>
+<% @chucvu.errors.full_messages.each do |message| %>
+$("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+<% end %>
+<% else %>
+$(".form-index").html("<%= escape_javascript(render(:partial => 'index')) %>");
+$("#form-modal").modal("hide")
+<% end %>

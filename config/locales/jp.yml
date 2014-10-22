@@ -250,6 +250,7 @@ jp:
     ma: "コード"
     ten: "タイトル"
     nhomchucdanh_id: "グループ"
+    promt: "グループタイトルを選択してください..."
     question: "タイトルを削除しますか: "
     keysearch: "タイトルを入力してください..."
     index:
@@ -284,5 +285,36 @@ jp:
       header: "新しい領域を追加します。"
     edit:
       header: "編集領域："
+    delete:
+      header: "削除の確認"
+
+  nhomchucvus:
+    ma: "コード"
+    ten: "グループ位置"
+    diengiai: "説明"
+    question: "あなたはグループ位置を削除したい: "
+    keysearch: "グループ位置を入力してください..."
+    index:
+      header: "リストグループ位置"
+    new:
+      header: "新しいグループの位置を追加します"
+    edit:
+      header: "編集グループ位置: "
+    delete:
+      header: "削除の確認"
+
+  chucvus:
+    ma: "コード"
+    ten: "ポジション"
+    nhomchucvu_id: "グループ"
+    promt: "グループ位置を選択してください..."
+    question: "あなたが位置を削除しますか: "
+    keysearch: "位置を入力してください..."
+    index:
+      header: "位置のリスト"
+    new:
+      header: "新しい位置を追加"
+    edit:
+      header: "編集位置: "
     delete:
       header: "削除の確認"

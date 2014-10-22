@@ -250,6 +250,7 @@ vn:
     ma: "Mã chức danh"
     ten: "Tên chức danh"
     nhomchucdanh_id: "Nhóm chức danh"
+    promt: "Chọn nhóm chức danh..."
     question: "Bạn có muốn xóa thông tin chức danh: "
     keysearch: "Nhập tên chức danh..."
     index:
@@ -284,5 +285,36 @@ vn:
       header: "Thêm mới vùng địa lý"
     edit:
       header: "Cập nhật vùng địa lý "
+    delete:
+      header: "Xác nhận xóa"
+
+  chucvus:
+    ma: "Mã chức vụ"
+    ten: "Tên chức vụ"
+    nhomchucvu_id: "Nhóm chức vụ"
+    promt: "Chọn nhóm chức vụ..."
+    question: "Bạn có muốn xóa thông tin chức vụ: "
+    keysearch: "Nhập nhóm chức vụ..."
+    index:
+      header: "Danh sách chức vụ"
+    new:
+      header: "Thêm mới chức vụ"
+    edit:
+      header: "Cập nhật thông tin nhóm chức vụ: "
+    delete:
+      header: "Xác nhận xóa"
+
+  nhomchucvus:
+    ma: "Mã nhóm"
+    ten: "Tên nhóm chức vụ"
+    diengiai: "Diễn giải"
+    question: "Bạn có muốn xóa thông tin nhóm chức vụ: "
+    keysearch: "Nhập tên nhóm chức vụ..."
+    index:
+      header: "Danh sách nhóm chức vụ"
+    new:
+      header: "Thêm mới nhóm chức vụ"
+    edit:
+      header: "Cập nhật thông tin nhóm chức vụ: "
     delete:
       header: "Xác nhận xóa"
