@@ -98,6 +98,21 @@ jp:
     delete:
       header: "削除の確認"
 
+  phuongxas:
+    ma: "コード"
+    ten: "名前"
+    quanhuyen_id: "地区"
+    tinhthanhpho: "シティ"
+    keysearch: "例えば: P.1, P.3..."
+    promt: "地区を選択してくださいt..."
+    question: "あなたが病棟を削除しますか: "
+    index:
+      header: "区のリスト"
+    new:
+      header: "新しいウォードを追加"
+    delete:
+      header: "削除の確認"
+
   nhombangcaps:
     ma: "コード"
     ten: "名前"

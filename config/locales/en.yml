@@ -88,7 +88,7 @@ en:
   quanhuyens:
     ma: "Code"
     ten: "Name of district"
-    tinhthanhpho_id: "Cities"
+    tinhthanhpho_id: "City"
     keysearch: "Ex: Q.1, Q.3..."
     promt: "Choose city..."
     question: "Are you want to delete district: "
@@ -96,6 +96,21 @@ en:
       header: "List of Districts"
     new:
       header: "Add new District"
+    delete:
+      header: "Confirm delete"
+
+  phuongxas:
+    ma: "Code"
+    ten: "Name of Ward"
+    quanhuyen_id: "District"
+    tinhthanhpho_id: "Cities"
+    keysearch: "Ex: P.1, P.3..."
+    promt: "Choose district..."
+    question: "Are you want to delete ward: "
+    index:
+      header: "List of Wards"
+    new:
+      header: "Add new Ward"
     delete:
       header: "Confirm delete"
 

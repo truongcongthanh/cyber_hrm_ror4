@@ -44,7 +44,7 @@ vn:
       quanhuyen: "Quận/Huyện"
       phuongxa: "Phường/Xã"
       dantoc: "Dân tộc"
-      tongiao: "Tôn"
+      tongiao: "Tôn giáo"
       benhvien: "Bệnh viện"
       nganhang: "Ngân Hàng"
       nhombangcap: "Nhóm bằng cấp"
@@ -95,6 +95,21 @@ vn:
       header: "Danh sách quận/huyện"
     new:
       header: "Thêm mới quận/huyện"
+    delete:
+      header: "Xác nhận xóa"
+
+  phuongxas:
+    ma: "Mã phường/xã"
+    ten: "Tên phường/xã"
+    quanhuyen_id: "Quận/Huyện"
+    tinhthanhpho: "Tỉnh/Thành phố"
+    keysearch: "Ví dụ: P.1, P.3..."
+    promt: "Chọn quận/huyên5..."
+    question: "Bạn có muốn xóa thông tin phường/xã: "
+    index:
+      header: "Danh sách phường/xã"
+    new:
+      header: "Thêm mới phường/xã"
     delete:
       header: "Xác nhận xóa"
 

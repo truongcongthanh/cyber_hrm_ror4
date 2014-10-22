@@ -6,7 +6,8 @@
   <tr>
     <th style="width: 150px;"><%= t "phuongxas.ma" %></th>
     <th><%= sortable "ten", t('phuongxas.ten') %></th>
-    <th><%= sortable "tinhthanhpho_id", t('phuongxas.tinhthanhpho_id') %></th>
+    <th><%= sortable "quanhuyen_id", t('phuongxas.quanhuyen_id') %></th>
+    <th><%= t('phuongxas.tinhthanhpho') %></th>
     <td style="width: 60px;">&nbsp;</td>
   </tr>
   </thead>
@@ -16,6 +17,7 @@
         <td><%= phuongxa.ma %></td>
         <td><%= phuongxa.ten %></td>
         <td><%= phuongxa.quanhuyen.ten %></td>
+        <td><%= phuongxa.quanhuyen.tinhthanhpho.ten %></td>
         <td><%= link_to edit_phuongxa_path(phuongxa), data: {remote: true}, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
