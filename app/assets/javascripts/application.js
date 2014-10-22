@@ -17,17 +17,16 @@
 //= require_tree .
 
 $(function () {
-    $(".form-index").on("click", ".pagination a", function () {
+    $(".form-index").on("click",".pagination a", function () {
         $.getScript(this.href);
         return false;
     });
-
+    $(".form-index").on("click","th a", function () {
+        $.getScript(this.href);
+        return false;
+    });
     $("#ajax_search input").keyup(function () {
         $.get($("#ajax_search").attr("action"), $("#ajax_search").serialize(), null, "script");
-        return false;
-    });
-    $('.form-index').on("click", "th a" ,function () {
-        $.getScript(this.href);
         return false;
     });
 });

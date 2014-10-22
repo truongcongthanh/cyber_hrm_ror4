@@ -21,6 +21,30 @@ Rails.application.routes.draw do
     resources :phuongxas do
       get "delete"
     end
+    resources :dantocs do
+      get "delete"
+    end
+    resources :tongiaos do
+      get "delete"
+    end
+    resources :benhviens do
+      get "delete"
+    end
+    resources :nganhangs do
+      get "delete"
+    end
+    resources :bangcaps do
+      get "delete"
+    end
+    resources :khoaphongs do
+      get "delete"
+    end
+    resources :nhomchucdanhs do
+      get "delete"
+    end
+    resources :chucdanhs do
+      get "delete"
+    end
     root to: 'pages#home', :as => 'home'
     match '/about' => 'pages#about', :via => :get
     match '/signin' => 'pages#signin', :via => [:get, :post]

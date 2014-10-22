@@ -1,0 +1,33 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "nganhangs.ma" %></th>
+    <th><%= t "nganhangs.ten" %></th>
+    <th><%= t "nganhangs.thongtin" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @nganhangs.each do |nganhang| %>
+      <tr>
+        <td><%= nganhang.ma %></td>
+        <td><%= nganhang.ten %></td>
+        <td><%= nganhang.thongtin %></td>
+        <td><%= link_to edit_nganhang_path(nganhang), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to nganhang_delete_path(nganhang), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="3">
+      <%= will_paginate @nganhangs, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

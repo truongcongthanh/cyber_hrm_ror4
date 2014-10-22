@@ -11,12 +11,74 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021095155) do
+ActiveRecord::Schema.define(version: 20141022065827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bangcaps", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.integer  "nhombangcap_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bangcaps", ["nhombangcap_id"], name: "index_bangcaps_on_nhombangcap_id", using: :btree
+
+  create_table "benhviens", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.string   "diachi"
+    t.string   "dienthoai"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chucdanhs", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.integer  "nhomchucdanh_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "chucdanhs", ["nhomchucdanh_id"], name: "index_chucdanhs_on_nhomchucdanh_id", using: :btree
+
+  create_table "dantocs", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "khoaphongs", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.integer  "nhomkhoaphong_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "khoaphongs", ["nhomkhoaphong_id"], name: "index_khoaphongs_on_nhomkhoaphong_id", using: :btree
+
+  create_table "nganhangs", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.text     "thongtin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "nhombangcaps", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.text     "diengiai"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "nhomchucdanhs", force: true do |t|
     t.string   "ma"
     t.string   "ten"
     t.text     "diengiai"
@@ -40,7 +102,7 @@ ActiveRecord::Schema.define(version: 20141021095155) do
     t.datetime "updated_at"
   end
 
-  add_index "phuongxas", ["quanhuyen_id_id"], name: "index_phuongxas_on_quanhuyen_id_id", using: :btree
+  add_index "phuongxas", ["quanhuyen_id"], name: "index_phuongxas_on_quanhuyen_id_id", using: :btree
 
   create_table "quanhuyens", force: true do |t|
     t.string   "ma"
@@ -68,6 +130,13 @@ ActiveRecord::Schema.define(version: 20141021095155) do
   end
 
   add_index "tinhthanhphos", ["vungdialy_id"], name: "index_tinhthanhphos_on_vungdialy_id", using: :btree
+
+  create_table "tongiaos", force: true do |t|
+    t.string   "ma"
+    t.string   "ten"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "vungdialies", force: true do |t|
     t.string   "ma"

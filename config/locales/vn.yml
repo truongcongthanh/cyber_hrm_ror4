@@ -140,6 +140,127 @@ vn:
     delete:
       header: "Xác nhận xóa"
 
+  dantocs:
+    ma: "Mã dân tộc"
+    ten: "Tên dân tộc"
+    question: "Bạn có muốn xóa thông tin dân tộc: "
+    keysearch: "Ví dụ: Hoa, Kinh, ..."
+    index:
+      header: "Danh sách dân tộc"
+    new:
+      header: "Thêm mới dân tộc"
+    edit:
+      header: "Cập nhật thông tin dân tộc: "
+    delete:
+      header: "Xác nhận xóa"
+
+  tongiaos:
+    ma: "Mã tôn giáo"
+    ten: "Tên tôn giáo"
+    question: "Bạn có muốn xóa thông tin tôn giáo: "
+    keysearch: "Ví dụ: Phật giáo, Thiên chúa giáo, ..."
+    index:
+      header: "Danh sách tôn giáo"
+    new:
+      header: "Thêm mới tôn giáo"
+    edit:
+      header: "Cập nhật thông tin tôn giáo: "
+    delete:
+      header: "Xác nhận xóa"
+
+  benhviens:
+    ma: "Mã bênh viện"
+    ten: "Tên bệnh viện"
+    diachi: "Địa chỉ"
+    dienthoai: "Điện thoại"
+    question: "Bạn có muốn xóa thông tin bệnh viện: "
+    keysearch: "Ví dụ: Thái Bình, Can Lộc, ..."
+    index:
+      header: "Danh sách bệnh viện"
+    new:
+      header: "Thêm mới bệnh viện"
+    edit:
+      header: "Cập nhật thông tin bệnh viện: "
+    delete:
+      header: "Xác nhận xóa"
+
+  nganhangs:
+    ma: "Mã ngân hàng"
+    ten: "Ngân hàng"
+    thongtin: "Thông tin ngân hàng"
+    question: "Bạn có muốn xóa thông tin ngân hàng: "
+    keysearch: "Ví dụ: Vietcombank, Vietinbank..."
+    index:
+      header: "Danh sách ngân hàng"
+    new:
+      header: "Thêm mới ngân hàng"
+    edit:
+      header: "Cập nhật thông tin ngân hàng: "
+    delete:
+      header: "Xác nhận xóa"
+
+  bangcaps:
+    ma: "Mã bằng cấp"
+    ten: "Tên bằng cấp"
+    nhombangcap_id: "Nhóm bằng cấp"
+    question: "Bạn có muốn xóa thông tin bằng cấp: "
+    promt: "Chọn nhóm bằng cấp..."
+    keysearch: "Ví dụ: Đại học, Cao đẳng..."
+    index:
+      header: "Danh sách bằng cấp"
+    new:
+      header: "Thêm mới bằng cấp"
+    edit:
+      header: "Cập nhật thông tin bằng cấp: "
+    delete:
+      header: "Xác nhận xóa"
+
+  khoaphongs:
+    ma: "Mã khoa/phòng"
+    ten: "Tên khoa/phòng"
+    nhomkhoaphong_id: "Nhóm khoa/phòng"
+    question: "Bạn có muốn xóa thông tin khoa/phòng: "
+    promt: "Chọn nhóm khoa/phòng..."
+    keysearch: "Nhập tên khoa/phòng..."
+    index:
+      header: "Danh sách khoa phòng"
+    new:
+      header: "Thêm mới khoa/phòng"
+    edit:
+      header: "Cập nhật thông tin khoa/phòng: "
+    delete:
+      header: "Xác nhận xóa"
+
+  nhomchucdanhs:
+    ma: "Mã nhóm"
+    ten: "Tên nhóm"
+    diengiai: "Diễn giải"
+    question: "Bạn có muốn xóa thông tin nhóm chức danh: "
+    keysearch: "Nhập tên nhóm chức danh..."
+    index:
+      header: "Danh sách nhóm chức danh"
+    new:
+      header: "Thêm mới nhóm chức danh"
+    edit:
+      header: "Cập nhật thông tin nhóm chức danh: "
+    delete:
+      header: "Xác nhận xóa"
+
+  chucdanhs:
+    ma: "Mã chức danh"
+    ten: "Tên chức danh"
+    nhomchucdanh_id: "Nhóm chức danh"
+    question: "Bạn có muốn xóa thông tin chức danh: "
+    keysearch: "Nhập tên chức danh..."
+    index:
+      header: "Danh sách chức danh"
+    new:
+      header: "Thêm mới chức danh"
+    edit:
+      header: "Cập nhật thông tin chức danh: "
+    delete:
+      header: "Xác nhận xóa"
+
   quoctiches:
     ma: "Mã quốc gia"
     ten: "Tên quốc gia"

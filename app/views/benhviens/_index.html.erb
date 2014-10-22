@@ -1,0 +1,35 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "benhviens.ma" %></th>
+    <th><%= t "benhviens.ten" %></th>
+    <th><%= t "benhviens.diachi" %></th>
+    <th><%= t "benhviens.dienthoai" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @benhviens.each do |benhvien| %>
+      <tr>
+        <td><%= benhvien.ma %></td>
+        <td><%= benhvien.ten %></td>
+        <td><%= benhvien.diachi %></td>
+        <td><%= benhvien.dienthoai %></td>
+        <td><%= link_to edit_benhvien_path(benhvien), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to benhvien_delete_path(benhvien), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="3">
+      <%= will_paginate @benhviens, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

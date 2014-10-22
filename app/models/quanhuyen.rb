@@ -12,12 +12,4 @@ class Quanhuyen < ActiveRecord::Base
       all
     end
   end
-  #
-  # def self.filter(filter)
-  #   if filter
-  #     where ('tinhthanhpho_id = filter')
-  #   else
-  #     all
-  #   end
-  # end
 end

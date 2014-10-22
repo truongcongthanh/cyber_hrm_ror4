@@ -1,0 +1,29 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "nhomchucdanhs.ma" %></th>
+    <th><%= t "nhomchucdanhs.ten" %></th>
+    <th><%= t "nhomchucdanhs.diengiai" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @nhomchucdanhs.each do |nhomchucdanh| %>
+      <tr>
+        <td><%= nhomchucdanh.ma %></td>
+        <td><%= nhomchucdanh.ten %></td>
+        <td><%= nhomchucdanh.diengiai %></td>
+        <td><%= link_to edit_nhomchucdanh_path(nhomchucdanh), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to nhomchucdanh_delete_path(nhomchucdanh), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr>
+  </tfoot>
+</table>

@@ -1,0 +1,31 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "dantocs.ma" %></th>
+    <th><%= t "dantocs.ten" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @dantocs.each do |dantoc| %>
+      <tr>
+        <td><%= dantoc.ma %></td>
+        <td><%= dantoc.ten %></td>
+        <td><%= link_to edit_dantoc_path(dantoc), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to dantoc_delete_path(dantoc), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="3">
+      <%= will_paginate @dantocs, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

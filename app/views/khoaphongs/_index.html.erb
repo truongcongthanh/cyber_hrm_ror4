@@ -1,0 +1,33 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "khoaphongs.ma" %></th>
+    <th><%= t "khoaphongs.ten" %></th>
+    <th><%= t "khoaphongs.nhomkhoaphong_id" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @khoaphongs.each do |khoaphong| %>
+      <tr>
+        <td><%= khoaphong.ma %></td>
+        <td><%= khoaphong.ten %></td>
+        <td><%= khoaphong.nhomkhoaphong.ten %></td>
+        <td><%= link_to edit_khoaphong_path(khoaphong), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to khoaphong_delete_path(khoaphong), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="3">
+      <%= will_paginate @khoaphongs, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>

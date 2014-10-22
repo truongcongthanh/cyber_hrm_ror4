@@ -140,6 +140,126 @@ jp:
     delete:
       header: "削除の確認"
 
+  dantocs:
+    ma: "コード"
+    ten: "名前"
+    question: "あなたはエスニック削除しますか: "
+    keysearch: "例えば: Hoa, Kinh..."
+    index:
+      header: "エスニック一覧"
+    new:
+      header: "エスニック新しい追加"
+    edit:
+      header: "編集部門グループ: "
+    delete:
+      header: "削除の確認"
+
+  tongiaos:
+    ma: "コード"
+    ten: "名前"
+    question: "あなたは宗教を削除しますか: "
+    keysearch: "例えば: Phật giáo, Thiên chúa giáo..."
+    index:
+      header: "宗教の一覧"
+    new:
+      header: "新興宗教を追加"
+    edit:
+      header: "編集宗教: "
+    delete:
+      header: "削除の確認"
+
+  benhviens:
+    ma: "コード"
+    ten: "病院"
+    diachi: "アドレス"
+    dienthoai: "電話"
+    question: "あなたが病院を削除しますか: "
+    keysearch: "例えば: Thái Bình, Can Lộc, ..."
+    index:
+        header: "病院一覧"
+    new:
+      header: "新しい病院を追加"
+    edit:
+      header: "編集病院の情報: "
+    delete:
+      header: "削除の確認"
+
+  nganhangs:
+    ma: "コード"
+    ten: "バンクス"
+    thongtin: "銀行の情報"
+    question: "あなたは、銀行の情報を削除したい: "
+    keysearch: "例えば: Vietcombank, Vietinbank..."
+    index:
+      header: "銀行のリスト"
+    new:
+      header: "新銀行を追加"
+    edit:
+      header: "編集銀行の情報: "
+    delete:
+      header: "削除の確認"
+
+  bangcaps:
+    ma: "コード"
+    ten: "証明書"
+    nhombangcap_id: "認定グループ"
+    question: "あなたが証明書を削除しますか: "
+    keysearch: "例えば: Đại học, Cao đẳng..."
+    promt: "認証グループを選択してください..."
+    index:
+      header: "証明書のリスト"
+    new:
+      header: "新しい証明書を追加します。"
+    edit:
+      header: "編集証明書: "
+    delete:
+      header: "削除の確認"
+
+  khoaphongs:
+    ma: "コード"
+    ten: "省"
+    nhomkhoaphong_id: "部署のグループ"
+    question: "あなたは、部門を削除しますか: "
+    promt: "部署のグループを選択してください..."
+    keysearch: "部署を入力してください..."
+    index:
+      header: "部門のリスト"
+    new:
+      header: "新しい部門を追加"
+    edit:
+      header: "編集部門の情報: "
+    delete:
+      header: "削除の確認"
+
+  nhomchucdanhs:
+    ma: "コード"
+    ten: "グループのタイトル"
+    diengiai: "説明"
+    question: "あなたはグループタイトルを削除したい: "
+    keysearch: "タイトルのグループを入力します..."
+    index:
+      header: "リスト]グループタイトル"
+    new:
+      header: "新しいグループのタイトルを追加します"
+    edit:
+      header: "編集グループのタイル: "
+    delete:
+      header: "削除の確認"
+
+  chucdanhs:
+    ma: "コード"
+    ten: "タイトル"
+    nhomchucdanh_id: "グループ"
+    question: "タイトルを削除しますか: "
+    keysearch: "タイトルを入力してください..."
+    index:
+      header: "リストタイトル"
+    new:
+      header: "新しいタイトルを追加します。"
+    edit:
+      header: "タイトル編集: "
+    delete:
+      header: "削除の確認"
 
   quoctiches:
     ma: "コード"

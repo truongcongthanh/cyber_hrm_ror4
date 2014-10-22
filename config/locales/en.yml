@@ -141,6 +141,126 @@ en:
     delete:
       header: "Confirm delete"
 
+  dantocs:
+    ma: "Code"
+    ten: "Name"
+    question: "Do you want to delete ethnic: "
+    keysearch: "Ex: Hoa, Kinh..."
+    index:
+      header: "List of Ethnic"
+    new:
+      header: "Add new ethnic"
+    edit:
+      header: "Edit ethnic: "
+    delete:
+      header: "Confirm delete"
+
+  tongiaos:
+    ma: "Code"
+    ten: "Name"
+    question: "Do you want to delete religion: "
+    keysearch: "Ex: Phật giáo, Thiên chúa giáo..."
+    index:
+      header: "List of religion"
+    new:
+      header: "Add new religion"
+    edit:
+      header: "Edit religion: "
+    delete:
+      header: "Confirm delete"
+
+  benhviens:
+    ma: "Code"
+    ten: "Hospital"
+    diachi: "Address"
+    dienthoai: "Telephone"
+    question: "Are you want to delete hospital: "
+    keysearch: "Ex: Thái Bình, Can Lộc, ..."
+    index:
+      header: "List of Hospitals"
+    new:
+      header: "Add new hospital"
+    edit:
+      header: "Edit hospital's information: "
+    delete:
+      header: "Confirm delete"
+
+  nganhangs:
+    ma: "Code"
+    ten: "Bank"
+    thongtin: "Bank's information"
+    question: "Are you want to delete bank's information: "
+    keysearch: "Ex: Vietcombank, Vietinbank..."
+    index:
+      header: "List of Banks"
+    new:
+      header: "Add new bank"
+    edit:
+      header: "Edit bank's information: "
+    delete:
+      header: "Confirm delete"
+
+  khoaphongs:
+    ma: "Code"
+    ten: "Department"
+    nhomkhoaphong_id: "Group of department"
+    question: "Are you want to delete department: "
+    promt: "Choose group of department..."
+    keysearch: "Enter department..."
+    index:
+      header: "List of Departments"
+    new:
+      header: "Add new department"
+    edit:
+      header: "Edit department's information: "
+    delete:
+      header: "Confirm delete"
+
+  nhomchucdanhs:
+    ma: "Code"
+    ten: "Group title"
+    diengiai: "Description"
+    question: "Are you want to delete group title: "
+    keysearch: "Enter group title..."
+    index:
+      header: "List group titles"
+    new:
+      header: "Add new group title"
+    edit:
+      header: "Edit group title: "
+    delete:
+      header: "Confirm delete"
+
+  chucdanhs:
+    ma: "Code"
+    ten: "Title"
+    nhomchucdanh_id: "Group"
+    question: "Are you want to delete title: "
+    keysearch: "Enter title..."
+    index:
+      header: "List Titles"
+    new:
+      header: "Add new title"
+    edit:
+      header: "Edit title: "
+    delete:
+      header: "Confirm delete"
+
+  bangcaps:
+    ma: "Code"
+    ten: "Certificate"
+    nhombangcap_id: "Certification group"
+    question: "Are you want to delete certificate: "
+    promt: "Choose Certification group..."
+    keysearch: "Ex: Đại học, Cao đẳng..."
+    index:
+      header: "List of Certificates"
+    new:
+      header: "Add new certificate"
+    edit:
+      header: "Edit certificate: "
+    delete:
+      header: "Confirm delete"
 
   quoctiches:
     ma: "Code"

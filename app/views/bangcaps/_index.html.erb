@@ -1,0 +1,33 @@
+<table class="table table-hover ta">
+  <thead>
+  <tr>
+    <th style="width: 150px;"><%= t "bangcaps.ma" %></th>
+    <th><%= t "bangcaps.ten" %></th>
+    <th><%= t "bangcaps.nhombangcap_id" %></th>
+    <td style="width: 60px;">&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @bangcaps.each do |bangcap| %>
+      <tr>
+        <td><%= bangcap.ma %></td>
+        <td><%= bangcap.ten %></td>
+        <td><%= bangcap.nhombangcap.ten %></td>
+        <td><%= link_to edit_bangcap_path(bangcap), data: {remote: true}, :title => t('edit') do %>
+              <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+          <%= link_to bangcap_delete_path(bangcap), data: {remote: true}, :title => t('delete') do %>
+              <i class="glyphicon glyphicon-trash"></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+  <tfoot>
+  <tr class="text-center">
+    <td colspan="3">
+      <%= will_paginate @bangcaps, renderer: BootstrapPagination::Rails %>
+    </td>
+  </tr>
+  </tfoot>
+</table>
