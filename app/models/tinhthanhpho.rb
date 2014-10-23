@@ -1,5 +1,8 @@
 class Tinhthanhpho < ActiveRecord::Base
+
   belongs_to :vungdialy
+  belongs_to :nhanvien
+
   has_many :quanhuyens
   validates :ma, :presence => true,:length => {:minimum => 2}
   validates :ten, :presence => true, :length => {:minimum => 3}

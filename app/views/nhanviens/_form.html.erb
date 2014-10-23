@@ -1,0 +1,90 @@
+<%= form_for @nhanvien, :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
+    <div class="modal-body">
+      <ul class="errors"></ul>
+      <div class="row">
+        <div class="col-xs-3 col-md-3 " align="center">
+          <img alt="User Pic" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=100" class="img-circle">
+        </div>
+        <div class=" col-md-9 col-lg-9 ">
+          <div class="form-group">
+            <div class="col-md-3">
+              <label for="ma"><%= t "nhanviens.eid" %></label>
+              <%= f.text_field :eid, class: "form-control" %>
+            </div>
+            <div class="col-md-4">
+              <label for="ten"><%= t "nhanviens.holot" %></label>
+              <%= f.text_field :holot, class: "form-control" %>
+            </div>
+            <div class="col-md-2">
+              <label for="thongtin"><%= t "nhanviens.ten" %></label>
+              <%= f.text_field :ten, class: "form-control" %>
+            </div>
+            <div class="col-md-3">
+              <label for="gioitinh"><%= t "nhanviens.gioitinh" %></label>
+              <%= f.select(:gioitinh, Gioitinh.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_gioitinh'}, {:class => 'form-control'}) %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-3">
+              <label for="ngaysinh"><%= t "nhanviens.ngaysinh" %></label>
+              <%= f.text_field :ngaysinh, class: "form-control" %>
+            </div>
+            <div class="col-md-2">
+              <label for="namsinh"><%= t "nhanviens.namsinh" %></label>
+              <%= f.text_field :namsinh, class: "form-control" %>
+            </div>
+            <div class="col-md-4">
+              <label for="tenkhac"><%= t "nhanviens.tenthuonggoi" %></label>
+              <%= f.text_field :tenkhac, class: "form-control" %>
+            </div>
+            <div class="col-md-3">
+              <label for="tinhtranghonnhan"><%= t "nhanviens.tinhtranghonnhan" %></label>
+              <%= f.select(:tinhtranghonnhan, Tinhtranghonnhan.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_honnhan'}, {:class => 'form-control'}) %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-4">
+              <label for="quoctich"><%= t "nhanviens.quoctich" %></label>
+              <%= f.select(:quoctich, Quoctich.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_quoctich'}, {:class => 'noisinh_tinh'}) %>
+            </div>
+            <div class="col-md-4">
+              <label for="dantoc"><%= t "nhanviens.dantoc" %></label>
+              <%= f.select(:dantoc, Dantoc.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_dantoc'}, {:class => 'form-control'}) %>
+            </div>
+            <div class="col-md-4">
+              <label for="tongiao"><%= t "nhanviens.tongiao" %></label>
+              <%= f.select(:tongiao, Tongiao.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_tongiao'}, {:class => 'form-control'}) %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end row -->
+      <div class="row">
+        <div class="form-group">
+          <div class="col-xs-12 col-md-12">
+            <div class="col-md-4">
+              <label for="noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
+              <%= f.collection_select(:noisinh_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: "nhanviens.promt_tinhthanhphos"} ,{class: "form-control"}) %>
+            </div>
+            <div class="col-md-4">
+              <label for="noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
+              <%= f.grouped_collection_select(:noisinh_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: "nhanviens.promt_quanhuyens"} ,{class: "form-control"}) %>
+            </div>
+            <div class="col-md-4">
+              <label for="noisinh_xa"><%= t "nhanviens.noisinh_xa" %></label>
+              <%= f.grouped_collection_select(:noisinh_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: "nhanviens.promt_phuongxas"} ,{class: "form-control"}) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--end modal-body -->
+    <!-- modal-footer -->
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary">
+        <i class="glyphicon glyphicon-floppy-save"></i> <%= t "save" %>
+      </button>
+      <%= link_to nhanviens_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+          <i class="glyphicon glyphicon-chevron-left"></i> <%= t "back" %>
+      <% end %>
+    </div><!-- end modal-footer -->
+<% end %>

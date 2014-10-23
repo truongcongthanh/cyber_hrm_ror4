@@ -51,7 +51,9 @@ Rails.application.routes.draw do
     resources :chucvus do
       get "delete"
     end
+    resources :nhanviens
     root to: 'pages#home', :as => 'home'
+    match '/javascripts/load_quanhuyen.js' => 'javascripts#load_quanhuyen.js', :via => :get
     match '/about' => 'pages#about', :via => :get
     match '/signin' => 'pages#signin', :via => [:get, :post]
     match '/danhmuc' => 'categories#index', :via => :get
