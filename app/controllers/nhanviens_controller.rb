@@ -11,6 +11,10 @@ class NhanviensController < ApplicationController
   end
 
   def edit
+    @tinhthanhphos = Tinhthanhpho.all
+    @quanhuyens = Quanhuyen.all
+    @phuongxas = Phuongxa.all
+
     @nhanvien = Nhanvien.find(params[:id])
   end
 
@@ -31,6 +35,10 @@ class NhanviensController < ApplicationController
   end
 
   def new
+    @tinhthanhphos = Tinhthanhpho.all
+    @quanhuyens = Quanhuyen.all
+    @phuongxas = Phuongxa.all
+
     @nhanvien = Nhanvien.new
 
     respond_to do |format|
