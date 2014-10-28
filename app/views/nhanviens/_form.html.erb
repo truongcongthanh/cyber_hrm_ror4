@@ -1,148 +1,209 @@
 <%= form_for @nhanvien, :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
     <div class="modal-body">
-      <ul class="errors"></ul>
-      <div class="row">
-        <div class="col-xs-3 col-md-3 " align="center">
-          <img alt="User Pic" src="/assets/new_user.jpg" class="img-circle">
-        </div>
-        <div class=" col-md-9 col-lg-9 ">
-          <div class="form-group">
-            <div class="col-md-3">
-              <label for="ma"><%= t "nhanviens.eid" %></label>
-              <%= f.text_field :eid, class: "form-control" %>
-            </div>
-            <div class="col-md-4">
-              <label for="ten"><%= t "nhanviens.holot" %></label>
-              <%= f.text_field :holot, class: "form-control" %>
-            </div>
-            <div class="col-md-2">
-              <label for="thongtin"><%= t "nhanviens.ten" %></label>
-              <%= f.text_field :ten, class: "form-control" %>
-            </div>
-            <div class="col-md-3">
-              <label for="gioitinh"><%= t "nhanviens.gioitinh" %></label>
-              <%= f.select(:gioitinh, Gioitinh.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_gioitinh'}, {:class => 'form-control'}) %>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-md-3">
-              <label for="ngaysinh"><%= t "nhanviens.ngaysinh" %></label>
-              <%= f.text_field :ngaysinh, class: "form-control" %>
-            </div>
-            <div class="col-md-2">
-              <label for="namsinh"><%= t "nhanviens.namsinh" %></label>
-              <%= f.text_field :namsinh, class: "form-control" %>
-            </div>
-            <div class="col-md-4">
-              <label for="tenkhac"><%= t "nhanviens.tenthuonggoi" %></label>
-              <%= f.text_field :tenkhac, class: "form-control" %>
-            </div>
-            <div class="col-md-3">
-              <label for="tinhtranghonnhan"><%= t "nhanviens.tinhtranghonnhan" %></label>
-              <%= f.select(:tinhtranghonnhan, Tinhtranghonnhan.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_honnhan'}, {:class => 'form-control'}) %>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-md-4">
-              <label for="quoctich"><%= t "nhanviens.quoctich" %></label>
-              <%= f.select(:quoctich, Quoctich.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_quoctich'}, {:class => 'form-control'}) %>
-            </div>
-            <div class="col-md-4">
-              <label for="dantoc"><%= t "nhanviens.dantoc" %></label>
-              <%= f.select(:dantoc, Dantoc.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_dantoc'}, {:class => 'form-control'}) %>
-            </div>
-            <div class="col-md-4">
-              <label for="tongiao"><%= t "nhanviens.tongiao" %></label>
-              <%= f.select(:tongiao, Tongiao.all.collect { |c| [c.ten, c.id] }, {:prompt => 'nhanviens.prompt_tongiao'}, {:class => 'form-control'}) %>
-            </div>
-          </div>
-        </div>
+    <ul class="errors"></ul>
+    <div class="row">
+      <div class="col-xs-3 col-md-3" align="center">
+        <img alt="User Pic" src="/assets/new_user.jpg" class="img-circle">
+        <button class="btn btn-default">
+          <i class="glyphicon glyphicon-upload"></i> Upload
+        </button>
       </div>
-      <!-- end row -->
-      <div class="row">
+      <div class=" col-md-9 col-lg-9 ">
         <div class="form-group">
-          <div class="col-xs-12 col-md-12">
-            <div class="col-md-4">
-              <label for="noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
-              <%= f.collection_select(:noisinh_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: "nhanviens.promt_tinhthanhphos"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-4">
-              <label for="noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
-              <%= f.grouped_collection_select(:noisinh_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: "nhanviens.promt_quanhuyens"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-4">
-              <label for="noisinh_xa"><%= t "nhanviens.noisinh_xa" %></label>
-              <%= f.grouped_collection_select(:noisinh_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: "nhanviens.promt_phuongxas"}, {class: "form-control"}) %>
-            </div>
+          <div class="col-md-3">
+            <label for="ma"><%= t "nhanviens.eid" %></label>
+            <%= f.text_field :eid, class: "form-control" %>
+          </div>
+          <div class="col-md-4">
+            <label for="ten"><%= t "nhanviens.holot" %></label>
+            <%= f.text_field :holot, class: "form-control" %>
+          </div>
+          <div class="col-md-2">
+            <label for="thongtin"><%= t "nhanviens.ten" %></label>
+            <%= f.text_field :ten, class: "form-control" %>
+          </div>
+          <div class="col-md-3">
+            <label for="gioitinh"><%= t "nhanviens.gioitinh" %></label>
+            <%= f.select(:gioitinh, Gioitinh.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_gioitinh')}, {:class => 'form-control'}) %>
           </div>
         </div>
-      </div>
-      <!-- end row -->
-      <div class="row">
         <div class="form-group">
-          <div class="col-xs-12 col-md-12">
-            <div class="col-md-4">
-              <label for="nguyenquan_tinh"><%= t "nhanviens.nguyenquan_tinh" %></label>
-              <%= f.collection_select(:nguyenquan_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: "nhanviens.promt_tinhthanhphos"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-4">
-              <label for="nguyenquan_huyen"><%= t "nhanviens.nguyenquan_huyen" %></label>
-              <%= f.grouped_collection_select(:nguyenquan_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: "nhanviens.promt_quanhuyens"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-4">
-              <label for="nguyenquan_xa"><%= t "nhanviens.nguyenquan_xa" %></label>
-              <%= f.grouped_collection_select(:nguyenquan_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: "nhanviens.promt_phuongxas"}, {class: "form-control"}) %>
-            </div>
+          <div class="col-md-3">
+            <label for="ngaysinh"><%= t "nhanviens.ngaysinh" %></label>
+            <%= f.text_field :ngaysinh, class: "form-control" %>
+          </div>
+          <div class="col-md-2">
+            <label for="namsinh"><%= t "nhanviens.namsinh" %></label>
+            <%= f.text_field :namsinh, class: "form-control" %>
+          </div>
+          <div class="col-md-4">
+            <label for="tenkhac"><%= t "nhanviens.tenthuonggoi" %></label>
+            <%= f.text_field :tenkhac, class: "form-control" %>
+          </div>
+          <div class="col-md-3">
+            <label for="tinhtranghonnhan"><%= t "nhanviens.tinhtranghonnhan" %></label>
+            <%= f.select(:tinhtranghonnhan, Tinhtranghonnhan.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_honnhan')}, {:class => 'form-control'}) %>
           </div>
         </div>
-      </div>
-      <!-- end row -->
-      <div class="row">
         <div class="form-group">
-          <div class="col-xs-12 col-md-12">
-            <div class="col-md-3">
-              <label for="thuongtru_duong"><%= t "nhanviens.thuongtru_duong" %></label>
-              <%= f.text_field :thuongtru_duong, :class => 'form-control' %>
-            </div>
-            <div class="col-md-3">
-              <label for="nguyenquan_tinh"><%= t "nhanviens.thuongtru_tinh" %></label>
-              <%= f.collection_select(:thuongtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: "nhanviens.promt_tinhthanhphos"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-3">
-              <label for="nguyenquan_huyen"><%= t "nhanviens.thuongtru_huyen" %></label>
-              <%= f.grouped_collection_select(:thuongtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: "nhanviens.promt_quanhuyens"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-3">
-              <label for="nguyenquan_xa"><%= t "nhanviens.thuongtru_xa" %></label>
-              <%= f.grouped_collection_select(:thuongtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: "nhanviens.promt_phuongxas"}, {class: "form-control"}) %>
-            </div>
+          <div class="col-md-4">
+            <label for="quoctich"><%= t "nhanviens.quoctich" %></label>
+            <%= f.select(:quoctich, Quoctich.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_quoctich')}, {:class => 'form-control'}) %>
+          </div>
+          <div class="col-md-4">
+            <label for="dantoc"><%= t "nhanviens.dantoc" %></label>
+            <%= f.select(:dantoc, Dantoc.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_dantoc')}, {:class => 'form-control'}) %>
+          </div>
+          <div class="col-md-4">
+            <label for="tongiao"><%= t "nhanviens.tongiao" %></label>
+            <%= f.select(:tongiao, Tongiao.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_tongiao')}, {:class => 'form-control'}) %>
           </div>
         </div>
       </div>
-      <!-- end row -->
-      <div class="row">
-        <div class="form-group">
-          <div class="col-xs-12 col-md-12">
-            <div class="col-md-3">
-              <label for="tamtru_duong"><%= t "nhanviens.tamtru_duong" %></label>
-              <%= f.text_field :tamtru_duong, :class => 'form-control' %>
-            </div>
-            <div class="col-md-3">
-              <label for="tamtru_tinh"><%= t "nhanviens.tamtru_tinh" %></label>
-              <%= f.collection_select(:tamtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: "nhanviens.promt_tinhthanhphos"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-3">
-              <label for="tamtru_huyen"><%= t "nhanviens.tamtru_huyen" %></label>
-              <%= f.grouped_collection_select(:tamtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: "nhanviens.promt_quanhuyens"}, {class: "form-control"}) %>
-            </div>
-            <div class="col-md-3">
-              <label for="tamtru_xa"><%= t "nhanviens.tamtru_xa" %></label>
-              <%= f.grouped_collection_select(:tamtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: "nhanviens.promt_phuongxas"}, {class: "form-control"}) %>
-            </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-4">
+            <label for="noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
+            <%= f.collection_select(:noisinh_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-4">
+            <label for="noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
+            <%= f.grouped_collection_select(:noisinh_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-4">
+            <label for="noisinh_xa"><%= t "nhanviens.noisinh_xa" %></label>
+            <%= f.grouped_collection_select(:noisinh_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
           </div>
         </div>
       </div>
-      <!-- end row -->
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-4">
+            <label for="nguyenquan_tinh"><%= t "nhanviens.nguyenquan_tinh" %></label>
+            <%= f.collection_select(:nguyenquan_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-4">
+            <label for="nguyenquan_huyen"><%= t "nhanviens.nguyenquan_huyen" %></label>
+            <%= f.grouped_collection_select(:nguyenquan_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-4">
+            <label for="nguyenquan_xa"><%= t "nhanviens.nguyenquan_xa" %></label>
+            <%= f.grouped_collection_select(:nguyenquan_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-3">
+            <label for="thuongtru_duong"><%= t "nhanviens.thuongtru_duong" %></label>
+            <%= f.text_field :thuongtru_duong, :class => 'form-control' %>
+          </div>
+          <div class="col-md-3">
+            <label for="nguyenquan_tinh"><%= t "nhanviens.thuongtru_tinh" %></label>
+            <%= f.collection_select(:thuongtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-3">
+            <label for="nguyenquan_huyen"><%= t "nhanviens.thuongtru_huyen" %></label>
+            <%= f.grouped_collection_select(:thuongtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-3">
+            <label for="nguyenquan_xa"><%= t "nhanviens.thuongtru_xa" %></label>
+            <%= f.grouped_collection_select(:thuongtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-3">
+            <label for="tamtru_duong"><%= t "nhanviens.tamtru_duong" %></label>
+            <%= f.text_field :tamtru_duong, :class => 'form-control' %>
+          </div>
+          <div class="col-md-3">
+            <label for="tamtru_tinh"><%= t "nhanviens.tamtru_tinh" %></label>
+            <%= f.collection_select(:tamtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {prompt: t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-3">
+            <label for="tamtru_huyen"><%= t "nhanviens.tamtru_huyen" %></label>
+            <%= f.grouped_collection_select(:tamtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {prompt: t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+          </div>
+          <div class="col-md-3">
+            <label for="tamtru_xa"><%= t "nhanviens.tamtru_xa" %></label>
+            <%= f.grouped_collection_select(:tamtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {prompt: t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-3">
+            <label for="dienthoai"><%= t "nhanviens.dienthoai" %></label>
+            <%= f.text_field :dienthoai, :class => 'form-control' %>
+          </div>
+          <div class="col-md-3">
+            <label for="didong"><%= t "nhanviens.didong" %></label>
+            <%= f.text_field :didong, :class => 'form-control' %>
+          </div>
+          <div class="col-md-6">
+            <label for="email"><%= t "nhanviens.email" %></label>
+            <%= f.text_field :email, :class => 'form-control' %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-3">
+            <label for="socmnd"><%= t "nhanviens.socmnd" %></label>
+            <%= f.text_field :socmnd, :class => 'form-control' %>
+          </div>
+          <div class="col-md-3">
+            <label for="ngaycapcmnd"><%= t "nhanviens.ngaycapcmnd" %></label>
+            <%= f.text_field :ngaycapcmnd, :class => 'form-control' %>
+          </div>
+          <div class="col-md-6">
+            <label for="noicapcmnd"><%= t "nhanviens.noicapcmnd" %></label>
+            <%= f.select(:noicapcmnd, Tinhthanhpho.all.collect { |c| [c.ten, c.id] }, {:prompt => t("nhanviens.prompt_tinhthanhphos")}, {:class => 'form-control'}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+    <div class="row">
+      <div class="form-group">
+        <div class="col-xs-12 col-md-12">
+          <div class="col-md-3">
+            <label for="masothue"><%= t "nhanviens.masothue" %></label>
+            <%= f.text_field :masothue, :class => 'form-control' %>
+          </div>
+          <div class="col-md-3">
+            <label for="taikhoannganhang"><%= t "nhanviens.taikhoannganhang" %></label>
+            <%= f.text_field :taikhoannganhang, :class => 'form-control' %>
+          </div>
+          <div class="col-md-6">
+            <label for="nganhang"><%= t "nhanviens.nganhang" %></label>
+            <%= f.select(:nganhang, Nganhang.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_nganhang')}, {:class => 'form-control'}) %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end row -->
+
     </div>
     <!--end modal-body -->
     <!-- modal-footer -->
@@ -156,3 +217,103 @@
     </div>
     <!-- end modal-footer -->
 <% end %>
+
+<script>
+    jQuery(function () {
+        var noisinh_huyen = $('#nhanvien_noisinh_huyen').html();
+        $('#nhanvien_noisinh_tinh').change( function () {
+            var escaped_noisinh_tinh, noisinh_tinh, options_noisinh_huyen;
+            noisinh_tinh = $('#nhanvien_noisinh_tinh :selected').text();
+            escaped_noisinh_tinh = noisinh_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_noisinh_huyen = $(noisinh_huyen).filter("optgroup[label='" + escaped_noisinh_tinh + "']").html();
+            if (options_noisinh_huyen)
+                $('#nhanvien_noisinh_huyen').html(options_noisinh_huyen);
+            else
+                $('#nhanvien_noisinh_huyen').empty();
+        });
+
+        var noisinh_xa = $('#nhanvien_noisinh_xa').html();
+        $('#nhanvien_noisinh_huyen').change( function () {
+            var escaped_noisinh_huyen, noisinh_huyen, options_noisinh_xa;
+            noisinh_huyen = $('#nhanvien_noisinh_huyen :selected').text();
+            escaped_noisinh_huyen = noisinh_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_noisinh_xa = $(noisinh_xa).filter("optgroup[label='" + escaped_noisinh_huyen + "']").html();
+            if (options_noisinh_xa)
+                $('#nhanvien_noisinh_xa').html(options_noisinh_xa);
+            else
+                $('#nhanvien_noisinh_xa').empty();
+        });
+
+        var nguyenquan_huyen = $('#nhanvien_nguyenquan_huyen').html();
+        $('#nhanvien_nguyenquan_tinh').change( function () {
+            var escaped_nguyenquan_tinh, nguyenquan_tinh, options_nguyenquan_huyen;
+            nguyenquan_tinh = $('#nhanvien_nguyenquan_tinh :selected').text();
+            escaped_nguyenquan_tinh = nguyenquan_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_nguyenquan_huyen = $(nguyenquan_huyen).filter("optgroup[label='" + escaped_nguyenquan_tinh + "']").html();
+            if (options_nguyenquan_huyen)
+                $('#nhanvien_nguyenquan_huyen').html(options_nguyenquan_huyen);
+            else
+                $('#nhanvien_nguyenquan_huyen').empty();
+        });
+
+        var nguyenquan_xa = $('#nhanvien_nguyenquan_xa').html();
+        $('#nhanvien_nguyenquan_huyen').change( function () {
+            var escaped_nguyenquan_huyen, nguyenquan_huyen, options_nguyenquan_xa;
+            nguyenquan_huyen = $('#nhanvien_nguyenquan_huyen :selected').text();
+            escaped_nguyenquan_huyen = nguyenquan_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_nguyenquan_xa = $(nguyenquan_xa).filter("optgroup[label='" + escaped_nguyenquan_huyen + "']").html();
+            if (options_nguyenquan_xa)
+                $('#nhanvien_nguyenquan_xa').html(options_nguyenquan_xa);
+            else
+                $('#nhanvien_nguyenquan_xa').empty();
+        });
+
+        var thuongtru_huyen = $('#nhanvien_thuongtru_huyen').html();
+        $('#nhanvien_thuongtru_tinh').change( function () {
+            var escaped_thuongtru_tinh, thuongtru_tinh, options_thuongtru_huyen;
+            thuongtru_tinh = $('#nhanvien_thuongtru_tinh :selected').text();
+            escaped_thuongtru_tinh = thuongtru_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_thuongtru_huyen = $(thuongtru_huyen).filter("optgroup[label='" + escaped_thuongtru_tinh + "']").html();
+            if (options_thuongtru_huyen)
+                $('#nhanvien_thuongtru_huyen').html(options_thuongtru_huyen);
+            else
+                $('#nhanvien_thuongtru_huyen').empty();
+        });
+
+        var thuongtru_xa = $('#nhanvien_thuongtru_xa').html();
+        $('#nhanvien_thuongtru_huyen').change( function () {
+            var escaped_thuongtru_huyen, thuongtru_huyen, options_thuongtru_xa;
+            thuongtru_huyen = $('#nhanvien_thuongtru_huyen :selected').text();
+            escaped_thuongtru_huyen = thuongtru_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_thuongtru_xa = $(thuongtru_xa).filter("optgroup[label='" + escaped_thuongtru_huyen + "']").html();
+            if (options_thuongtru_xa)
+                $('#nhanvien_thuongtru_xa').html(options_thuongtru_xa);
+            else
+                $('#nhanvien_thuongtru_xa').empty();
+        });
+
+        var tamtru_huyen = $('#nhanvien_tamtru_huyen').html();
+        $('#nhanvien_tamtru_tinh').change( function () {
+            var escaped_tamtru_tinh, tamtru_tinh, options_tamtru_huyen;
+            tamtru_tinh = $('#nhanvien_tamtru_tinh :selected').text();
+            escaped_tamtru_tinh = tamtru_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_tamtru_huyen = $(tamtru_huyen).filter("optgroup[label='" + escaped_tamtru_tinh + "']").html();
+            if (options_tamtru_huyen)
+                $('#nhanvien_tamtru_huyen').html(options_tamtru_huyen);
+            else
+                $('#nhanvien_tamtru_huyen').empty();
+        });
+
+        var tamtru_xa = $('#nhanvien_tamtru_xa').html();
+        $('#nhanvien_tamtru_huyen').change( function () {
+            var escaped_tamtru_huyen, tamtru_huyen, options_tamtru_xa;
+            tamtru_huyen = $('#nhanvien_tamtru_huyen :selected').text();
+            escaped_tamtru_huyen = tamtru_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
+            options_tamtru_xa = $(tamtru_xa).filter("optgroup[label='" + escaped_tamtru_huyen + "']").html();
+            if (options_tamtru_xa)
+                $('#nhanvien_tamtru_xa').html(options_tamtru_xa);
+            else
+                $('#nhanvien_tamtru_xa').empty();
+        });
+    });
+</script>

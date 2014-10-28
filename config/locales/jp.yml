@@ -318,3 +318,53 @@ jp:
       header: "編集位置: "
     delete:
       header: "削除の確認"
+
+  nhanviens:
+    index:
+      header: 従業員のリスト
+    edit:
+      header: 更新従業員の情報
+    keysearch: 従業員の名前を入力します
+    eid: E.I.D
+    holot: 彼ら
+    ten: 名前
+    gioitinh: 性別
+    prompt_gioitinh: 選択してください性別
+    ngaysinh: 生まれた日
+    namsinh: 生まれた年
+    tenthuonggoi: 他の名前
+    tinhtranghonnhan: 結婚
+    prompt_honnhan: セレクト夫婦
+    quoctich: 国籍
+    prompt_quoctich: 国家選択
+    dantoc: 人々
+    prompt_dantoc: エスニック選択
+    tongiao: 宗教
+    prompt_tongiao: セレクト宗教
+    prompt_tinhthanhphos: 地域を選択
+    prompt_quanhuyens: セレクト地区
+    prompt_phuongxas: セレクト病棟
+    noisinh_tinh: 生まれの場所（市）
+    noisinh_huyen: 地区
+    noisinh_xa: ウォード
+    nguyenquan_tinh: ネイティブ土地（市）
+    nguyenquan_huyen: 地区
+    nguyenquan_xa: ウォード
+    thuongtru_duong: 本籍地
+    thuongtru_tinh: シティ
+    thuongtru_huyen: 地区
+    thuongtru_xa: ウォード
+    tamtru_duong: 一時アドレス
+    tamtru_tinh: シティ
+    tamtru_huyen: 地区
+    tamtru_xa: ウォード
+    dienthoai: 電話
+    didong: モビール
+    email: Email
+    socmnd: 番号.
+    ngaycapcmnd: 賄うの日
+    noicapcmnd: 賄うの場所
+    masothue: 税法
+    taikhoannganhang: 銀行口座
+    nganhang: 銀行
+    prompt_nganhang: バンクを選択

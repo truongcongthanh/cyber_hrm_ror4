@@ -76,7 +76,7 @@ en:
     ten: "Name of city"
     vungdialy_id: "Region"
     keysearch: "Ex: Hà Nội, Hồ Chí Minh..."
-    promt: "Choose region..."
+    promt: "Select region..."
     question: "Are you want to delete city: "
     index:
       header: "List of Cities"
@@ -90,7 +90,7 @@ en:
     ten: "Name of district"
     tinhthanhpho_id: "City"
     keysearch: "Ex: Q.1, Q.3..."
-    promt: "Choose city..."
+    promt: "Select city..."
     question: "Are you want to delete district: "
     index:
       header: "List of Districts"
@@ -105,7 +105,7 @@ en:
     quanhuyen_id: "District"
     tinhthanhpho_id: "Cities"
     keysearch: "Ex: P.1, P.3..."
-    promt: "Choose district..."
+    promt: "Select district..."
     question: "Are you want to delete ward: "
     index:
       header: "List of Wards"
@@ -205,7 +205,7 @@ en:
     ten: "Department"
     nhomkhoaphong_id: "Group of department"
     question: "Are you want to delete department: "
-    promt: "Choose group of department..."
+    promt: "Select group of department..."
     keysearch: "Enter department..."
     index:
       header: "List of Departments"
@@ -265,7 +265,7 @@ en:
     ma: "Code"
     ten: "Position"
     nhomchucvu_id: "Group"
-    promt: "Choose group position..."
+    promt: "Select group position..."
     question: "Are you want to delete position: "
     keysearch: "Enter position..."
     index:
@@ -282,7 +282,7 @@ en:
     ten: "Certificate"
     nhombangcap_id: "Certification group"
     question: "Are you want to delete certificate: "
-    promt: "Choose Certification group..."
+    promt: "Select Certification group..."
     keysearch: "Ex: Đại học, Cao đẳng..."
     index:
       header: "List of Certificates"
@@ -319,3 +319,52 @@ en:
     delete:
       header: "Confirm delete"
 
+  nhanviens:
+    index:
+      header: List of employees
+    edit:
+      header: Update employee's information
+    keysearch: Enter name of employee
+    eid: E.I.D
+    holot: Lastname
+    ten: Firstname
+    gioitinh: Gender
+    prompt_gioitinh: Select gender
+    ngaysinh: Date of born
+    namsinh: Year of born
+    tenthuonggoi: Other name
+    tinhtranghonnhan: Marriage
+    prompt_honnhan: Select marital
+    quoctich: Nationality
+    prompt_quoctich: Select national
+    dantoc: Ethenic
+    prompt_dantoc: Select ethnic
+    tongiao: Religion
+    prompt_tongiao: Select religion
+    prompt_tinhthanhphos: Select city
+    prompt_quanhuyens: Select district
+    prompt_phuongxas: Select ward
+    noisinh_tinh: Place of born (City)
+    noisinh_huyen: District
+    noisinh_xa: Ward
+    nguyenquan_tinh: Native land (City)
+    nguyenquan_huyen: District
+    nguyenquan_xa: Ward
+    thuongtru_duong: Permanent Address
+    thuongtru_tinh: City
+    thuongtru_huyen: District
+    thuongtru_xa: Ward
+    tamtru_duong: Temporary address
+    tamtru_tinh: City
+    tamtru_huyen: District
+    tamtru_xa: Ward
+    dienthoai: Telephone
+    didong: Mobile
+    email: Email
+    socmnd: ID No.
+    ngaycapcmnd: Date of purvey
+    noicapcmnd: Place of purvet
+    masothue: Tax code
+    taikhoannganhang: Bank accounts No.
+    nganhang: Bank
+    prompt_nganhang: Select a bank

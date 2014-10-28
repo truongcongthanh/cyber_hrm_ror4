@@ -318,3 +318,53 @@ vn:
       header: "Cập nhật thông tin nhóm chức vụ: "
     delete:
       header: "Xác nhận xóa"
+
+  nhanviens:
+    index:
+      header: Danh sách nhân viên
+    edit:
+      header: Cập nhật thông tin nhân viên
+    keysearch: Nhập họ, tên nhân viên
+    eid: Mã nhân viên
+    holot: Họ, lót
+    ten: Tên
+    gioitinh: Giới tính
+    prompt_gioitinh: Chọn giới tính
+    ngaysinh: Ngày sinh
+    namsinh: Năm sinh
+    tenthuonggoi: Tên thường gọi
+    tinhtranghonnhan: Hôn nhân
+    prompt_honnhan: Chọn tình trạng
+    quoctich: Quốc tịch
+    prompt_quoctich: Chọn quốc tịch
+    dantoc: Dân tộc
+    prompt_dantoc: Chọn dân tộc
+    tongiao: Tôn giáo
+    prompt_tongiao: Chọn tôn giáo
+    prompt_tinhthanhphos: Chọn tỉnh/thành phố
+    prompt_quanhuyens: Chọn quận/huyện
+    prompt_phuongxas: Chọn phường/xã
+    noisinh_tinh: Nơi sinh (tỉnh/thành phố)
+    noisinh_huyen: Quận/Huyện
+    noisinh_xa: Phường/Xã
+    nguyenquan_tinh: Nguyên quán (tỉnh/thành phố)
+    nguyenquan_huyen: Quận/Huyện
+    nguyenquan_xa: Phường/Xã
+    thuongtru_duong: Địa chỉ thường trú
+    thuongtru_tinh: Tỉnh/Thành phố
+    thuongtru_huyen: Quận/Huyện
+    thuongtru_xa: Phường/Xã
+    tamtru_duong: Địa chỉ tạm trú
+    tamtru_tinh: Tỉnh/Thành phố
+    tamtru_huyen: Quận/Huyện
+    tamtru_xa: Phường/Xã
+    dienthoai: Điện thoại liên lạc
+    didong: Di động
+    email: Email
+    socmnd: Số CMND
+    ngaycapcmnd: Ngày cấp
+    noicapcmnd: Nơi cấp
+    masothue: Mã số thuế
+    taikhoannganhang: Số tài khoản ngân hàng
+    nganhang: Mở tại ngân hàng
+    prompt_nganhang: Chọn ngân hàng
