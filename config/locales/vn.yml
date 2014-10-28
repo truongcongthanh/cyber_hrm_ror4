@@ -326,7 +326,7 @@ vn:
       header: Cập nhật thông tin nhân viên
     keysearch: Nhập họ, tên nhân viên
     eid: Mã nhân viên
-    holot: Họ, lót
+    holot: Họ, tên lót
     ten: Tên
     gioitinh: Giới tính
     prompt_gioitinh: Chọn giới tính
