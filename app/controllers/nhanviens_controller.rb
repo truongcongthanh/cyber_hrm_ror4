@@ -11,10 +11,6 @@ class NhanviensController < ApplicationController
   end
 
   def edit
-    @tinhthanhphos = Tinhthanhpho.all
-    @quanhuyens = Quanhuyen.all
-    @phuongxas = Phuongxa.all
-
     @nhanvien = Nhanvien.find(params[:id])
   end
 
@@ -35,10 +31,6 @@ class NhanviensController < ApplicationController
   end
 
   def new
-    @tinhthanhphos = Tinhthanhpho.all
-    @quanhuyens = Quanhuyen.all
-    @phuongxas = Phuongxa.all
-
     @nhanvien = Nhanvien.new
 
     respond_to do |format|
@@ -62,6 +54,10 @@ class NhanviensController < ApplicationController
         format.json { render json: @nhanvien.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def delete
+    @nhanvien = Nhanvien.find(params[:nhanvien_id])
   end
 
   def destroy

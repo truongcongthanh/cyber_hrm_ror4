@@ -8,7 +8,7 @@
       <th><%= t "nhanviens.ngaysinh" %></th>
       <th><%= t "nhanviens.didong" %></th>
       <th><%= t "nhanviens.email" %></th>
-      <td style="width: 60px;">&nbsp;</td>
+      <th style="width: 60px;">&nbsp;</th>
     </tr>
     </thead>
     <tbody>
@@ -32,7 +32,7 @@
     </tbody>
     <tfoot>
     <tr class="text-center">
-      <td colspan="3">
+      <td colspan="7">
         <%= will_paginate @nhanviens, renderer: BootstrapPagination::Rails %>
       </td>
     </tr>
