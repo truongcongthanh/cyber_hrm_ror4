@@ -325,7 +325,7 @@ vn:
     edit:
       header: Cập nhật thông tin nhân viên
     keysearch: Nhập họ, tên nhân viên
-    eid: Mã nhân viên
+    eid: Mã NV
     holot: Họ, tên lót
     ten: Tên
     gioitinh: Giới tính
