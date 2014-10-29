@@ -2,10 +2,10 @@
     <tr>
       <td><%= vungdialy.ma %></td>
       <td><%= vungdialy.ten %></td>
-      <td><%= link_to edit_vungdialy_path(vungdialy), data: {remote: true}, :title => t('edit') do %>
+      <td><%= link_to edit_danhmuc_vungdialy_path(vungdialy), data: {remote: true}, :title => t('edit') do %>
             <i class="glyphicon glyphicon-edit"></i>
         <% end %>
-        <%= link_to vungdialy_delete_path(vungdialy), data: {remote: true}, :title => t('delete') do %>
+        <%= link_to danhmuc_vungdialy_delete_path(vungdialy), data: {remote: true}, :title => t('delete') do %>
             <i class="glyphicon glyphicon-trash"></i>
         <% end %>
       </td>

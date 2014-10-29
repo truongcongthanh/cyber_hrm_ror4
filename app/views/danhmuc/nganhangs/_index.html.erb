@@ -13,10 +13,10 @@
         <td><%= nganhang.ma %></td>
         <td><%= nganhang.ten %></td>
         <td><%= nganhang.thongtin %></td>
-        <td><%= link_to edit_nganhang_path(nganhang), data: {remote: true}, :title => t('edit') do %>
+        <td><%= link_to edit_danhmuc_nganhang_path(nganhang), data: {remote: true}, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
-          <%= link_to nganhang_delete_path(nganhang), data: {remote: true}, :title => t('delete') do %>
+          <%= link_to danhmuc_nganhang_delete_path(nganhang), data: {remote: true}, :title => t('delete') do %>
               <i class="glyphicon glyphicon-trash"></i>
           <% end %>
         </td>

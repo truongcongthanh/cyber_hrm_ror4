@@ -16,10 +16,10 @@
         <td><%= quanhuyen.ma %></td>
         <td><%= quanhuyen.ten %></td>
         <td><%= quanhuyen.tinhthanhpho.ten %></td>
-        <td><%= link_to edit_quanhuyen_path(quanhuyen), data: {remote: true}, :title => t('edit') do %>
+        <td><%= link_to edit_danhmuc_quanhuyen_path(quanhuyen), data: {remote: true}, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
-          <%= link_to quanhuyen_delete_path(quanhuyen), data: {remote: true}, :title => t('delete') do %>
+          <%= link_to danhmuc_quanhuyen_delete_path(quanhuyen), data: {remote: true}, :title => t('delete') do %>
               <i class="glyphicon glyphicon-trash"></i>
           <% end %>
         </td>

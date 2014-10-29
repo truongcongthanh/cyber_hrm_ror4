@@ -6,10 +6,10 @@
   <%= t "dantocs.question" %><b><%= @dantoc.ten %></b>?
 </div>
 <div class="modal-footer">
-  <%= link_to dantoc_path(@dantoc), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
+  <%= link_to danhmuc_dantoc_path(@dantoc), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
       <i class="glyphicon glyphicon-ok-sign"></i> <%= t "yes" %>
   <% end %>
-  <%= link_to dantocs_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+  <%= link_to danhmuc_dantocs_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
       <i class="glyphicon glyphicon-remove-sign"></i> <%= t "no" %>
   <% end %>
 </div>

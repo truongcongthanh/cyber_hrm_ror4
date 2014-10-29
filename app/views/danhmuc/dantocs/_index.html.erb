@@ -11,10 +11,10 @@
       <tr>
         <td><%= dantoc.ma %></td>
         <td><%= dantoc.ten %></td>
-        <td><%= link_to edit_dantoc_path(dantoc), data: {remote: true}, :title => t('edit') do %>
+        <td><%= link_to edit_danhmuc_dantoc_path(dantoc), data: {remote: true}, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
-          <%= link_to dantoc_delete_path(dantoc), data: {remote: true}, :title => t('delete') do %>
+          <%= link_to dantoc_danhmuc_delete_path(dantoc), data: {remote: true}, :title => t('delete') do %>
               <i class="glyphicon glyphicon-trash"></i>
           <% end %>
         </td>

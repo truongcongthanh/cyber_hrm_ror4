@@ -18,10 +18,10 @@
         <td><%= phuongxa.ten %></td>
         <td><%= phuongxa.quanhuyen.ten %></td>
         <td><%= phuongxa.quanhuyen.tinhthanhpho.ten %></td>
-        <td><%= link_to edit_phuongxa_path(phuongxa), data: {remote: true}, :title => t('edit') do %>
+        <td><%= link_to edit_danhmuc_phuongxa_path(phuongxa), data: {remote: true}, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
-          <%= link_to phuongxa_delete_path(phuongxa), data: {remote: true}, :title => t('delete') do %>
+          <%= link_to danhmuc_phuongxa_delete_path(phuongxa), data: {remote: true}, :title => t('delete') do %>
               <i class="glyphicon glyphicon-trash"></i>
           <% end %>
         </td>

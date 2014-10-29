@@ -6,10 +6,10 @@
   <%= t "quanhuyens.question" %><b><%= @quanhuyen.ten %></b>?
 </div>
 <div class="modal-footer">
-  <%= link_to quanhuyen_path(@quanhuyen), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
+  <%= link_to danhmuc_quanhuyen_path(@quanhuyen), method: :delete, :data => {remote: true}, class: "btn btn-danger" do %>
       <i class="glyphicon glyphicon-ok-sign"></i> <%= t "yes" %>
   <% end %>
-  <%= link_to quanhuyens_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
+  <%= link_to danhmuc_quanhuyens_path, class: "btn btn-default", data: {dismiss: "modal"} do %>
       <i class="glyphicon glyphicon-remove-sign"></i> <%= t "no" %>
   <% end %>
 </div>

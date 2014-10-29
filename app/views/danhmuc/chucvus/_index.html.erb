@@ -13,10 +13,10 @@
         <td><%= chucvu.ma %></td>
         <td><%= chucvu.ten %></td>
         <td><%= chucvu.nhomchucvu.ten %></td>
-        <td><%= link_to edit_chucvu_path(chucvu), remote: true, :title => t('edit') do %>
+        <td><%= link_to edit_danhmuc_chucvu_path(chucvu), remote: true, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
-          <%= link_to chucvu_delete_path(chucvu), remote: true, :title => t('delete') do %>
+          <%= link_to danhmuc_chucvu_delete_path(chucvu), remote: true, :title => t('delete') do %>
               <i class="glyphicon glyphicon-trash"></i>
           <% end %>
         </td>

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+
     namespace :danhmuc do
+      match "/" => "base#index", :via => :get
+
       resources :nhombangcaps do
         get "delete"
       end

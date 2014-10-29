@@ -13,10 +13,10 @@
         <td><%= nhomchucdanh.ma %></td>
         <td><%= nhomchucdanh.ten %></td>
         <td><%= nhomchucdanh.diengiai %></td>
-        <td><%= link_to edit_nhomchucdanh_path(nhomchucdanh), data: {remote: true}, :title => t('edit') do %>
+        <td><%= link_to edit_danhmuc_nhomchucdanh_path(nhomchucdanh), data: {remote: true}, :title => t('edit') do %>
               <i class="glyphicon glyphicon-edit"></i>
           <% end %>
-          <%= link_to nhomchucdanh_delete_path(nhomchucdanh), data: {remote: true}, :title => t('delete') do %>
+          <%= link_to danhmuc_nhomchucdanh_delete_path(nhomchucdanh), data: {remote: true}, :title => t('delete') do %>
               <i class="glyphicon glyphicon-trash"></i>
           <% end %>
         </td>

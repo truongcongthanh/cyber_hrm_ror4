@@ -1,12 +1,12 @@
 <div class="page-header">
   <h1 class="pull-left"><%= t "khoaphongs.index.header" %></h1>
-  <%= link_to new_khoaphong_path, remote: true, class: "btn btn-primary pull-right" do %>
+  <%= link_to new_danhmuc_khoaphong_path, remote: true, class: "btn btn-primary pull-right" do %>
       <i class="glyphicon glyphicon-plus-sign"></i> <%= t('new') %>
   <% end %>
   <div class="clearfix"></div>
 </div>
 <div class="new-form"></div>
-<%= form_tag khoaphongs_path, :method => 'get', :id => "ajax_search" do %>
+<%= form_tag danhmuc_khoaphongs_path, :method => 'get', :id => "ajax_search" do %>
     <div class="row">
       <div class="col-lg-6">
         <div class="input-group">
