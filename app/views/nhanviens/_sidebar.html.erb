@@ -1,0 +1,31 @@
+<h3>
+  <i class="glyphicon glyphicon-user"></i>
+  <%= t "employees" %>
+</h3>
+<hr>
+<ul class="nav nav-stacked">
+  <li>
+    <%= link_to new_nhanvien_path, :data => {remote: true} do %>
+        <i class="glyphicon glyphicon-plus-sign"></i> <%= t('new') %>
+    <% end %>
+  </li>
+  <li>
+    <a href="#">
+      <i class="glyphicon glyphicon-bell"></i>
+      <%= t "nhanviens.list_of_employees_unsigned" %>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="glyphicon glyphicon-list-alt"></i>
+      <%= t "nhanviens.reports" %>
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="glyphicon glyphicon-list"></i>
+      <%= t "nhanviens.list_of_employees_in_hospital" %>
+    </a>
+  </li>
+</ul>
+<hr>
