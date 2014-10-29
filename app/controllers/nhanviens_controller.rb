@@ -20,11 +20,11 @@ class NhanviensController < ApplicationController
 
     respond_to do |format|
       if @nhanvien.update_attributes(nhanvien_params)
-        format.html { redirect_to nhanviens_path, flash[:success] = 'Thong tin nhan vien da cap nhat thanh cong.' }
-        format.js { flash[:success] = 'Thong tin nhan vien da cap nhat thanh cong.' }
+        format.html { redirect_to nhanviens_path, flash[:info] = 'Thong tin nhan vien da cap nhat thanh cong.' }
+        format.js { flash[:info] = 'Thong tin nhan vien da cap nhat thanh cong.' }
         format.json { head :ok }
       else
-        format.html { render 'new' }
+        format.html { render :partial => 'edit' }
         format.json { render json: @nhanvien.errors, status: :unprocessable_entity }
       end
     end
@@ -46,11 +46,11 @@ class NhanviensController < ApplicationController
 
     respond_to do |format|
       if @nhanvien.save
-        format.html { redirect_to nhanviens_path, flash[:success] = 'Nhan vien moi da duoc them thanh cong.' }
-        format.js { flash[:success] = 'Nhan vien moi da duoc them thanh cong.' }
+        format.html { redirect_to nhanviens_path, flash[:info] = 'Nhan vien moi da duoc them thanh cong.' }
+        format.js { flash[:info] = 'Nhan vien moi da duoc them thanh cong.' }
         format.json { render json: @nhanvien, status: :created, location: @nhanvien }
       else
-        format.html { render 'new' }
+        format.html { render :partial => 'new' }
         format.json { render json: @nhanvien.errors, status: :unprocessable_entity }
       end
     end

@@ -3,10 +3,16 @@
     <ul class="errors"></ul>
     <div class="row">
       <div class="col-xs-3 col-md-3" align="center">
-        <img alt="User Pic" src="/assets/new_user.jpg" class="img-circle">
-        <button class="btn btn-default">
-          <i class="glyphicon glyphicon-upload"></i> Upload
-        </button>
+        <div class="thumbnail">
+          <img src="/assets/new_user.jpg" style="width: 250px;">
+
+          <div class="caption">
+            <p><a href="#" class="btn btn-default text-center" role="button">
+              <i class="glyphicon glyphicon-upload"></i> <%= t "nhanviens.upload" %>
+            </a>
+            </p>
+          </div>
+        </div>
       </div>
       <div class=" col-md-9 col-lg-9 ">
         <div class="form-group">
@@ -30,7 +36,7 @@
         <div class="form-group">
           <div class="col-md-3">
             <label for="ngaysinh"><%= t "nhanviens.ngaysinh" %></label>
-            <%= f.text_field :ngaysinh, class: "form-control" %>
+            <%= f.text_field :ngaysinh, :value => (@nhanvien.ngaysinh.blank? ? '' :@nhanvien.ngaysinh.strftime("%d/%m/%Y")), class: "form-control" %>
           </div>
           <div class="col-md-2">
             <label for="namsinh"><%= t "nhanviens.namsinh" %></label>
@@ -59,23 +65,18 @@
             <%= f.select(:tongiao, Tongiao.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_tongiao')}, {:class => 'form-control'}) %>
           </div>
         </div>
-      </div>
-    </div>
-    <!-- end row -->
-    <div class="row">
-      <div class="form-group">
-        <div class="col-xs-12 col-md-12">
+        <div class="form-group">
           <div class="col-md-4">
             <label for="noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
-            <%= f.collection_select(:noisinh_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank=> t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <%= f.collection_select(:noisinh_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-4">
             <label for="noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
-            <%= f.grouped_collection_select(:noisinh_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:noisinh_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-4">
             <label for="noisinh_xa"><%= t "nhanviens.noisinh_xa" %></label>
-            <%= f.grouped_collection_select(:noisinh_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:noisinh_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
           </div>
         </div>
       </div>
@@ -86,15 +87,15 @@
         <div class="col-xs-12 col-md-12">
           <div class="col-md-4">
             <label for="nguyenquan_tinh"><%= t "nhanviens.nguyenquan_tinh" %></label>
-            <%= f.collection_select(:nguyenquan_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank=> t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <%= f.collection_select(:nguyenquan_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-4">
             <label for="nguyenquan_huyen"><%= t "nhanviens.nguyenquan_huyen" %></label>
-            <%= f.grouped_collection_select(:nguyenquan_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:nguyenquan_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-4">
             <label for="nguyenquan_xa"><%= t "nhanviens.nguyenquan_xa" %></label>
-            <%= f.grouped_collection_select(:nguyenquan_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:nguyenquan_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
           </div>
         </div>
       </div>
@@ -109,15 +110,15 @@
           </div>
           <div class="col-md-3">
             <label for="nguyenquan_tinh"><%= t "nhanviens.thuongtru_tinh" %></label>
-            <%= f.collection_select(:thuongtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank=> t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <%= f.collection_select(:thuongtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-3">
             <label for="nguyenquan_huyen"><%= t "nhanviens.thuongtru_huyen" %></label>
-            <%= f.grouped_collection_select(:thuongtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:thuongtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-3">
             <label for="nguyenquan_xa"><%= t "nhanviens.thuongtru_xa" %></label>
-            <%= f.grouped_collection_select(:thuongtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:thuongtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
           </div>
         </div>
       </div>
@@ -132,15 +133,15 @@
           </div>
           <div class="col-md-3">
             <label for="tamtru_tinh"><%= t "nhanviens.tamtru_tinh" %></label>
-            <%= f.collection_select(:tamtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank=> t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <%= f.collection_select(:tamtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-3">
             <label for="tamtru_huyen"><%= t "nhanviens.tamtru_huyen" %></label>
-            <%= f.grouped_collection_select(:tamtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:tamtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
           </div>
           <div class="col-md-3">
             <label for="tamtru_xa"><%= t "nhanviens.tamtru_xa" %></label>
-            <%= f.grouped_collection_select(:tamtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank=> t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <%= f.grouped_collection_select(:tamtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
           </div>
         </div>
       </div>
@@ -174,7 +175,7 @@
           </div>
           <div class="col-md-3">
             <label for="ngaycapcmnd"><%= t "nhanviens.ngaycapcmnd" %></label>
-            <%= f.text_field :ngaycapcmnd, :class => 'form-control' %>
+            <%= f.text_field :ngaycapcmnd, :value => (@nhanvien.ngaycapcmnd.blank? ? '' :@nhanvien.ngaycapcmnd.strftime("%d/%m/%Y")), :class => 'form-control' %>
           </div>
           <div class="col-md-6">
             <label for="noicapcmnd"><%= t "nhanviens.noicapcmnd" %></label>

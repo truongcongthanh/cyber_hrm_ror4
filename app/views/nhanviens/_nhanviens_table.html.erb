@@ -17,7 +17,11 @@
           <td><%= nhanvien.eid %></td>
           <td><%= nhanvien.holot %></td>
           <td><%= nhanvien.ten %></td>
-          <td><%= nhanvien.ngaysinh %></td>
+          <% if nhanvien.ngaysinh.blank? %>
+              <td><%= nhanvien.namsinh %></td>
+          <% else %>
+              <td><%= nhanvien.ngaysinh.strftime("%d/%m/%Y") %></td>
+          <% end %>
           <td><%= nhanvien.didong %></td>
           <td><%= nhanvien.email %></td>
           <td><%= link_to edit_nhanvien_path(nhanvien), data: {remote: true}, :title => t('edit') do %>
