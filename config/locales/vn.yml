@@ -322,6 +322,8 @@ vn:
   nhanviens:
     index:
       header: Danh sách nhân viên
+    new:
+      header: Thông tin nhân viên mới
     edit:
       header: Cập nhật thông tin nhân viên
     keysearch: Nhập họ, tên nhân viên

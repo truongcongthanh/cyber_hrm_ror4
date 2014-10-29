@@ -322,6 +322,8 @@ jp:
   nhanviens:
     index:
       header: 従業員のリスト
+    new:
+      header: 新しい従業員の情報を追加する
     edit:
       header: 更新従業員の情報
     keysearch: 従業員の名前を入力します

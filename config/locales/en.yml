@@ -322,6 +322,8 @@ en:
   nhanviens:
     index:
       header: List of employees
+    new:
+      header: Add new employee 's information
     edit:
       header: Update employee's information
     keysearch: Enter name of employee
