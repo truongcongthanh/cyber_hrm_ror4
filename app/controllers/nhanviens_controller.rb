@@ -72,14 +72,23 @@ class NhanviensController < ApplicationController
     end
   end
 
+  def laythongtin
+    # id = 10
+    # a =  Nhanvien.find(10)
+    # respond_to do |f|
+    #   f.json {render :json => a}
+    # end
+    render :text => "da"
+  end
+
   private
   def nhanvien_params
     params.require(:nhanvien).permit(:eid, :holot, :ten, :tenkhac, :email, :didong, :dienthoai, :quoctich, :dantoc,
-          :ngaysinh, :namsinh, :gioitinh, :tongiao, :tinhtranghonnhan, :noisinh_xa, :noisinh_huyen,:noisinh_tinh,
-          :nguyenquan_xa, :nguyenquan_huyen, :nguyenquan_tinh, :tamtru_duong, :tamtru_xa, :tamtru_huyen, :tamtru_tinh,
-          :thuongtru_duong, :thuongtru_xa, :thuongtru_huyen, :thuongtru_tinh, :trinhdophothong, :ngoaingu, :trinhdongoaingu,
-          :trinhdotinhoc, :bangcap, :nganhdaotao, :hedaotao, :noidaotao, :masothue, :taikhoannganhang, :nganhang,
-          :socmnd, :ngaycapcmnd, :noicapcmnd, :tinhtrangsuckhoe, :chieucao, :cannang)
+                                     :ngaysinh, :namsinh, :gioitinh, :tongiao, :tinhtranghonnhan, :noisinh_xa, :noisinh_huyen, :noisinh_tinh,
+                                     :nguyenquan_xa, :nguyenquan_huyen, :nguyenquan_tinh, :tamtru_duong, :tamtru_xa, :tamtru_huyen, :tamtru_tinh,
+                                     :thuongtru_duong, :thuongtru_xa, :thuongtru_huyen, :thuongtru_tinh, :trinhdophothong, :ngoaingu, :trinhdongoaingu,
+                                     :trinhdotinhoc, :bangcap, :nganhdaotao, :hedaotao, :noidaotao, :masothue, :taikhoannganhang, :nganhang,
+                                     :socmnd, :ngaycapcmnd, :noicapcmnd, :tinhtrangsuckhoe, :chieucao, :cannang)
   end
 
 end

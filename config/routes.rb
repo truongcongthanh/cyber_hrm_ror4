@@ -58,6 +58,8 @@ Rails.application.routes.draw do
     end
     resources :nhanviens do
       get "delete"
+
+      get "laythongtin"
     end
     root to: 'pages#home', :as => 'home'
     match '/javascripts/load_quanhuyen.js' => 'javascripts#load_quanhuyen.js', :via => :get

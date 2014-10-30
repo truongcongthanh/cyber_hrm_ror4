@@ -12,7 +12,7 @@
     </thead>
     <tbody>
     <% @nhanviens.each do |nhanvien| %>
-        <tr>
+        <tr nhanvienid="<%= nhanvien.id %>">
           <td><%= nhanvien.eid %></td>
           <td><%= nhanvien.holot %></td>
           <td><%= nhanvien.ten %></td>
