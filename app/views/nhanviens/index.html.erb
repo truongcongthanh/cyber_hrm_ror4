@@ -1,24 +1,26 @@
+
 <div>
-  <h1 class="pull-left"><%= t "nhanviens.index.header" %></h1>
+  <h2 class="text-center text-capitalize text-danger"><%= t "nhanviens.index.header" %></h2>
   <div class="clearfix"></div>
 </div>
 <div class="new-form"></div>
 <%= form_tag nhanviens_path, :method => 'get', :id => "ajax_search" do %>
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-12">
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
           <%= text_field_tag :search, params[:search], :placeholder => t('nhanviens.keysearch'), :class => "form-control" %>
         </div>
       </div>
     </div>
+    <p>
     <div class="row">
       <div class="form-index">
         <%= render "nhanviens_table" %>
       </div>
     </div>
 <% end %>
-<div id="form-modal" class="modal fade bs-example-modal-lg">
+<div id="form-modal" class="modal fade bs-example-modal-lg" data-keyboard="false" data-backdrop="static">
   <div class="modal-dialog modal-lg">
     <div id="inner-form-modal" class="modal-content"></div>
   </div>
