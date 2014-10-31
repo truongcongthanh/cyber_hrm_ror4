@@ -72,10 +72,6 @@ class NhanviensController < ApplicationController
     end
   end
 
-  def laythongtin
-    render :json => Nhanvien.find(params[:id])
-  end
-
   private
   def nhanvien_params
     params.require(:nhanvien).permit(:eid, :holot, :ten, :tenkhac, :email, :didong, :dienthoai, :quoctich, :dantoc,

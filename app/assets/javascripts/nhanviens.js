@@ -1,13 +1,8 @@
 $(function () {
-//    $("tbody").on("click","tr", function () {
-//        var nhanvienid = $(this).attr("nhanvienid");
-//        alert(nhanvienid);
-//    });
-
     $(".form-index tr").click(function () {
         id = $(this).attr("nhanvienid");
         $.ajax({
-            url: "nhanviens/laythongtin",
+            url: "laythongtinnhanvien",
             dataType: 'json',
             data: {id: id}
         }).done(function (json) {

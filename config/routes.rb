@@ -56,15 +56,16 @@ Rails.application.routes.draw do
         get "delete"
       end
     end
+
     resources :nhanviens do
       get "delete"
-
-      get "laythongtin"
     end
-    root to: 'pages#home', :as => 'home'
-    match '/javascripts/load_quanhuyen.js' => 'javascripts#load_quanhuyen.js', :via => :get
+
+    root to: 'pages#home', :as => 'home'\
+
     match '/about' => 'pages#about', :via => :get
-    match '/signin' => 'pages#signin', :via => [:get, :post]
+    match '/laythongtinnhanvien' => 'pages#laythongtinnhanvien', :via => [:get, :post]
+    match '/danh_sach_tinh_tp' => 'pages#danh_sach_tinh_tp', :via => [:get, :post]
   end
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), :via => [:get, :post]
   match '', to: redirect("/#{I18n.default_locale}"), :via => [:get, :post]
