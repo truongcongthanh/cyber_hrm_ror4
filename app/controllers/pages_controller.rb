@@ -7,8 +7,6 @@ class PagesController < ApplicationController
   end
 
   def signin
-
-     render :json => Nhanvien.find(params[:id])
   end
 
 end

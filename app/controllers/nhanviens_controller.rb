@@ -73,12 +73,7 @@ class NhanviensController < ApplicationController
   end
 
   def laythongtin
-    # id = 10
-    # a =  Nhanvien.find(10)
-    # respond_to do |f|
-    #   f.json {render :json => a}
-    # end
-    render :text => "da"
+    render :json => Nhanvien.find(params[:id])
   end
 
   private
