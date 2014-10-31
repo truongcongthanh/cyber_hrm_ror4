@@ -6,10 +6,14 @@ $(function () {
             dataType: 'json',
             data: {id: id}
         }).done(function (json) {
-            $("#nhanvien").find("h4").html(json.holot + " " + json.ten);
-            $("#nhanvien").find("#namsinh").html(json.namsinh);
-
-        });
+                $("#nhanvien").find("h4").html(json.holot + " " + json.ten);
+                if (json.ngaysinh == '')
+                    $("#nhanvien").find("#ngaysinh").html(json.namsinh);
+                else
+                    $("#nhanvien").find("#ngaysinh").html(json.ngaysinh);
+            }
+        )
+        ;
     });
 });
 

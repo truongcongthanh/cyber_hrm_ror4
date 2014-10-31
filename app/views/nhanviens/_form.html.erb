@@ -17,66 +17,82 @@
       <div class=" col-md-9 col-lg-9 ">
         <div class="form-group">
           <div class="col-md-3">
-            <label for="ma"><%= t "nhanviens.eid" %></label>
+            <label for="nhanvien_eid"><%= t "nhanviens.eid" %></label>
             <%= f.text_field :eid, class: "form-control" %>
           </div>
           <div class="col-md-4">
-            <label for="ten"><%= t "nhanviens.holot" %></label>
+            <label for="nhanvien_holot"><%= t "nhanviens.holot" %></label>
             <%= f.text_field :holot, class: "form-control" %>
           </div>
           <div class="col-md-2">
-            <label for="thongtin"><%= t "nhanviens.ten" %></label>
+            <label for="nhanvien_ten"><%= t "nhanviens.ten" %></label>
             <%= f.text_field :ten, class: "form-control" %>
           </div>
           <div class="col-md-3">
-            <label for="gioitinh"><%= t "nhanviens.gioitinh" %></label>
-            <%= f.select(:gioitinh, Gioitinh.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_gioitinh')}, {:class => 'form-control'}) %>
+            <label for="nhanvien_gioitinh"><%= t "nhanviens.gioitinh" %></label>
+            <select name="nhanvien[gioitinh]" id="nhanvien_gioitinh" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_gioitinh" %></option>
+            </select>
           </div>
         </div>
         <div class="form-group">
           <div class="col-md-3">
-            <label for="ngaysinh"><%= t "nhanviens.ngaysinh" %></label>
-            <%= f.text_field :ngaysinh, :value => (@nhanvien.ngaysinh.blank? ? '' :@nhanvien.ngaysinh.strftime("%d/%m/%Y")), class: "form-control" %>
+            <label for="nhanvien_ngaysinh"><%= t "nhanviens.ngaysinh" %></label>
+            <%= f.text_field :ngaysinh, :value => (@nhanvien.ngaysinh.blank? ? '' : @nhanvien.ngaysinh.strftime("%d/%m/%Y")), class: "form-control" %>
           </div>
           <div class="col-md-2">
-            <label for="namsinh"><%= t "nhanviens.namsinh" %></label>
+            <label for="nhanvien_namsinh"><%= t "nhanviens.namsinh" %></label>
             <%= f.text_field :namsinh, class: "form-control" %>
           </div>
           <div class="col-md-4">
-            <label for="tenkhac"><%= t "nhanviens.tenthuonggoi" %></label>
+            <label for="nhanvien_tenkhac"><%= t "nhanviens.tenthuonggoi" %></label>
             <%= f.text_field :tenkhac, class: "form-control" %>
           </div>
           <div class="col-md-3">
-            <label for="tinhtranghonnhan"><%= t "nhanviens.tinhtranghonnhan" %></label>
-            <%= f.select(:tinhtranghonnhan, Tinhtranghonnhan.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_honnhan')}, {:class => 'form-control'}) %>
+            <label for="nhanvien_tinhtranghonnhan"><%= t "nhanviens.tinhtranghonnhan" %></label>
+            <select name="nhanvien[tinhtranghonnhan]" id="nhanvien_tinhtranghonnhan" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_honnhan" %></option>
+            </select>
           </div>
         </div>
         <div class="form-group">
           <div class="col-md-4">
-            <label for="quoctich"><%= t "nhanviens.quoctich" %></label>
-            <%= f.select(:quoctich, Quoctich.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_quoctich')}, {:class => 'form-control'}) %>
+            <label for="nhanvien_quoctich"><%= t "nhanviens.quoctich" %></label>
+            <select name="nhanvien[quoctich]" id="nhanvien_quoctich" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_quoctich" %></option>
+            </select>
           </div>
           <div class="col-md-4">
-            <label for="dantoc"><%= t "nhanviens.dantoc" %></label>
-            <%= f.select(:dantoc, Dantoc.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_dantoc')}, {:class => 'form-control'}) %>
+            <label for="nhanvien_dantoc"><%= t "nhanviens.dantoc" %></label>
+            <select name="nhanvien[dantoc]" id="nhanvien_dantoc" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_dantoc" %></option>
+            </select>
           </div>
           <div class="col-md-4">
-            <label for="tongiao"><%= t "nhanviens.tongiao" %></label>
-            <%= f.select(:tongiao, Tongiao.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_tongiao')}, {:class => 'form-control'}) %>
+            <label for="nhanvien_tongiao"><%= t "nhanviens.tongiao" %></label>
+            <select name="nhanvien[tongiao]" id="nhanvien_tongiao" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_tongiao" %></option>
+            </select>
           </div>
         </div>
         <div class="form-group">
           <div class="col-md-4">
-            <label for="noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
-            <%= f.collection_select(:noisinh_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <label for="nhanvien_noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
+            <select name="nhanvien[noisinh_tinh]" id="nhanvien_noisinh_tinh" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
+            </select>
           </div>
           <div class="col-md-4">
-            <label for="noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
-            <%= f.grouped_collection_select(:noisinh_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <label for="nhanvien_noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
+            <select name="nhanvien[noisinh_huyen]" id="nhanvien_noisinh_huyen" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
+            </select>
           </div>
           <div class="col-md-4">
-            <label for="noisinh_xa"><%= t "nhanviens.noisinh_xa" %></label>
-            <%= f.grouped_collection_select(:noisinh_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <label for="nhanvien_noisinh_xa"><%= t "nhanviens.noisinh_xa" %></label>
+            <select name="nhanvien[noisinh_xa]" id="nhanvien_noisinh_xa" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
+            </select>
           </div>
         </div>
       </div>
@@ -86,39 +102,52 @@
       <div class="form-group">
         <div class="col-xs-12 col-md-12">
           <div class="col-md-4">
-            <label for="nguyenquan_tinh"><%= t "nhanviens.nguyenquan_tinh" %></label>
-            <%= f.collection_select(:nguyenquan_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <label for="nhanvien_nguyenquan_tinh"><%= t "nhanviens.nguyenquan_tinh" %></label>
+            <select name="nhanvien[nguyenquan_tinh]" id="nhanvien_nguyenquan_tinh" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
+            </select>
           </div>
           <div class="col-md-4">
-            <label for="nguyenquan_huyen"><%= t "nhanviens.nguyenquan_huyen" %></label>
-            <%= f.grouped_collection_select(:nguyenquan_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <label for="nhanvien_nguyenquan_huyen"><%= t "nhanviens.nguyenquan_huyen" %></label>
+            <select name="nhanvien[nguyenquan_huyen]" id="nhanvien_nguyenquan_huyen" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
+            </select>
           </div>
           <div class="col-md-4">
-            <label for="nguyenquan_xa"><%= t "nhanviens.nguyenquan_xa" %></label>
-            <%= f.grouped_collection_select(:nguyenquan_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <label for="nhanvien_nguyenquan_xa"><%= t "nhanviens.nguyenquan_xa" %></label>
+            <select name="nhanvien[nguyenquan_xa]" id="nhanvien_nguyenquan_xa" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
+            </select>
           </div>
         </div>
       </div>
+
     </div>
     <!-- end row -->
     <div class="row">
       <div class="form-group">
         <div class="col-xs-12 col-md-12">
           <div class="col-md-3">
-            <label for="thuongtru_duong"><%= t "nhanviens.thuongtru_duong" %></label>
+            <label for="nhanvien_thuongtru_duong"><%= t "nhanviens.thuongtru_duong" %></label>
             <%= f.text_field :thuongtru_duong, :class => 'form-control' %>
           </div>
           <div class="col-md-3">
-            <label for="nguyenquan_tinh"><%= t "nhanviens.thuongtru_tinh" %></label>
-            <%= f.collection_select(:thuongtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <label for="nhanvien_thuongtru_tinh"><%= t "nhanviens.thuongtru_tinh" %></label>
+            <select name="nhanvien[thuongtru_tinh]" id="nhanvien_thuongtru_tinh" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
+            </select>
           </div>
           <div class="col-md-3">
-            <label for="nguyenquan_huyen"><%= t "nhanviens.thuongtru_huyen" %></label>
-            <%= f.grouped_collection_select(:thuongtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <label for="nhanvien_thuongtru_huyen"><%= t "nhanviens.thuongtru_huyen" %></label>
+            <select name="nhanvien[thuongtru_huyen]" id="nhanvien_thuongtru_huyen" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
+            </select>
           </div>
           <div class="col-md-3">
-            <label for="nguyenquan_xa"><%= t "nhanviens.thuongtru_xa" %></label>
-            <%= f.grouped_collection_select(:thuongtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <label for="nhanvien_thuongtru_xa"><%= t "nhanviens.thuongtru_xa" %></label>
+            <select name="nhanvien[thuongtru_xa]" id="nhanvien_thuongtru_xa" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
+            </select>
           </div>
         </div>
       </div>
@@ -132,16 +161,22 @@
             <%= f.text_field :tamtru_duong, :class => 'form-control' %>
           </div>
           <div class="col-md-3">
-            <label for="tamtru_tinh"><%= t "nhanviens.tamtru_tinh" %></label>
-            <%= f.collection_select(:tamtru_tinh, Tinhthanhpho.order(:ten), :id, :ten, {:include_blank => t("nhanviens.prompt_tinhthanhphos")}, {class: "form-control"}) %>
+            <label for="nhanvien_tamtru_tinh"><%= t "nhanviens.tamtru_tinh" %></label>
+            <select name="nhanvien[tamtru_tinh]" id="nhanvien_tamtru_tinh" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
+            </select>
           </div>
           <div class="col-md-3">
-            <label for="tamtru_huyen"><%= t "nhanviens.tamtru_huyen" %></label>
-            <%= f.grouped_collection_select(:tamtru_huyen, Tinhthanhpho.order(:ten), :quanhuyens, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_quanhuyens")}, {class: "form-control"}) %>
+            <label for="nhanvien_tamtru_huyen"><%= t "nhanviens.tamtru_huyen" %></label>
+            <select name="nhanvien[tamtru_huyen]" id="nhanvien_tamtru_huyen" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
+            </select>
           </div>
           <div class="col-md-3">
-            <label for="tamtru_xa"><%= t "nhanviens.tamtru_xa" %></label>
-            <%= f.grouped_collection_select(:tamtru_xa, Quanhuyen.order(:ten), :phuongxas, :ten, :id, :ten, {:include_blank => t("nhanviens.prompt_phuongxas")}, {class: "form-control"}) %>
+            <label for="nhanvien_tamtru_xa"><%= t "nhanviens.tamtru_xa" %></label>
+            <select name="nhanvien[tamtru_xa]" id="nhanvien_tamtru_xa" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
+            </select>
           </div>
         </div>
       </div>
@@ -170,16 +205,18 @@
       <div class="form-group">
         <div class="col-xs-12 col-md-12">
           <div class="col-md-3">
-            <label for="socmnd"><%= t "nhanviens.socmnd" %></label>
+            <label for="nhanvien_socmnd"><%= t "nhanviens.socmnd" %></label>
             <%= f.text_field :socmnd, :class => 'form-control' %>
           </div>
           <div class="col-md-3">
-            <label for="ngaycapcmnd"><%= t "nhanviens.ngaycapcmnd" %></label>
-            <%= f.text_field :ngaycapcmnd, :value => (@nhanvien.ngaycapcmnd.blank? ? '' :@nhanvien.ngaycapcmnd.strftime("%d/%m/%Y")), :class => 'form-control' %>
+            <label for="nhanvien_ngaycapcmnd"><%= t "nhanviens.ngaycapcmnd" %></label>
+            <%= f.text_field :ngaycapcmnd, :value => (@nhanvien.ngaycapcmnd.blank? ? '' : @nhanvien.ngaycapcmnd.strftime("%d/%m/%Y")), :class => 'form-control' %>
           </div>
           <div class="col-md-6">
-            <label for="noicapcmnd"><%= t "nhanviens.noicapcmnd" %></label>
-            <%= f.select(:noicapcmnd, Tinhthanhpho.all.collect { |c| [c.ten, c.id] }, {:prompt => t("nhanviens.prompt_tinhthanhphos")}, {:class => 'form-control'}) %>
+            <label for="nhanvien_noicapcmnd"><%= t "nhanviens.noicapcmnd" %></label>
+            <select name="nhanvien[noicapcmnd]" id="nhanvien_noicapcmnd" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
+            </select>
           </div>
         </div>
       </div>
@@ -189,16 +226,18 @@
       <div class="form-group">
         <div class="col-xs-12 col-md-12">
           <div class="col-md-3">
-            <label for="masothue"><%= t "nhanviens.masothue" %></label>
+            <label for="nhanvien_masothue"><%= t "nhanviens.masothue" %></label>
             <%= f.text_field :masothue, :class => 'form-control' %>
           </div>
           <div class="col-md-3">
-            <label for="taikhoannganhang"><%= t "nhanviens.taikhoannganhang" %></label>
+            <label for="nhanvien_taikhoannganhang"><%= t "nhanviens.taikhoannganhang" %></label>
             <%= f.text_field :taikhoannganhang, :class => 'form-control' %>
           </div>
           <div class="col-md-6">
-            <label for="nganhang"><%= t "nhanviens.nganhang" %></label>
-            <%= f.select(:nganhang, Nganhang.all.collect { |c| [c.ten, c.id] }, {:prompt => t('nhanviens.prompt_nganhang')}, {:class => 'form-control'}) %>
+            <label for="nhanvien_nganhang"><%= t "nhanviens.nganhang" %></label>
+            <select name="nhanvien[nganhang]" id="nhanvien_nganhang" class="form-control">
+              <option key="0"><%= t "nhanviens.prompt_nganhang" %></option>
+            </select>
           </div>
         </div>
       </div>
@@ -220,101 +259,240 @@
 
 <script>
     jQuery(function () {
-        var noisinh_huyen = $('#nhanvien_noisinh_huyen').html();
-        $('#nhanvien_noisinh_tinh').change(function () {
-            var escaped_noisinh_tinh, noisinh_tinh, options_noisinh_huyen;
-            noisinh_tinh = $('#nhanvien_noisinh_tinh :selected').text();
-            escaped_noisinh_tinh = noisinh_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_noisinh_huyen = $(noisinh_huyen).filter("optgroup[label='" + escaped_noisinh_tinh + "']").html();
-            alert(options_noisinh_huyen);
-            if (options_noisinh_huyen)
-                $('#nhanvien_noisinh_huyen').html(options_noisinh_huyen);
-            else
-                $('#nhanvien_noisinh_huyen').empty();
+        $("#nhanvien_gioitinh").click(function () {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get("gioitinh", function (json) {
+                    string = "<option><%= t "nhanviens.prompt_gioitinh" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_gioitinh").html(string);
+                });
+            }
         });
 
-        var noisinh_xa = $('#nhanvien_noisinh_xa').html();
-        $('#nhanvien_noisinh_huyen').change(function () {
-            var escaped_noisinh_huyen, noisinh_huyen, options_noisinh_xa;
-            noisinh_huyen = $('#nhanvien_noisinh_huyen :selected').text();
-            escaped_noisinh_huyen = noisinh_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_noisinh_xa = $(noisinh_xa).filter("optgroup[label='" + escaped_noisinh_huyen + "']").html();
-            if (options_noisinh_xa)
-                $('#nhanvien_noisinh_xa').html(options_noisinh_xa);
-            else
-                $('#nhanvien_noisinh_xa').empty();
+        $("#nhanvien_tinhtranghonnhan").click(function () {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get("tinhtranghonnhan", function (json) {
+                    string = "<option><%= t "nhanviens.prompt_honnhan" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_tinhtranghonnhan").html(string);
+                });
+            }
         });
 
-        var nguyenquan_huyen = $('#nhanvien_nguyenquan_huyen').html();
-        $('#nhanvien_nguyenquan_tinh').change(function () {
-            var escaped_nguyenquan_tinh, nguyenquan_tinh, options_nguyenquan_huyen;
-            nguyenquan_tinh = $('#nhanvien_nguyenquan_tinh :selected').text();
-            escaped_nguyenquan_tinh = nguyenquan_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_nguyenquan_huyen = $(nguyenquan_huyen).filter("optgroup[label='" + escaped_nguyenquan_tinh + "']").html();
-            if (options_nguyenquan_huyen)
-                $('#nhanvien_nguyenquan_huyen').html(options_nguyenquan_huyen);
-            else
-                $('#nhanvien_nguyenquan_huyen').empty();
+        $("#nhanvien_quoctich").click(function () {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get("quoctich", function (json) {
+                    string = "<option><%= t "nhanviens.prompt_quoctich" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_quoctich").html(string);
+                });
+            }
         });
 
-        var nguyenquan_xa = $('#nhanvien_nguyenquan_xa').html();
-        $('#nhanvien_nguyenquan_huyen').change(function () {
-            var escaped_nguyenquan_huyen, nguyenquan_huyen, options_nguyenquan_xa;
-            nguyenquan_huyen = $('#nhanvien_nguyenquan_huyen :selected').text();
-            escaped_nguyenquan_huyen = nguyenquan_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_nguyenquan_xa = $(nguyenquan_xa).filter("optgroup[label='" + escaped_nguyenquan_huyen + "']").html();
-            if (options_nguyenquan_xa)
-                $('#nhanvien_nguyenquan_xa').html(options_nguyenquan_xa);
-            else
-                $('#nhanvien_nguyenquan_xa').empty();
+        $("#nhanvien_dantoc").click(function () {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get("dantoc", function (json) {
+                    string = "<option><%= t "nhanviens.prompt_dantoc" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_dantoc").html(string);
+                });
+            }
         });
 
-        var thuongtru_huyen = $('#nhanvien_thuongtru_huyen').html();
-        $('#nhanvien_thuongtru_tinh').change(function () {
-            var escaped_thuongtru_tinh, thuongtru_tinh, options_thuongtru_huyen;
-            thuongtru_tinh = $('#nhanvien_thuongtru_tinh :selected').text();
-            escaped_thuongtru_tinh = thuongtru_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_thuongtru_huyen = $(thuongtru_huyen).filter("optgroup[label='" + escaped_thuongtru_tinh + "']").html();
-            if (options_thuongtru_huyen)
-                $('#nhanvien_thuongtru_huyen').html(options_thuongtru_huyen);
-            else
-                $('#nhanvien_thuongtru_huyen').empty();
+        $("#nhanvien_tongiao").click(function () {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get("tongiao", function (json) {
+                    string = "<option><%= t "nhanviens.prompt_tongiao" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_tongiao").html(string);
+                });
+            }
         });
 
-        var thuongtru_xa = $('#nhanvien_thuongtru_xa').html();
-        $('#nhanvien_thuongtru_huyen').change(function () {
-            var escaped_thuongtru_huyen, thuongtru_huyen, options_thuongtru_xa;
-            thuongtru_huyen = $('#nhanvien_thuongtru_huyen :selected').text();
-            escaped_thuongtru_huyen = thuongtru_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_thuongtru_xa = $(thuongtru_xa).filter("optgroup[label='" + escaped_thuongtru_huyen + "']").html();
-            if (options_thuongtru_xa)
-                $('#nhanvien_thuongtru_xa').html(options_thuongtru_xa);
-            else
-                $('#nhanvien_thuongtru_xa').empty();
+        $("#nhanvien_noisinh_tinh").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get('danh_sach_tinh_tp', function (json) {
+                    string = "<option><%= t "nhanviens.prompt_tinhthanhphos" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_noisinh_tinh").html(string);
+                });
+            }
         });
 
-        var tamtru_huyen = $('#nhanvien_tamtru_huyen').html();
-        $('#nhanvien_tamtru_tinh').change(function () {
-            var escaped_tamtru_tinh, tamtru_tinh, options_tamtru_huyen;
-            tamtru_tinh = $('#nhanvien_tamtru_tinh :selected').text();
-            escaped_tamtru_tinh = tamtru_tinh.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_tamtru_huyen = $(tamtru_huyen).filter("optgroup[label='" + escaped_tamtru_tinh + "']").html();
-            if (options_tamtru_huyen)
-                $('#nhanvien_tamtru_huyen').html(options_tamtru_huyen);
-            else
-                $('#nhanvien_tamtru_huyen').empty();
+        $("#nhanvien_noisinh_huyen").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_quan_huyen', {id: $("#nhanvien_noisinh_tinh").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_quanhuyens" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_noisinh_huyen").html(string);
+                });
+            }
         });
 
-        var tamtru_xa = $('#nhanvien_tamtru_xa').html();
-        $('#nhanvien_tamtru_huyen').change(function () {
-            var escaped_tamtru_huyen, tamtru_huyen, options_tamtru_xa;
-            tamtru_huyen = $('#nhanvien_tamtru_huyen :selected').text();
-            escaped_tamtru_huyen = tamtru_huyen.replace(/([ #;&,.+*~\':"!^$[\]()=>|\/@])/g, '\\$1');
-            options_tamtru_xa = $(tamtru_xa).filter("optgroup[label='" + escaped_tamtru_huyen + "']").html();
-            if (options_tamtru_xa)
-                $('#nhanvien_tamtru_xa').html(options_tamtru_xa);
-            else
-                $('#nhanvien_tamtru_xa').empty();
+        $("#nhanvien_noisinh_xa").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_phuong_xa', {id: $("#nhanvien_noisinh_huyen").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_phuongxas" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_noisinh_xa").html(string);
+                });
+            }
+        });
+        
+        $("#nhanvien_nguyenquan_tinh").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get('danh_sach_tinh_tp', function (json) {
+                    string = "<option><%= t "nhanviens.prompt_tinhthanhphos" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_nguyenquan_tinh").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_nguyenquan_huyen").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_quan_huyen', {id: $("#nhanvien_nguyenquan_tinh").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_quanhuyens" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_nguyenquan_huyen").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_nguyenquan_xa").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_phuong_xa', {id: $("#nhanvien_nguyenquan_huyen").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_phuongxas" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_nguyenquan_xa").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_thuongtru_tinh").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get('danh_sach_tinh_tp', function (json) {
+                    string = "<option><%= t "nhanviens.prompt_tinhthanhphos" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_thuongtru_tinh").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_thuongtru_huyen").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_quan_huyen', {id: $("#nhanvien_thuongtru_tinh").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_quanhuyens" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_thuongtru_huyen").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_thuongtru_xa").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_phuong_xa', {id: $("#nhanvien_thuongtru_huyen").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_phuongxas" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_thuongtru_xa").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_tamtru_tinh").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get('danh_sach_tinh_tp', function (json) {
+                    string = "<option><%= t "nhanviens.prompt_tinhthanhphos" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_tamtru_tinh").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_tamtru_huyen").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_quan_huyen', {id: $("#nhanvien_tamtru_tinh").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_quanhuyens" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_tamtru_huyen").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_tamtru_xa").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.post('danh_sach_phuong_xa', {id: $("#nhanvien_tamtru_huyen").val()}, function (json) {
+
+                    string = "<option><%= t "nhanviens.prompt_phuongxas" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_tamtru_xa").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_noicapcmnd").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get('danh_sach_tinh_tp', function (json) {
+                    string = "<option><%= t "nhanviens.prompt_tinhthanhphos" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_noicapcmnd").html(string);
+                });
+            }
+        });
+
+        $("#nhanvien_nganhang").click(function (event) {
+            if ($(this).find("option:first-child").attr('key') == 0) {
+                $.get('nganhang', function (json) {
+                    string = "<option><%= t "nhanviens.prompt_nganhang" %></option>";
+                    for (i = 0; i < json.length; i++) {
+                        string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
+                    }
+                    $("#nhanvien_nganhang").html(string);
+                });
+            }
         });
     });
 </script>

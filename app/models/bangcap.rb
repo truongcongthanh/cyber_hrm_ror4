@@ -1,7 +1,7 @@
 class Bangcap < ActiveRecord::Base
   belongs_to :nhombangcap
 
-  validates :ma, :presence => true
+  validates :ma, :presence => true, :message => I18n.t('tinhthanhphos.delete.header')
   validates :ten, :presence => true
   validates :nhombangcap_id, :presence => true
 

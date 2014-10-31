@@ -1,7 +1,7 @@
 class NhanviensController < ApplicationController
 
   def index
-    @nhanviens = Nhanvien.paginate(:page => params[:page], :per_page => 10)
+    @nhanviens = Nhanvien.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html #index.html.erb
@@ -15,7 +15,7 @@ class NhanviensController < ApplicationController
   end
 
   def update
-    @nhanviens = Nhanvien.paginate(:page => params[:page], :per_page => 10)
+    @nhanviens = Nhanvien.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     @nhanvien = Nhanvien.find(params[:id])
 
     respond_to do |format|
@@ -41,7 +41,7 @@ class NhanviensController < ApplicationController
   end
 
   def create
-    @nhanviens = Nhanvien.paginate(:page => params[:page], :per_page => 10)
+    @nhanviens = Nhanvien.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
     @nhanvien = Nhanvien.new(nhanvien_params)
 
     respond_to do |format|
@@ -63,7 +63,7 @@ class NhanviensController < ApplicationController
   def destroy
     @nhanvien = Nhanvien.find(params[:id])
     @nhanvien.destroy
-    @nhanviens = Nhanvien.paginate(:page => params[:page], :per_page => 10)
+    @nhanviens = Nhanvien.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html { redirect_to nhanviens_path, flash[:info]='Nhan vien da duoc xoa thanh cong.' }

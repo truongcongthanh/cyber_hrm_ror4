@@ -61,11 +61,22 @@ Rails.application.routes.draw do
       get "delete"
     end
 
-    root to: 'pages#home', :as => 'home'\
+    root to: 'pages#home', :as => 'home'
 
     match '/about' => 'pages#about', :via => :get
+
     match '/laythongtinnhanvien' => 'pages#laythongtinnhanvien', :via => [:get, :post]
-    match '/danh_sach_tinh_tp' => 'pages#danh_sach_tinh_tp', :via => [:get, :post]
+    match '/danh_sach_tinh_tp' => 'pages#danh_sach_tinh_tp', :via => [:get, :post],  :format => :json
+    match '/danh_sach_quan_huyen' => 'pages#danh_sach_quan_huyen', :via => [:get, :post],  :format => :json
+    match '/danh_sach_phuong_xa' => 'pages#danh_sach_phuong_xa', :via => [:get, :post],  :format => :json
+    match '/quoctich' => 'pages#quoctich', :via => [:get],  :format => :json
+    match '/dantoc' => 'pages#dantoc', :via => [:get],  :format => :json
+    match '/tongiao' => 'pages#tongiao', :via => [:get],  :format => :json
+    match '/gioitinh' => 'pages#gioitinh', :via => [:get],  :format => :json
+    match '/tinhtranghonnhan' => 'pages#tinhtranghonnhan', :via => [:get],  :format => :json
+    match '/nganhang' => 'pages#nganhang', :via => [:get],  :format => :json
+
+
   end
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), :via => [:get, :post]
   match '', to: redirect("/#{I18n.default_locale}"), :via => [:get, :post]
