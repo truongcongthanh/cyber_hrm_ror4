@@ -12,7 +12,7 @@
     </thead>
     <tbody>
     <% @nhanviens.each do |nhanvien| %>
-        <tr nhanvienid="<%= nhanvien.id %>" onclick="aaa(this)">
+        <tr nhanvienid="<%= nhanvien.id %>" onclick="nhanvien(this)">
           <td><%= nhanvien.eid %></td>
           <td><%= nhanvien.holot %></td>
           <td><%= nhanvien.ten %></td>

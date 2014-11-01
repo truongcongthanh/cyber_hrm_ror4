@@ -1,13 +1,4 @@
-<h3><%= t "nhanviens.edit.header" %> : <b><%= @nhanvien.holot + " " + @nhanvien.ten + " - " + @nhanvien.namsinh.to_s %></b></h3>
+<div class="modal-header">
+  <h3><%= t "nhanviens.edit.header" %> : <b><%= @nhanvien.holot + " " + @nhanvien.ten + " - " + @nhanvien.namsinh.to_s %></b></h3>
+</div>
 <%= render "form" %>
-
-<script>
-    function aaaaaa(id_xa){
-        if ($(id_xa).find("option:first-child").attr('key') == 0) {
-            $.get('/dantoc', function (json) {
-
-                alert(JSON.stringify(json));
-            });
-        }
-    }
-</script>

@@ -1,3 +1,4 @@
+
 <%= form_for @nhanvien, :data => {remote: true}, :html => {:class => "form-horizontal", role: "form"} do |f| %>
     <div class="modal-body">
     <ul class="errors"></ul>
@@ -30,7 +31,7 @@
           </div>
           <div class="col-md-3">
             <label for="nhanvien_gioitinh"><%= t "nhanviens.gioitinh" %></label>
-            <select name="nhanvien[gioitinh]" id="nhanvien_gioitinh" class="form-control">
+            <select name="nhanvien[gioitinh]" id="nhanvien_gioitinh" class="form-control" onclick="nhanvien_gioitinh(this)">
               <option key="0"><%= t "nhanviens.prompt_gioitinh" %></option>
             </select>
           </div>
@@ -50,7 +51,7 @@
           </div>
           <div class="col-md-3">
             <label for="nhanvien_tinhtranghonnhan"><%= t "nhanviens.tinhtranghonnhan" %></label>
-            <select name="nhanvien[tinhtranghonnhan]" id="nhanvien_tinhtranghonnhan" class="form-control">
+            <select name="nhanvien[tinhtranghonnhan]" id="nhanvien_tinhtranghonnhan" class="form-control" onclick="nhanvien_tinhtranghonnhan(this)">
               <option key="0"><%= t "nhanviens.prompt_honnhan" %></option>
             </select>
           </div>
@@ -58,19 +59,19 @@
         <div class="form-group">
           <div class="col-md-4">
             <label for="nhanvien_quoctich"><%= t "nhanviens.quoctich" %></label>
-            <select name="nhanvien[quoctich]" id="nhanvien_quoctich" class="form-control">
+            <select name="nhanvien[quoctich]" id="nhanvien_quoctich" class="form-control" onclick="nhanvien_quoctich(this)">
               <option key="0"><%= t "nhanviens.prompt_quoctich" %></option>
             </select>
           </div>
           <div class="col-md-4">
             <label for="nhanvien_dantoc"><%= t "nhanviens.dantoc" %></label>
-            <select name="nhanvien[dantoc]" id="nhanvien_dantoc" class="form-control">
+            <select name="nhanvien[dantoc]" id="nhanvien_dantoc" class="form-control" onclick="nhanvien_dantoc(this)">
               <option key="0"><%= t "nhanviens.prompt_dantoc" %></option>
             </select>
           </div>
           <div class="col-md-4">
             <label for="nhanvien_tongiao"><%= t "nhanviens.tongiao" %></label>
-            <select name="nhanvien[tongiao]" id="nhanvien_tongiao" class="form-control">
+            <select name="nhanvien[tongiao]" id="nhanvien_tongiao" class="form-control" onclick="nhanvien_tongiao(this)">
               <option key="0"><%= t "nhanviens.prompt_tongiao" %></option>
             </select>
           </div>
@@ -78,13 +79,13 @@
         <div class="form-group">
           <div class="col-md-4">
             <label for="nhanvien_noisinh_tinh"><%= t "nhanviens.noisinh_tinh" %></label>
-            <select name="nhanvien[noisinh_tinh]" id="nhanvien_noisinh_tinh" class="form-control">
+            <select name="nhanvien[noisinh_tinh]" id="nhanvien_noisinh_tinh" class="form-control" onclick="nhanvien_noisinh_tinh(this)">
               <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
             </select>
           </div>
           <div class="col-md-4">
             <label for="nhanvien_noisinh_huyen"><%= t "nhanviens.noisinh_huyen" %></label>
-            <select name="nhanvien[noisinh_huyen]" id="nhanvien_noisinh_huyen" class="form-control">
+            <select name="nhanvien[noisinh_huyen]" id="nhanvien_noisinh_huyen" class="form-control" onclick="nhanvien_noisinh_huyen(this)">
               <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
             </select>
           </div>
@@ -103,19 +104,19 @@
         <div class="col-xs-12 col-md-12">
           <div class="col-md-4">
             <label for="nhanvien_nguyenquan_tinh"><%= t "nhanviens.nguyenquan_tinh" %></label>
-            <select name="nhanvien[nguyenquan_tinh]" id="nhanvien_nguyenquan_tinh" class="form-control">
+            <select name="nhanvien[nguyenquan_tinh]" id="nhanvien_nguyenquan_tinh" class="form-control" onclick="nhanvien_nguyenquan_tinh(this)">
               <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
             </select>
           </div>
           <div class="col-md-4">
             <label for="nhanvien_nguyenquan_huyen"><%= t "nhanviens.nguyenquan_huyen" %></label>
-            <select name="nhanvien[nguyenquan_huyen]" id="nhanvien_nguyenquan_huyen" class="form-control">
+            <select name="nhanvien[nguyenquan_huyen]" id="nhanvien_nguyenquan_huyen" class="form-control" onclick="nhanvien_nguyenquan_huyen(this)">
               <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
             </select>
           </div>
           <div class="col-md-4">
             <label for="nhanvien_nguyenquan_xa"><%= t "nhanviens.nguyenquan_xa" %></label>
-            <select name="nhanvien[nguyenquan_xa]" id="nhanvien_nguyenquan_xa" class="form-control">
+            <select name="nhanvien[nguyenquan_xa]" id="nhanvien_nguyenquan_xa" class="form-control" onclick="nhanvien_nguyenquan_xa(this)">
               <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
             </select>
           </div>
@@ -133,19 +134,19 @@
           </div>
           <div class="col-md-3">
             <label for="nhanvien_thuongtru_tinh"><%= t "nhanviens.thuongtru_tinh" %></label>
-            <select name="nhanvien[thuongtru_tinh]" id="nhanvien_thuongtru_tinh" class="form-control">
+            <select name="nhanvien[thuongtru_tinh]" id="nhanvien_thuongtru_tinh" class="form-control" onclick="nhanvien_thuongtru_tinh(this)">
               <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
             </select>
           </div>
           <div class="col-md-3">
             <label for="nhanvien_thuongtru_huyen"><%= t "nhanviens.thuongtru_huyen" %></label>
-            <select name="nhanvien[thuongtru_huyen]" id="nhanvien_thuongtru_huyen" class="form-control">
+            <select name="nhanvien[thuongtru_huyen]" id="nhanvien_thuongtru_huyen" class="form-control" onclick="nhanvien_nguyenquan_huyen(this)">
               <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
             </select>
           </div>
           <div class="col-md-3">
             <label for="nhanvien_thuongtru_xa"><%= t "nhanviens.thuongtru_xa" %></label>
-            <select name="nhanvien[thuongtru_xa]" id="nhanvien_thuongtru_xa" class="form-control">
+            <select name="nhanvien[thuongtru_xa]" id="nhanvien_thuongtru_xa" class="form-control" onclick="nhanvien_nguyenquan_xa(this)">
               <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
             </select>
           </div>
@@ -162,19 +163,19 @@
           </div>
           <div class="col-md-3">
             <label for="nhanvien_tamtru_tinh"><%= t "nhanviens.tamtru_tinh" %></label>
-            <select name="nhanvien[tamtru_tinh]" id="nhanvien_tamtru_tinh" class="form-control">
+            <select name="nhanvien[tamtru_tinh]" id="nhanvien_tamtru_tinh" class="form-control" onclick="nhanvien_tamtru_tinh(this)">
               <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
             </select>
           </div>
           <div class="col-md-3">
             <label for="nhanvien_tamtru_huyen"><%= t "nhanviens.tamtru_huyen" %></label>
-            <select name="nhanvien[tamtru_huyen]" id="nhanvien_tamtru_huyen" class="form-control">
+            <select name="nhanvien[tamtru_huyen]" id="nhanvien_tamtru_huyen" class="form-control" onclick="nhanvien_tamtru_huyen(this)">
               <option key="0"><%= t "nhanviens.prompt_quanhuyens" %></option>
             </select>
           </div>
           <div class="col-md-3">
             <label for="nhanvien_tamtru_xa"><%= t "nhanviens.tamtru_xa" %></label>
-            <select name="nhanvien[tamtru_xa]" id="nhanvien_tamtru_xa" class="form-control">
+            <select name="nhanvien[tamtru_xa]" id="nhanvien_tamtru_xa" class="form-control" onclick="nhanvien_tamtru_xa(this)">
               <option key="0"><%= t "nhanviens.prompt_phuongxas" %></option>
             </select>
           </div>
@@ -214,7 +215,7 @@
           </div>
           <div class="col-md-6">
             <label for="nhanvien_noicapcmnd"><%= t "nhanviens.noicapcmnd" %></label>
-            <select name="nhanvien[noicapcmnd]" id="nhanvien_noicapcmnd" class="form-control">
+            <select name="nhanvien[noicapcmnd]" id="nhanvien_noicapcmnd" class="form-control" onclick="nhanvien_noicapcmnd(this)">
               <option key="0"><%= t "nhanviens.prompt_tinhthanhphos" %></option>
             </select>
           </div>
@@ -235,7 +236,7 @@
           </div>
           <div class="col-md-6">
             <label for="nhanvien_nganhang"><%= t "nhanviens.nganhang" %></label>
-            <select name="nhanvien[nganhang]" id="nhanvien_nganhang" class="form-control">
+            <select name="nhanvien[nganhang]" id="nhanvien_nganhang" class="form-control" onclick="nhanvien_nganhang(this)">
               <option key="0"><%= t "nhanviens.prompt_nganhang" %></option>
             </select>
           </div>
@@ -256,21 +257,3 @@
     </div>
     <!-- end modal-footer -->
 <% end %>
-<script>
-
-
-
-
-    //     // $("#nhanvien_quoctich").html('<option key="0">asdas</option>');
-    // });
-    function nhanvien_noisinh_xa(id_xa){
-        if ($(id_xa).find("option:first-child").attr('key') == 0) {
-            $.post('http://localhost:3000/en/dantoc', {id: 10}, function (json) {
-
-                alert(JSON.stringify(json));
-            });
-        }
-    }
-
-
-</script>
