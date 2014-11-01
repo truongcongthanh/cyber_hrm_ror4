@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0d45aa-a019-43e1-bed3-67f9ab88b638" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/nhanviens/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/nhanviens/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/nhanviens.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/nhanviens.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -43,8 +42,8 @@
       <file leaf-file-name="nhanviens.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nhanviens.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3555133" vertical-offset="153" max-vertical-offset="4386">
-              <caret line="20" column="66" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.904943" vertical-offset="4131" max-vertical-offset="4709">
+              <caret line="271" column="0" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,8 +114,8 @@
         <option value="$PROJECT_DIR$/app/views/nhanviens/_nhanviens_table.html.erb" />
         <option value="$PROJECT_DIR$/app/views/nhanviens/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/nhanviens/_edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/nhanviens.js" />
         <option value="$PROJECT_DIR$/app/views/nhanviens/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/nhanviens.js" />
       </list>
     </option>
   </component>
@@ -653,7 +652,11 @@
       <created>1414825208967</created>
       <updated>1414825208967</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Quản lý nhân viên">
+      <created>1414827435115</created>
+      <updated>1414827435121</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1160,8 +1163,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nhanviens.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3555133" vertical-offset="153" max-vertical-offset="4386">
-          <caret line="20" column="66" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.904943" vertical-offset="4131" max-vertical-offset="4709">
+          <caret line="271" column="0" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
           <folding />
         </state>
       </provider>
