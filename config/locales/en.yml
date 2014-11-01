@@ -333,7 +333,7 @@ en:
     gioitinh: Gender
     prompt_gioitinh: Select gender
     ngaysinh: Date of born
-    namsinh: Year of born
+    namsinh: Year
     tenthuonggoi: Other name
     tinhtranghonnhan: Marriage
     prompt_honnhan: Select marital

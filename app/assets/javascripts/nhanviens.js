@@ -1,5 +1,4 @@
-
-function  aaa(_id) {
+function aaa(_id) {
     id = $(_id).attr("nhanvienid");
     $.ajax({
         url: "laythongtinnhanvien",
@@ -11,6 +10,7 @@ function  aaa(_id) {
                 $("#nhanvien").find("#ngaysinh").html(json.namsinh);
             else
                 $("#nhanvien").find("#ngaysinh").html(json.ngaysinh);
+            $("#edit_nhanvien").attr("href","nhanviens/"+json.id+"/edit")
         }
     );
 }
