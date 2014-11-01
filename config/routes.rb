@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
+  # scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
 
     namespace :danhmuc do
       match "/" => "base#index", :via => :get
@@ -77,7 +77,7 @@ Rails.application.routes.draw do
     match '/nganhang' => 'pages#nganhang', :via => [:get],  :format => :json
 
 
-  end
-  match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), :via => [:get, :post]
-  match '', to: redirect("/#{I18n.default_locale}"), :via => [:get, :post]
+  
+  # match '*path', to: redirect("/#{I18n.default_locale}/%{path}"), :via => [:get, :post]
+  # match '', to: redirect("/#{I18n.default_locale}"), :via => [:get, :post]
 end
