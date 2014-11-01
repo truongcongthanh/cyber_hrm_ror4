@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0d45aa-a019-43e1-bed3-67f9ab88b638" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/nhanviens/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/nhanviens/_form.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/nhanviens.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/nhanviens.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -15,7 +16,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/cyber_hrm_rorv4@Development__cyber_hrm_rorv4.coverage" NAME="Development: cyber_hrm_rorv4 Coverage Results" MODIFIED="1414823279622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cyber_hrm_rorv4" />
+    <SUITE FILE_PATH="coverage/cyber_hrm_rorv4@Development__cyber_hrm_rorv4.coverage" NAME="Development: cyber_hrm_rorv4 Coverage Results" MODIFIED="1414824599307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="cyber_hrm_rorv4" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -32,8 +33,8 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/nhanviens/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="4505">
-              <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="108" />
+            <state vertical-scroll-proportion="-5.769231" vertical-offset="2060" max-vertical-offset="4505">
+              <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -42,8 +43,8 @@
       <file leaf-file-name="nhanviens.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nhanviens.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26020408" vertical-offset="0" max-vertical-offset="5066">
-              <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+            <state vertical-scroll-proportion="6.0280614" vertical-offset="0" max-vertical-offset="5049">
+              <caret line="278" column="26" selection-start-line="278" selection-start-column="9" selection-end-line="278" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -644,7 +645,11 @@
       <created>1414823896826</created>
       <updated>1414823896826</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Quản lý nhân viên">
+      <created>1414824542558</created>
+      <updated>1414824542558</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1143,16 +1148,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/nhanviens/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.576923" vertical-offset="0" max-vertical-offset="4505">
-          <caret line="33" column="108" selection-start-line="33" selection-start-column="108" selection-end-line="33" selection-end-column="108" />
+        <state vertical-scroll-proportion="-5.769231" vertical-offset="2060" max-vertical-offset="4505">
+          <caret line="130" column="32" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/nhanviens.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26020408" vertical-offset="0" max-vertical-offset="5066">
-          <caret line="12" column="72" selection-start-line="12" selection-start-column="72" selection-end-line="12" selection-end-column="72" />
+        <state vertical-scroll-proportion="6.0280614" vertical-offset="0" max-vertical-offset="5049">
+          <caret line="278" column="26" selection-start-line="278" selection-start-column="9" selection-end-line="278" selection-end-column="26" />
           <folding />
         </state>
       </provider>
