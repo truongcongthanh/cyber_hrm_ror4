@@ -39,7 +39,7 @@ class PagesController < ApplicationController
            "thuongtru_huyen" => thuongtru_huyen, "thuongtru_huyen_id" => nhanvien.thuongtru_huyen.blank? ? '' : nhanvien.thuongtru_huyen,
            "thuongtru_xa" => thuongtru_xa, "thuongtru_xa_id" => nhanvien.thuongtru_xa.blank? ? '' : nhanvien.thuongtru_xa,
            "tamtru_duong" => nhanvien.tamtru_duong, "tamtru_tinh" => tamtru_tinh, "tamtru_tinh_id" => nhanvien.tamtru_tinh.blank? ? '' : nhanvien.tamtru_tinh,
-           "tamtru_huyen" => tamtru_huyen, "tamtru_huyen_id" => nhanvien.tamtru_huyen.blank? ? '' : nhanvien.tamtru_tinh,
+           "tamtru_huyen" => tamtru_huyen, "tamtru_huyen_id" => nhanvien.tamtru_huyen.blank? ? '' : nhanvien.tamtru_huyen,
            "tamtru_xa" => tamtru_xa, "tamtru_xa_id" => nhanvien.tamtru_xa.blank? ? '' : nhanvien.tamtru_xa,
            "dienthoai" => nhanvien.dienthoai, "didong" => nhanvien.didong, "email" => nhanvien.email, "socmnd" => nhanvien.socmnd,
            "ngaycapcmnd" => nhanvien.ngaycapcmnd.blank? ? '' : nhanvien.ngaycapcmnd.strftime('%d/%m/%Y'),

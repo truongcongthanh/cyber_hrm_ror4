@@ -78,8 +78,9 @@ function tongiao(_tongiao) {
 }
 
 function noisinhtinh(_tinh) {
-    curV = $(_tinh).val();
-    curT = $(_tinh).text();
+    var curV = $(_tinh).val();
+    var curT = $(_tinh).text();
+    var clickV = "";
     if ($(_tinh).find("option:first-child").attr('key') == 0) {
         $.get('/danh_sach_tinh_tp', function (json) {
             string = "<option value=" + curV + ">" + curT + "</option>";
@@ -105,8 +106,9 @@ function noisinhtinh(_tinh) {
 }
 
 function noisinhhuyen(_huyen) {
-    curV = $(_huyen).val();
-    curT = $(_huyen).text();
+    var curV = $(_huyen).val();
+    var curT = $(_huyen).text();
+    var clickV = "";
     if ($(_huyen).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_quan_huyen', {id: $("#nhanvien_noisinh_tinh").val()}, function (json) {
 
@@ -133,9 +135,12 @@ function noisinhhuyen(_huyen) {
 }
 
 function noisinhxa(_xa) {
+    var curV = $(_xa).val();
+    var curT = $(_xa).text();
+    var clickV = "";
     if ($(_xa).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_phuong_xa', {id: $("#nhanvien_noisinh_huyen").val()}, function (json) {
-            string = "";
+            string = "<option value=" + curV + ">" + curT + "</option>";
             for (i = 0; i < json.length; i++) {
                 string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
             }
@@ -145,8 +150,9 @@ function noisinhxa(_xa) {
 }
 
 function nguyenquantinh(_tinh) {
-    curV = $(_tinh).val();
-    curT = $(_tinh).text();
+    var curV = $(_tinh).val();
+    var curT = $(_tinh).text();
+    var clickV = "";
     if ($(_tinh).find("option:first-child").attr('key') == 0) {
         $.get('/danh_sach_tinh_tp', function (json) {
             string = "<option value=" + curV + ">" + curT + "</option>";
@@ -172,8 +178,9 @@ function nguyenquantinh(_tinh) {
 }
 
 function nguyenquanhuyen(_huyen) {
-    curV = $(_huyen).val();
-    curT = $(_huyen).text();
+    var curV = $(_huyen).val();
+    var curT = $(_huyen).text();
+    var clickV = "";
     if ($(_huyen).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_quan_huyen', {id: $("#nhanvien_nguyenquan_tinh").val()}, function (json) {
 
@@ -201,10 +208,13 @@ function nguyenquanhuyen(_huyen) {
 
 
 function nguyenquanxa(_xa) {
+    var curV = $(_xa).val();
+    var curT = $(_xa).text();
+    var clickV = "";
     if ($(_xa).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_phuong_xa', {id: $("#nhanvien_nguyenquan_huyen").val()}, function (json) {
 
-            string = "";
+            string = "<option value=" + curV + ">" + curT + "</option>";
             for (i = 0; i < json.length; i++) {
                 string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
             }
@@ -214,8 +224,9 @@ function nguyenquanxa(_xa) {
 }
 
 function thuongtrutinh(_tinh) {
-    curV = $(_tinh).val();
-    curT = $(_tinh).text();
+    var curV = $(_tinh).val();
+    var curT = $(_tinh).text();
+    var clickV = "";
     if ($(_tinh).find("option:first-child").attr('key') == 0) {
         $.get('/danh_sach_tinh_tp', function (json) {
             string = "<option value=" + curV + ">" + curT + "</option>";
@@ -241,8 +252,9 @@ function thuongtrutinh(_tinh) {
 }
 
 function thuongtruhuyen(_huyen) {
-    curV = $(_huyen).val();
-    curT = $(_huyen).text();
+    var curV = $(_huyen).val();
+    var curT = $(_huyen).text();
+    var clickV = "";
     if ($(_huyen).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_quan_huyen', {id: $("#nhanvien_thuongtru_tinh").val()}, function (json) {
 
@@ -269,10 +281,13 @@ function thuongtruhuyen(_huyen) {
 }
 
 function thuongtruxa(_xa) {
+    var curV = $(_xa).val();
+    var curT = $(_xa).text();
+    var clickV = "";
     if ($(_xa).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_phuong_xa', {id: $("#nhanvien_thuongtru_huyen").val()}, function (json) {
 
-            string = "";
+            string = "<option value=" + curV + ">" + curT + "</option>";
             for (i = 0; i < json.length; i++) {
                 string += "<option value='" + json[i].id + "'>" + json[i].ten + "</option>";
             }
@@ -282,8 +297,9 @@ function thuongtruxa(_xa) {
 }
 
 function tamtrutinh(_tinh) {
-    curV = $(_tinh).val();
-    curT = $(_tinh).text();
+    var curV = $(_tinh).val();
+    var curT = $(_tinh).text();
+    var clickV = "";
     if ($(_tinh).find("option:first-child").attr('key') == 0) {
         $.get('/danh_sach_tinh_tp', function (json) {
             string = "<option value=" + curV + ">" + curT + "</option>";
@@ -309,8 +325,9 @@ function tamtrutinh(_tinh) {
 }
 
 function tamtruhuyen(_huyen) {
-    curV = $(_huyen).val();
-    curT = $(_huyen).text();
+    var curV = $(_huyen).val();
+    var curT = $(_huyen).text();
+    var clickV = "";
     if ($(_huyen).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_quan_huyen', {id: $("#nhanvien_tamtru_tinh").val()}, function (json) {
 
@@ -336,8 +353,9 @@ function tamtruhuyen(_huyen) {
 }
 
 function tamtruxa(_xa) {
-    curV = $(_xa).val();
-    curT = $(_xa).text();
+    var curV = $(_xa).val();
+    var curT = $(_xa).text();
+    var clickV = "";
     if ($(_xa).find("option:first-child").attr('key') == 0) {
         $.post('/danh_sach_phuong_xa', {id: $("#nhanvien_tamtru_huyen").val()}, function (json) {
 
