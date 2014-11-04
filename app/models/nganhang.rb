@@ -1,5 +1,6 @@
 class Nganhang < ActiveRecord::Base
 
+  has_many :nhanviens
   validates :ma, :presence => true
   validates :ten, :presence => true
 

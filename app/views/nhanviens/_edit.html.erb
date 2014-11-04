@@ -1,0 +1,61 @@
+<h3><%= t "nhanviens.edit.header" %> :
+  <b class="text"><%= @nhanvien.holot + " " + @nhanvien.ten + " - " + @nhanvien.namsinh.to_s %></b></h3>
+
+<div class="">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#sectionA">Hành chánh</a></li>
+    <li><a data-toggle="tab" href="#sectionB">Hợp đồng</a></li>
+    <li><a data-toggle="tab" href="#sectionC">Đào tạo</a></li>
+    <li><a data-toggle="tab" href="#sectionD">Công tác</a></li>
+    <li><a data-toggle="tab" href="#sectionE">Gia cảnh</a></li>
+    <li><a data-toggle="tab" href="#sectionF">Đoàn thể</a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="sectionA" class="tab-pane fade in active">
+      <h3>Thông tin hành chánh</h3>
+      <%= render "form" %>
+    </div>
+    <div id="sectionB" class="tab-pane fade">
+      <h3>Thông tin hợp đồng</h3>
+
+      <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis
+        a
+        magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed
+        molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis
+        leo
+        at faucibus adipiscing.</p>
+    </div>
+    <div id="sectionC" class="tab-pane fade">
+      <h3>Quá trình đào tạo</h3>
+
+      <p>WInteger convallis, nulla in sollicitudin placerat, ligula enim auctor lectus, in mollis diam dolor at lorem.
+        Sed bibendum nibh sit amet dictum feugiat. Vivamus arcu sem, cursus a feugiat ut, iaculis at erat. Donec
+        vehicula at ligula vitae venenatis. Sed nunc nulla, vehicula non porttitor in, pharetra et dolor. Fusce nec
+        velit velit. Pellentesque consectetur eros.</p>
+    </div>
+    <div id="sectionD" class="tab-pane fade">
+      <h3>Quá trình công tác</h3>
+
+      <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat
+        magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et
+        ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum
+        sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+    <div id="sectionE" class="tab-pane fade">
+      <h3>Thông tin gia cảnh</h3>
+
+      <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat
+        magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et
+        ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum
+        sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+    <div id="sectionF" class="tab-pane fade">
+      <h3>Thông tin Đảng - Đoàn - Công Đoàn</h3>
+
+      <p>Donec vel placerat quam, ut euismod risus. Sed a mi suscipit, elementum sem a, hendrerit velit. Donec at erat
+        magna. Sed dignissim orci nec eleifend egestas. Donec eget mi consequat massa vestibulum laoreet. Mauris et
+        ultrices nulla, malesuada volutpat ante. Fusce ut orci lorem. Donec molestie libero in tempus imperdiet. Cum
+        sociis natoque penatibus et magnis dis parturient.</p>
+    </div>
+  </div>
+</div>

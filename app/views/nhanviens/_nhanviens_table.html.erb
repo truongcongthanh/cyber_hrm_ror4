@@ -1,37 +1,56 @@
-<div class="table-responsive">
-  <table class="table table-hover">
-    <thead>
-    <tr class="info">
-      <th style="width: 80px;"><%= t "nhanviens.eid" %></th>
-      <th><%= t "nhanviens.holot" %></th>
-      <th><%= t "nhanviens.ten" %></th>
-      <th><%= t "nhanviens.ngaysinh" %></th>
-      <th><%= t "nhanviens.didong" %></th>
-      <th><%= t "nhanviens.email" %></th>
-    </tr>
-    </thead>
-    <tbody>
-    <% @nhanviens.each do |nhanvien| %>
-        <tr nhanvienid="<%= nhanvien.id %>" onclick="nhanvien(this)">
-          <td><%= nhanvien.eid %></td>
-          <td><%= nhanvien.holot %></td>
-          <td><%= nhanvien.ten %></td>
-          <% if nhanvien.ngaysinh.blank? %>
-              <td><%= nhanvien.namsinh %></td>
-          <% else %>
-              <td><%= nhanvien.ngaysinh.strftime("%d/%m/%Y") %></td>
-          <% end %>
-          <td><%= nhanvien.didong %></td>
-          <td><%= nhanvien.email %></td>
-        </tr>
-    <% end %>
-    </tbody>
-    <tfoot>
-    <tr class="text-center">
-      <td colspan="7">
-        <%= will_paginate @nhanviens, renderer: BootstrapPagination::Rails %>
-      </td>
-    </tr>
-    </tfoot>
-  </table>
+<div>
+  <h2 class="text-center text-capitalize text-danger"><%= t "nhanviens.index.header" %></h2>
+
+  <div class="clearfix"></div>
 </div>
+<div class="new-form"></div>
+<%= form_tag nhanviens_path, :method => 'get', :id => "ajax_search" do %>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+          <%= text_field_tag :search, params[:search], :placeholder => t('nhanviens.keysearch'), :class => "form-control" %>
+        </div>
+      </div>
+    </div>
+    <p>
+    <div class="row">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+          <tr class="info">
+            <th style="width: 80px;"><%= t "nhanviens.eid" %></th>
+            <th><%= t "nhanviens.holot" %></th>
+            <th><%= t "nhanviens.ten" %></th>
+            <th><%= t "nhanviens.ngaysinh" %></th>
+            <th><%= t "nhanviens.didong" %></th>
+            <th><%= t "nhanviens.email" %></th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @nhanviens.each do |nhanvien| %>
+              <tr nhanvienid="<%= nhanvien.id %>" onclick="nhanvien(this)">
+                <td><%= nhanvien.eid %></td>
+                <td><%= nhanvien.holot %></td>
+                <td><%= nhanvien.ten %></td>
+                <% if nhanvien.ngaysinh.blank? %>
+                    <td><%= nhanvien.namsinh %></td>
+                <% else %>
+                    <td><%= nhanvien.ngaysinh.strftime("%d/%m/%Y") %></td>
+                <% end %>
+                <td><%= nhanvien.didong %></td>
+                <td><%= nhanvien.email %></td>
+              </tr>
+          <% end %>
+          </tbody>
+          <tfoot>
+          <tr class="text-center">
+            <td colspan="7">
+              <%= will_paginate @nhanviens, renderer: BootstrapPagination::Rails %>
+            </td>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+<% end %>

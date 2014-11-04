@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141023022014) do
+ActiveRecord::Schema.define(version: 20141103064700) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "bangcaps", force: true do |t|
     t.string   "ma"
@@ -58,6 +59,13 @@ ActiveRecord::Schema.define(version: 20141023022014) do
   create_table "dantocs", force: true do |t|
     t.string   "ma"
     t.string   "ten"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "demos", force: true do |t|
+    t.string   "ten"
+    t.hstore   "data"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -191,6 +199,7 @@ ActiveRecord::Schema.define(version: 20141023022014) do
     t.integer  "trangthai"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "bangcap"
   end
 
   create_table "nhombangcaps", force: true do |t|

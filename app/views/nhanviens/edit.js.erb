@@ -1,2 +1,23 @@
-$("#inner-form-modal").html("<%= escape_javascript(render 'edit') %>")
-$("#form-modal").modal("show")
+$(".form-index").html("<%= escape_javascript(render("edit")) %>");
+var data = $("body").data("dulieu_nhanvien");
+
+$("#nhanvien_gioitinh").html("<option key='0' value='" + data.gioitinh_id + "'>" + data.gioitinh + "</option>");
+$("#nhanvien_tinhtranghonnhan").html("<option key='0' value='" + data.honnhan_id + "'>" + data.tinhtranghonnhan + "</option>");
+$("#nhanvien_quoctich").html("<option key='0' value='" + data.quoctich_id + "'>" + data.quoctich + "</option>");
+$("#nhanvien_dantoc").html("<option key='0' value='" + data.dantoc_id + "'>" + data.dantoc + "</option>");
+$("#nhanvien_tongiao").html("<option key='0' value='" + data.tongiao_id + "'>" + data.tongiao + "</option>");
+$("#nhanvien_noisinh_tinh").html("<option key='0' value='" + data.noisinh_tinh_id + "'>" + data.noisinh_tinh + "</option>");
+$("#nhanvien_noisinh_huyen").html("<option key='0' value='" + data.noisinh_id + "'>" + data.noisinh_huyen + "</option>");
+$("#nhanvien_noisinh_xa").html("<option key='0' value='" + noisinh_xa_id + "'>" + data.noisinh_xa + "</option>");
+$("#nhanvien_nguyenquan_tinh").html("<option key='0' value='" + data.nguyenquan_tinh_id + "'>" + data.nguyenquan_tinh + "</option>");
+$("#nhanvien_nguyenquan_huyen").html("<option key='0' value='" + data.nguyenquan_huyen_id + "'>" + data.nguyenquan_huyen + "</option>");
+$("#nhanvien_nguyenquan_xa").html("<option key='0' value='" + data.nguyenquan_xa_id + "'>" + data.nguyenquan_xa + "</option>")
+$("#nhanvien_thuongtru_tinh").html("<option key='0' value='" + data.thuongtru_tinh_id + "'>" + data.thuongtru_tinh + "</option>");
+$("#nhanvien_thuongtru_huyen").html("<option key='0' value='" + data.thuongtru_id + "'>" + data.thuonggtru_huyen + "</option>");
+$("#nhanvien_thuongtru_xa").html("<option key='0' value='" + data.thuongtru_xa_id + "'>" + data.thuongtru_xa + "</option>");
+$("#nhanvien_tamtru_tinh").html("<option key='0' value='" + data.tamtru_tinh_id + "'>" + data.tamtru_tinh + "</option>");
+$("#nhanvien_tamtru_huyen").html("<option key='0' value='" + data.tamtru_huyen_id + "'>" + data.tamtru_huyen + "</option>");
+$("#nhanvien_tamtru_xa").html("<option key='0' value='" + data.tamtru_xa_id + "'>" + data.tamtru_xa + "</option>");
+$("#nhanvien_noicapcmnd").html("<option key='0' value='" + data.noicapcmnd_id + "'>" + data.noicapcmnd + "</option>");
+$("#nhanvien_nganhang").html("<option key='0' value='" + data.nganhang_id + "'>" + data.nganhang + "</option>");
+

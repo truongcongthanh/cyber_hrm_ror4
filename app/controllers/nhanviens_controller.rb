@@ -74,12 +74,10 @@ class NhanviensController < ApplicationController
 
   private
   def nhanvien_params
-    params.require(:nhanvien).permit(:eid, :holot, :ten, :tenkhac, :email, :didong, :dienthoai, :quoctich, :dantoc,
-                                     :ngaysinh, :namsinh, :gioitinh, :tongiao, :tinhtranghonnhan, :noisinh_xa, :noisinh_huyen, :noisinh_tinh,
-                                     :nguyenquan_xa, :nguyenquan_huyen, :nguyenquan_tinh, :tamtru_duong, :tamtru_xa, :tamtru_huyen, :tamtru_tinh,
-                                     :thuongtru_duong, :thuongtru_xa, :thuongtru_huyen, :thuongtru_tinh, :trinhdophothong, :ngoaingu, :trinhdongoaingu,
-                                     :trinhdotinhoc, :bangcap, :nganhdaotao, :hedaotao, :noidaotao, :masothue, :taikhoannganhang, :nganhang,
-                                     :socmnd, :ngaycapcmnd, :noicapcmnd, :tinhtrangsuckhoe, :chieucao, :cannang)
+    params.require(:nhanvien).permit(:eid, :holot, :ten, :gioitinh, :ngaysinh, :namsinh, :tenkhac, :tinhtranghonnhan, :quoctich,
+    :dantoc, :tongiao, :noisinh_tinh, :noisinh_huyen, :noisinh_xa, :nguyenquan_tinh, :nguyenquan_huyen, :nguyenquan_xa, :thuongtru_duong,
+    :thuongtru_tinh, :thuongtru_huyen, :thuongtru_xa, :tamtru_duong, :tamtru_tinh, :tamtru_huyen, :tamtru_xa, :dienthoai, :didong, :email,
+    :socmnd, :ngaycapcmnd, :noicapcmnd, :masothue, :taikhoannganhang, :nganhang)
   end
 
 end
